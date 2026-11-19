@@ -52,7 +52,7 @@
                     </div>
                     <i
                         class="fa fa-chevron-right"
-                        style="color: var(--ilx-on-surface-variant); font-size: 0.8rem;"
+                        style="color: var(--barcode-scanner-on-surface-variant); font-size: 0.8rem;"
                     />
                 </div>
                 <div class="ilx-kw-info-row mt-3">

@@ -25,7 +25,7 @@
                                 <span class="ilx-mw-v2-eyebrow">TASK STATUS</span>
                                 <h3 class="ilx-mw-v2-task-title">Move Operation</h3>
                                 <div
-                                    style="font-size: 0.875rem; color: var(--ilx-on-surface-variant, #6b7280); margin-top: 2px;"
+                                    style="font-size: 0.875rem; color: var(--barcode-scanner-on-surface-variant, #6b7280); margin-top: 2px;"
                                 >
                                     <i class="fa fa-cube" />
                                     <t t-esc="state.move?.product_id?.[1]" />

@@ -108,7 +108,7 @@
                         <i class="fa fa-plus" />
                     </button>
                     <span
-                        style="font-size: 0.85rem; color: var(--ilx-on-surface-variant); font-weight: 500;"
+                        style="font-size: 0.85rem; color: var(--barcode-scanner-on-surface-variant); font-weight: 500;"
                     >UNITS</span>
                 </div>
             </div>

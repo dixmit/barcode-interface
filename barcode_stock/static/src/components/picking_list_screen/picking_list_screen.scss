@@ -26,8 +26,8 @@
         gap: 8px;
         white-space: nowrap;
         cursor: pointer;
-        background: var(--ilx-surface-container-high);
-        color: var(--ilx-on-surface-variant);
+        background: var(--barcode-scanner-surface-container-high);
+        color: var(--barcode-scanner-on-surface-variant);
 
         .fa-caret-down {
             font-size: 0.8rem;
@@ -35,13 +35,13 @@
         }
 
         &.has-value {
-            background: var(--ilx-surface-container-low);
-            color: var(--ilx-on-surface);
+            background: var(--barcode-scanner-surface-container-low);
+            color: var(--barcode-scanner-on-surface);
         }
 
         &.active {
-            background: var(--ilx-primary-container);
-            color: var(--ilx-on-surface);
+            background: var(--barcode-scanner-primary-container);
+            color: var(--barcode-scanner-on-surface);
         }
     }
 
@@ -50,7 +50,7 @@
         height: 18px;
         padding: 0 5px;
         border-radius: 9px;
-        background: var(--ilx-primary);
+        background: var(--barcode-scanner-primary);
         color: #fff;
         font-size: 0.7rem;
         display: inline-flex;
@@ -72,8 +72,8 @@
         }
 
         &.active {
-            color: var(--ilx-primary);
-            background: var(--ilx-surface-container-low);
+            color: var(--barcode-scanner-primary);
+            background: var(--barcode-scanner-surface-container-low);
         }
     }
 
@@ -94,11 +94,11 @@
         gap: 4px;
         font-size: 0.8rem;
         font-weight: 600;
-        background: var(--ilx-primary-container);
-        color: var(--ilx-on-surface);
+        background: var(--barcode-scanner-primary-container);
+        color: var(--barcode-scanner-on-surface);
 
         &.ilx-kw-facet--group {
-            background: var(--ilx-tertiary-container);
+            background: var(--barcode-scanner-tertiary-container);
         }
     }
 
@@ -132,9 +132,9 @@
         max-width: #{"min(320px, calc(100vw - 3rem))"};
         max-height: 60vh;
         overflow-y: auto;
-        background: var(--ilx-surface);
-        border: 1px solid var(--ilx-outline-variant);
-        border-radius: var(--ilx-radius-lg);
+        background: var(--barcode-scanner-surface);
+        border: 1px solid var(--barcode-scanner-outline-variant);
+        border-radius: var(--barcode-scanner-radius-lg);
         box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
         padding: 8px;
         z-index: 50;
@@ -143,7 +143,7 @@
     .ilx-kw-menu-section + .ilx-kw-menu-section {
         margin-top: 4px;
         padding-top: 8px;
-        border-top: 1px solid var(--ilx-outline-variant);
+        border-top: 1px solid var(--barcode-scanner-outline-variant);
     }
 
     .ilx-kw-menu-title {
@@ -151,7 +151,7 @@
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.04em;
-        color: var(--ilx-on-surface-variant);
+        color: var(--barcode-scanner-on-surface-variant);
         padding: 6px 10px;
     }
 
@@ -162,31 +162,31 @@
         gap: 10px;
         border: none;
         background: transparent;
-        color: var(--ilx-on-surface);
+        color: var(--barcode-scanner-on-surface);
         font-size: 0.9rem;
         font-weight: 500;
         text-align: left;
         padding: 10px;
-        border-radius: var(--ilx-radius-default);
+        border-radius: var(--barcode-scanner-radius-default);
         cursor: pointer;
 
         .fa {
             font-size: 0.95rem;
-            color: var(--ilx-on-surface-variant);
+            color: var(--barcode-scanner-on-surface-variant);
             width: 18px;
             text-align: center;
         }
 
         &:hover {
-            background: var(--ilx-surface-container-high);
+            background: var(--barcode-scanner-surface-container-high);
         }
 
         &.selected {
-            color: var(--ilx-primary);
+            color: var(--barcode-scanner-primary);
             font-weight: 600;
 
             .fa {
-                color: var(--ilx-primary);
+                color: var(--barcode-scanner-primary);
             }
         }
     }

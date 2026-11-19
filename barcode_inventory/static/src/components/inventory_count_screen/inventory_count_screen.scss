@@ -4,15 +4,15 @@
     font-weight: 600;
 
     &.ilx-inv-diff-up {
-        color: var(--ilx-success);
+        color: var(--barcode-scanner-success);
     }
 
     &.ilx-inv-diff-down {
-        color: var(--ilx-error);
+        color: var(--barcode-scanner-error);
     }
 
     &.ilx-inv-diff-none {
-        color: var(--ilx-on-surface-variant);
+        color: var(--barcode-scanner-on-surface-variant);
         font-weight: normal;
     }
 }

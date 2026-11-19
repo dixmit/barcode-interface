@@ -13,18 +13,18 @@
         <t t-else="">
             <div
                 class="ilx-kw-cta-banner"
-                style="background: var(--ilx-surface-container-low);"
+                style="background: var(--barcode-scanner-surface-container-low);"
             >
                 <i
                     class="fa fa-inbox ilx-kw-cta-icon"
-                    style="color: var(--ilx-on-surface-variant);"
+                    style="color: var(--barcode-scanner-on-surface-variant);"
                 />
                 <div class="ilx-kw-cta-text">
                     <strong
-                        style="color: var(--ilx-on-surface);"
+                        style="color: var(--barcode-scanner-on-surface);"
                     >No confirmed scans yet</strong>
                     <span
-                        style="color: var(--ilx-on-surface-variant);"
+                        style="color: var(--barcode-scanner-on-surface-variant);"
                     >Process products from the To Do tab to build the done log here.</span>
                 </div>
             </div>

@@ -15,17 +15,20 @@
             </t>
         </t>
         <t t-else="">
-            <div class="ilx-kw-cta-banner" style="background: var(--ilx-success-bg);">
+            <div
+                class="ilx-kw-cta-banner"
+                style="background: var(--barcode-scanner-success-bg);"
+            >
                 <i
                     class="fa fa-check-circle ilx-kw-cta-icon"
-                    style="color: var(--ilx-success);"
+                    style="color: var(--barcode-scanner-success);"
                 />
                 <div class="ilx-kw-cta-text">
                     <strong
-                        style="color: var(--ilx-success);"
+                        style="color: var(--barcode-scanner-success);"
                     >All operations completed</strong>
                     <span
-                        style="color: var(--ilx-on-surface-variant);"
+                        style="color: var(--barcode-scanner-on-surface-variant);"
                     >There are no pending products for this picking.</span>
                 </div>
             </div>

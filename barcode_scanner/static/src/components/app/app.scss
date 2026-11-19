@@ -2,18 +2,18 @@
 .barcode-main-wrapper,
 .barcode-wrapper {
     --barcode-font-family: "Inter", "Inter var", "Segoe UI", Roboto, sans-serif;
-    --barcode-text: var(--ilx-on-surface);
-    --barcode-text-muted: var(--ilx-on-surface-variant);
-    --barcode-border-soft: var(--ilx-outline-variant);
-    --barcode-surface: var(--ilx-surface-container-low);
-    --barcode-surface-elevated: var(--ilx-surface-container-lowest);
-    --barcode-surface-glass: var(--ilx-surface-container-low);
+    --barcode-text: var(--barcode-scanner-on-surface);
+    --barcode-text-muted: var(--barcode-scanner-on-surface-variant);
+    --barcode-border-soft: var(--barcode-scanner-outline-variant);
+    --barcode-surface: var(--barcode-scanner-surface-container-low);
+    --barcode-surface-elevated: var(--barcode-scanner-surface-container-lowest);
+    --barcode-surface-glass: var(--barcode-scanner-surface-container-low);
     --barcode-shadow-soft: 0 2px 12px rgba(28, 27, 31, 0.08);
-    --barcode-primary-start: var(--ilx-primary);
-    --barcode-primary-end: var(--ilx-primary-container);
-    --barcode-success: var(--ilx-success);
-    --barcode-warning: var(--ilx-warning);
-    --barcode-danger: var(--ilx-error);
+    --barcode-primary-start: var(--barcode-scanner-primary);
+    --barcode-primary-end: var(--barcode-scanner-primary-container);
+    --barcode-success: var(--barcode-scanner-success);
+    --barcode-warning: var(--barcode-scanner-warning);
+    --barcode-danger: var(--barcode-scanner-error);
     --barcode-touch-target: 48px;
     font-family: var(--barcode-font-family);
 }
@@ -21,8 +21,8 @@
 .barcode-app-root {
     position: fixed;
     inset: 0;
-    background: var(--ilx-background);
-    color: var(--ilx-on-surface);
+    background: var(--barcode-scanner-background);
+    color: var(--barcode-scanner-on-surface);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,8 +30,8 @@
 }
 
 .barcode-card {
-    background: var(--ilx-surface-container-lowest);
-    border-radius: var(--ilx-radius-lg);
+    background: var(--barcode-scanner-surface-container-lowest);
+    border-radius: var(--barcode-scanner-radius-lg);
     padding: 2rem;
     width: 100%;
     max-width: 520px;
@@ -49,16 +49,16 @@
 }
 
 .primary-action-btn {
-    background-color: var(--ilx-primary-container);
+    background-color: var(--barcode-scanner-primary-container);
     color: white;
     font-weight: 600;
     padding: 0.9rem;
-    border-radius: var(--ilx-radius-default);
+    border-radius: var(--barcode-scanner-radius-default);
     transition: all 0.2s ease;
 }
 
 .primary-action-btn:hover {
-    background-color: var(--ilx-primary);
+    background-color: var(--barcode-scanner-primary);
     transform: translateY(-2px);
 }
 
@@ -82,27 +82,27 @@
     border: none;
     background: transparent;
     font-weight: 500;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     transition: 0.2s;
 }
 
 .back-button:hover {
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     transform: translateX(-3px);
 }
 
 .exit-action-btn {
-    background-color: var(--ilx-error);
+    background-color: var(--barcode-scanner-error);
     color: white;
     font-weight: 600;
     padding: 0.9rem;
-    border-radius: var(--ilx-radius-default);
+    border-radius: var(--barcode-scanner-radius-default);
     transition: all 0.2s ease;
 }
 
 .exit-action-btn:hover {
-    background-color: var(--ilx-error-container);
-    color: var(--ilx-on-error-container);
+    background-color: var(--barcode-scanner-error-container);
+    color: var(--barcode-scanner-on-error-container);
     transform: translateY(-2px);
 }
 
@@ -120,16 +120,16 @@
 }
 
 .success-btn {
-    background: var(--ilx-success);
+    background: var(--barcode-scanner-success);
     color: white;
 }
 
 .warning-btn {
-    background: var(--ilx-warning);
+    background: var(--barcode-scanner-warning);
 }
 
 .danger-btn {
-    background: var(--ilx-error);
+    background: var(--barcode-scanner-error);
     color: white;
 }
 
@@ -142,7 +142,7 @@
 .tab-picking {
     flex: 1;
     padding: 0.6rem;
-    background: var(--ilx-outline-variant);
+    background: var(--barcode-scanner-outline-variant);
     border: none;
 }
 
@@ -160,7 +160,7 @@
 }
 
 .move-card.done {
-    background: var(--ilx-success-bg);
+    background: var(--barcode-scanner-success-bg);
 }
 
 .footer-actions {
@@ -257,7 +257,7 @@
     flex: 1;
     padding: 0.4rem;
     border: none;
-    background: var(--ilx-outline-variant);
+    background: var(--barcode-scanner-outline-variant);
     border-radius: 6px;
 }
 
@@ -288,7 +288,7 @@
 }
 
 .group-header.state-draft {
-    background: var(--ilx-surface-container-high);
+    background: var(--barcode-scanner-surface-container-high);
     color: #555;
 }
 
@@ -304,34 +304,34 @@
 }
 
 .group-header.state-draft:hover {
-    background: var(--ilx-surface-container-high);
+    background: var(--barcode-scanner-surface-container-high);
 }
 
 .group-header.state-assigned {
-    background: var(--ilx-warning-bg);
+    background: var(--barcode-scanner-warning-bg);
     color: #e65100;
 }
 
 .group-header.state-assigned:hover {
-    background: var(--ilx-warning-bg);
+    background: var(--barcode-scanner-warning-bg);
 }
 
 .group-header.state-confirmed {
-    background: var(--ilx-info-bg);
+    background: var(--barcode-scanner-info-bg);
     color: #1565c0;
 }
 
 .group-header.state-confirmed:hover {
-    background: var(--ilx-info-bg);
+    background: var(--barcode-scanner-info-bg);
 }
 
 .group-header.state-done {
-    background: var(--ilx-success-bg);
+    background: var(--barcode-scanner-success-bg);
     color: #2e7d32;
 }
 
 .group-header.state-done:hover {
-    background: var(--ilx-success-bg);
+    background: var(--barcode-scanner-success-bg);
 }
 
 .chevron {
@@ -368,7 +368,7 @@
 }
 
 .action-btn-warning {
-    background-color: var(--ilx-warning);
+    background-color: var(--barcode-scanner-warning);
 }
 
 .action-btn-warning:hover {
@@ -376,7 +376,7 @@
 }
 
 .action-btn-success {
-    background-color: var(--ilx-success);
+    background-color: var(--barcode-scanner-success);
 }
 
 .action-btn-success:hover {
@@ -384,7 +384,7 @@
 }
 
 .action-btn-info {
-    background-color: var(--ilx-info);
+    background-color: var(--barcode-scanner-info);
 }
 
 .action-btn-info:hover {
@@ -392,7 +392,7 @@
 }
 
 .action-btn.action-btn-danger {
-    background-color: var(--ilx-error);
+    background-color: var(--barcode-scanner-error);
 }
 
 .action-btn.action-btn-danger:hover {
@@ -415,17 +415,17 @@
 
 .form-input {
     padding: 0.85rem 1rem;
-    border-radius: var(--ilx-radius-default);
-    border: 1px solid var(--ilx-outline-variant);
-    background: var(--ilx-surface-container-lowest);
-    color: var(--ilx-on-surface);
+    border-radius: var(--barcode-scanner-radius-default);
+    border: 1px solid var(--barcode-scanner-outline-variant);
+    background: var(--barcode-scanner-surface-container-lowest);
+    color: var(--barcode-scanner-on-surface);
     font-size: 1rem;
     width: 100%;
     outline: none;
 }
 
 .form-input:focus {
-    border-color: var(--ilx-primary-container);
+    border-color: var(--barcode-scanner-primary-container);
     box-shadow: 0 0 0 2px rgba(124, 110, 170, 0.15);
 }
 
@@ -445,7 +445,7 @@
 }
 
 .autocomplete-item:hover {
-    background: var(--ilx-surface-container-low);
+    background: var(--barcode-scanner-surface-container-low);
 }
 
 .barcode-main-wrapper {
@@ -454,7 +454,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--ilx-surface);
+    background: var(--barcode-scanner-surface);
     overflow: hidden;
 }
 
@@ -475,7 +475,7 @@
 }
 
 .employee-item:hover {
-    background: var(--ilx-surface-container-low);
+    background: var(--barcode-scanner-surface-container-low);
 }
 
 .employee-avatar {
@@ -541,7 +541,7 @@
 .toggle-slider {
     width: 40px;
     height: 22px;
-    background: var(--ilx-outline-variant);
+    background: var(--barcode-scanner-outline-variant);
     border-radius: 20px;
     position: relative;
     transition: 0.2s ease;
@@ -586,7 +586,7 @@
 
 .empty-icon {
     font-size: 2rem;
-    color: var(--ilx-success);
+    color: var(--barcode-scanner-success);
     margin-bottom: 0.8rem;
 }
 
@@ -615,7 +615,7 @@
 }
 
 .done-card {
-    background-color: var(--ilx-success-bg);
+    background-color: var(--barcode-scanner-success-bg);
     border-radius: 12px;
     padding: 16px;
     margin-bottom: 16px;
@@ -630,7 +630,7 @@
 }
 
 .todo-card {
-    background-color: var(--ilx-danger-bg);
+    background-color: var(--barcode-scanner-danger-bg);
     border-radius: 12px;
     padding: 16px;
     margin-bottom: 16px;
@@ -657,7 +657,7 @@
     padding: 10px;
     border-radius: 4px;
     cursor: pointer;
-    background: var(--ilx-surface);
+    background: var(--barcode-scanner-surface);
 }
 
 .responsible-section {
@@ -684,7 +684,7 @@
 }
 
 .delete-btn {
-    background: var(--ilx-error);
+    background: var(--barcode-scanner-error);
     border: none;
     color: white;
     padding: 6px 10px;
@@ -714,7 +714,7 @@
 }
 
 .check {
-    background: var(--ilx-success);
+    background: var(--barcode-scanner-success);
     color: white;
 }
 
@@ -746,7 +746,7 @@
 }
 
 .selector-item:hover {
-    background: var(--ilx-surface-container-low);
+    background: var(--barcode-scanner-surface-container-low);
 }
 
 .employee-placeholder i {
@@ -823,7 +823,7 @@
 }
 
 .pad-delete {
-    background: var(--ilx-danger-bg);
+    background: var(--barcode-scanner-danger-bg);
 }
 
 .image-preview-grid {
@@ -846,7 +846,7 @@
     position: absolute;
     top: 4px;
     right: 4px;
-    background: var(--ilx-error);
+    background: var(--barcode-scanner-error);
     color: white;
     border: none;
     border-radius: 50%;
@@ -933,7 +933,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 12px;
-    background: var(--ilx-surface-container-low);
+    background: var(--barcode-scanner-surface-container-low);
     border-radius: 8px;
     margin-top: 6px;
     font-weight: 600;
@@ -995,7 +995,7 @@
 }
 
 .level-0 {
-    background: var(--ilx-surface-container-low);
+    background: var(--barcode-scanner-surface-container-low);
     border-radius: 6px;
     padding: 10px 12px;
     margin-top: 8px;
@@ -1093,8 +1093,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: var(--ilx-primary-container);
-    color: var(--ilx-surface-container-lowest);
+    background: var(--barcode-scanner-primary-container);
+    color: var(--barcode-scanner-surface-container-lowest);
     box-shadow: 0 4px 16px rgba(99, 85, 143, 0.3);
 }
 
@@ -1158,8 +1158,8 @@
     justify-content: center;
     padding: 0.85rem 1rem;
     border-radius: 999px;
-    color: var(--ilx-on-surface);
-    background: var(--ilx-surface-container-low);
+    color: var(--barcode-scanner-on-surface);
+    background: var(--barcode-scanner-surface-container-low);
 }
 
 .ilx-queue-header__copy {
@@ -1174,19 +1174,19 @@
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-queue-header__title {
     margin: 0;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     font-size: 1.5rem;
     font-weight: 700;
 }
 
 .ilx-queue-header__subtitle {
     margin: 0.35rem 0 0;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     font-size: 0.95rem;
 }
 
@@ -1200,7 +1200,7 @@
     top: 50%;
     left: 1rem;
     transform: translateY(-50%);
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-queue-search__input,
@@ -1210,8 +1210,8 @@
     min-height: 52px;
     border-radius: 16px;
     border: none;
-    background: var(--ilx-surface-container-low);
-    color: var(--ilx-on-surface);
+    background: var(--barcode-scanner-surface-container-low);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-queue-search__input {
@@ -1219,7 +1219,7 @@
 }
 
 .ilx-queue-search__input::placeholder {
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-queue-summary-grid {
@@ -1232,7 +1232,7 @@
 .ilx-summary-card {
     padding: 0.95rem 1rem;
     border-radius: 18px;
-    background: var(--ilx-surface-container-low);
+    background: var(--barcode-scanner-surface-container-low);
     border: none;
     display: flex;
     flex-direction: column;
@@ -1240,25 +1240,25 @@
 }
 
 .ilx-summary-card--success {
-    background: var(--ilx-success-bg);
+    background: var(--barcode-scanner-success-bg);
 }
 
 .ilx-summary-card--info {
-    background: var(--ilx-info-bg);
+    background: var(--barcode-scanner-info-bg);
 }
 
 .ilx-summary-card--warning {
-    background: var(--ilx-warning-bg);
+    background: var(--barcode-scanner-warning-bg);
 }
 
 .ilx-summary-card__label {
     font-size: 0.78rem;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-summary-card__value {
     font-size: 1.35rem;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-queue-filters {
@@ -1277,8 +1277,8 @@
     min-height: 52px;
     border: none;
     border-radius: 16px;
-    background: var(--ilx-surface-container-low);
-    color: var(--ilx-on-surface);
+    background: var(--barcode-scanner-surface-container-low);
+    color: var(--barcode-scanner-on-surface);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1287,12 +1287,12 @@
 }
 
 .ilx-filter-chip.is-active {
-    background: var(--ilx-primary-container);
-    color: var(--ilx-surface-container-lowest);
+    background: var(--barcode-scanner-primary-container);
+    color: var(--barcode-scanner-surface-container-lowest);
 }
 
 .ilx-filter-select option {
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-filter-reset {
@@ -1305,7 +1305,7 @@
 }
 
 .ilx-group-chip {
-    background: var(--ilx-surface-container-low);
+    background: var(--barcode-scanner-surface-container-low);
 }
 
 .ilx-group-add {
@@ -1330,8 +1330,8 @@
     padding: 1rem 1.1rem;
     border: 0;
     border-radius: 20px;
-    background: var(--ilx-surface-container-low);
-    color: var(--ilx-on-surface);
+    background: var(--barcode-scanner-surface-container-low);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-queue-group__copy {
@@ -1344,12 +1344,12 @@
 .ilx-queue-group__eyebrow,
 .ilx-queue-group__summary {
     font-size: 0.78rem;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-queue-group__title {
     font-size: 1rem;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-queue-group__chevron {
@@ -1389,17 +1389,17 @@
 }
 
 .ilx-queue-card__code {
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     font-size: 1rem;
 }
 
 .ilx-queue-card__partner {
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     font-size: 0.9rem;
 }
 
 .ilx-queue-card__arrow {
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     padding-top: 0.3rem;
 }
 
@@ -1416,43 +1416,43 @@
 }
 
 .ilx-state-pill {
-    background: var(--ilx-surface-container-high);
-    color: var(--ilx-on-surface);
+    background: var(--barcode-scanner-surface-container-high);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-state-pill--assigned {
-    background: var(--ilx-success-bg);
-    color: var(--ilx-success);
+    background: var(--barcode-scanner-success-bg);
+    color: var(--barcode-scanner-success);
 }
 
 .ilx-state-pill--confirmed,
 .ilx-state-pill--waiting {
-    background: var(--ilx-warning-bg);
-    color: var(--ilx-warning);
+    background: var(--barcode-scanner-warning-bg);
+    color: var(--barcode-scanner-warning);
 }
 
 .ilx-state-pill--draft {
-    background: var(--ilx-surface-container-high);
+    background: var(--barcode-scanner-surface-container-high);
 }
 
 .ilx-queue-meta-pill {
-    background: var(--ilx-surface-container-low);
-    color: var(--ilx-on-surface);
+    background: var(--barcode-scanner-surface-container-low);
+    color: var(--barcode-scanner-on-surface);
     flex-wrap: wrap;
 }
 
 .ilx-queue-meta-pill.is-warning {
-    background: var(--ilx-warning-bg);
-    color: var(--ilx-warning);
+    background: var(--barcode-scanner-warning-bg);
+    color: var(--barcode-scanner-warning);
 }
 
 .ilx-queue-meta-pill.is-muted {
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-queue-meta-pill.is-success {
-    background: var(--ilx-success-bg);
-    color: var(--ilx-success);
+    background: var(--barcode-scanner-success-bg);
+    color: var(--barcode-scanner-success);
 }
 
 .ilx-queue-card__meta-row.is-secondary {
@@ -1545,25 +1545,25 @@
 .ilx-move-field__label {
     font-size: 0.82rem;
     font-weight: 700;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-move-input {
     min-height: 56px;
     border-radius: 16px;
     border: none;
-    background: var(--ilx-surface-container-low);
-    color: var(--ilx-on-surface);
+    background: var(--barcode-scanner-surface-container-low);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-move-input:focus {
-    color: var(--ilx-on-surface);
-    background: var(--ilx-surface-container-high);
-    border-color: var(--ilx-primary-container);
+    color: var(--barcode-scanner-on-surface);
+    background: var(--barcode-scanner-surface-container-high);
+    border-color: var(--barcode-scanner-primary-container);
 }
 
 .ilx-move-input option {
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-move-input--qty {
@@ -1619,7 +1619,7 @@
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 24px;
-    background: var(--ilx-surface-container-low);
+    background: var(--barcode-scanner-surface-container-low);
     border: none;
 }
 
@@ -1633,13 +1633,13 @@
 .ilx-picking-hero__progress-value {
     font-size: 1.6rem;
     line-height: 1.1;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-picking-hero__message,
 .ilx-picking-hero__progress-label {
     margin: 0;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-picking-hero__meta {
@@ -1653,7 +1653,7 @@
     height: 10px;
     border-radius: 999px;
     overflow: hidden;
-    background: var(--ilx-surface-container-high);
+    background: var(--barcode-scanner-surface-container-high);
 }
 
 .ilx-progress-bar--large {
@@ -1664,7 +1664,7 @@
     position: absolute;
     inset: 0 auto 0 0;
     border-radius: inherit;
-    background: var(--ilx-primary);
+    background: var(--barcode-scanner-primary);
 }
 
 .ilx-picking-tabs {
@@ -1691,7 +1691,7 @@
     padding: 0.85rem;
     border-radius: 20px;
     border: none;
-    background: var(--ilx-surface-container-lowest);
+    background: var(--barcode-scanner-surface-container-lowest);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     margin-bottom: calc(env(safe-area-inset-bottom) + 0.5rem);
@@ -1704,13 +1704,13 @@
     border: 0;
     display: grid;
     gap: 0.75rem;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-picking-move-card.is-highlighted,
 .ilx-picking-done-card.is-highlighted {
     box-shadow:
-        0 0 0 2px var(--ilx-primary-container),
+        0 0 0 2px var(--barcode-scanner-primary-container),
         var(--barcode-shadow-soft);
 }
 
@@ -1734,7 +1734,7 @@
 .ilx-picking-info-card__meta {
     display: block;
     font-size: 0.78rem;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-picking-move-card__stats,
@@ -1748,7 +1748,7 @@
 .ilx-picking-move-card__lots {
     margin: 0;
     padding-left: 1rem;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-picking-move-card__lots li {
@@ -1770,7 +1770,7 @@
 .ilx-picking-quality-card {
     padding: 1rem;
     border-radius: 18px;
-    background: var(--ilx-surface-container-low);
+    background: var(--barcode-scanner-surface-container-low);
     border: none;
 }
 
@@ -1787,7 +1787,7 @@
     flex-direction: column;
     align-items: stretch;
     gap: 0.65rem;
-    border-bottom-color: var(--ilx-outline-variant);
+    border-bottom-color: var(--barcode-scanner-outline-variant);
 }
 
 .ilx-info-media-actions {
@@ -1803,11 +1803,11 @@
 }
 
 .color-primary-container {
-    color: var(--ilx-primary-container) !important;
+    color: var(--barcode-scanner-primary-container) !important;
 }
 
 .color-on-surface {
-    color: var(--ilx-on-surface) !important;
+    color: var(--barcode-scanner-on-surface) !important;
 }
 
 .bg-transparent {
@@ -1815,11 +1815,11 @@
 }
 
 .bg-surface-low {
-    background-color: var(--ilx-surface-container-low) !important;
+    background-color: var(--barcode-scanner-surface-container-low) !important;
 }
 
 .bg-surface-lowest {
-    background-color: var(--ilx-surface-container-lowest) !important;
+    background-color: var(--barcode-scanner-surface-container-lowest) !important;
 }
 
 .p-0 {
@@ -1849,11 +1849,11 @@
 }
 
 .ilx-empty-text {
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-empty-text-sm {
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     font-size: 0.9rem;
 }
 
@@ -1867,13 +1867,13 @@
 }
 
 .ilx-radius-xl {
-    border-radius: var(--ilx-radius-xl);
+    border-radius: var(--barcode-scanner-radius-xl);
 }
 
 /* Home Screen (stitch theme) */
 .ilx-home-screen {
-    background-color: var(--ilx-surface);
-    color: var(--ilx-on-surface);
+    background-color: var(--barcode-scanner-surface);
+    color: var(--barcode-scanner-on-surface);
     font-family: "Inter", "Inter var", sans-serif;
     position: absolute;
     inset: 0;
@@ -1897,7 +1897,7 @@
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     min-height: 48px;
     min-width: 48px;
     display: flex;
@@ -1910,7 +1910,7 @@
     height: 40px;
     border-radius: 12px;
     overflow: hidden;
-    background: var(--ilx-primary-container);
+    background: var(--barcode-scanner-primary-container);
 }
 
 .ilx-home-avatar-img {
@@ -1933,19 +1933,19 @@
 .ilx-home-title {
     font-size: 1.75rem;
     font-weight: 700;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     margin: 0;
     line-height: 1.2;
     text-align: center;
 }
 
 .ilx-home-title-name {
-    color: var(--ilx-primary);
+    color: var(--barcode-scanner-primary);
 }
 
 .ilx-home-subtitle {
     font-size: 0.9rem;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     margin: 0.5rem 0 0;
     text-align: center;
 }
@@ -1965,15 +1965,15 @@
 }
 
 .ilx-home-grid-item {
-    background: var(--ilx-surface-container-lowest);
+    background: var(--barcode-scanner-surface-container-lowest);
     border: none;
-    border-radius: var(--ilx-radius-xl);
+    border-radius: var(--barcode-scanner-radius-xl);
     padding: 1.5rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    box-shadow: var(--ilx-shadow);
+    box-shadow: var(--barcode-scanner-shadow);
     cursor: pointer;
     transition:
         transform 0.15s ease,
@@ -1988,7 +1988,7 @@
 .ilx-home-grid-icon {
     width: 48px;
     height: 48px;
-    border-radius: var(--ilx-radius-lg);
+    border-radius: var(--barcode-scanner-radius-lg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1997,41 +1997,41 @@
 
 .ilx-icon-warehouse {
     background: #fce4ec;
-    color: var(--ilx-primary-container);
+    color: var(--barcode-scanner-primary-container);
 }
 
 .ilx-icon-transfer {
-    background: var(--ilx-surface-container-low);
-    color: var(--ilx-on-surface);
+    background: var(--barcode-scanner-surface-container-low);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-icon-adjustment {
-    background: var(--ilx-info-bg);
+    background: var(--barcode-scanner-info-bg);
     color: #1976d2;
 }
 
 .ilx-icon-scrap {
-    background: var(--ilx-danger-bg);
-    color: var(--ilx-error);
+    background: var(--barcode-scanner-danger-bg);
+    color: var(--barcode-scanner-error);
 }
 
 .ilx-icon-info {
-    background: var(--ilx-success-bg);
-    color: var(--ilx-success);
+    background: var(--barcode-scanner-success-bg);
+    color: var(--barcode-scanner-success);
 }
 
 .ilx-home-grid-title {
     font-size: 0.85rem;
     font-weight: 700;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     text-align: center;
     line-height: 1.3;
 }
 
 /* Stitch screen (Warehouse Operations) */
 .ilx-stitch-screen {
-    background-color: var(--ilx-surface);
-    color: var(--ilx-on-surface);
+    background-color: var(--barcode-scanner-surface);
+    color: var(--barcode-scanner-on-surface);
     font-family: "Inter", "Inter var", sans-serif;
     position: absolute;
     inset: 0;
@@ -2055,14 +2055,14 @@
     margin: 0;
     font-size: 1.125rem;
     font-weight: 700;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     letter-spacing: -0.01em;
 }
 
 .ilx-stitch-menu-btn {
     background: none;
     border: none;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     font-size: 1.25rem;
     min-height: 48px;
     min-width: 48px;
@@ -2085,9 +2085,9 @@
 
 .ilx-stitch-select-wrapper {
     position: relative;
-    background: var(--ilx-surface-container-lowest);
-    border-radius: var(--ilx-radius-xl);
-    box-shadow: var(--ilx-shadow);
+    background: var(--barcode-scanner-surface-container-lowest);
+    border-radius: var(--barcode-scanner-radius-xl);
+    box-shadow: var(--barcode-scanner-shadow);
     display: flex;
     align-items: center;
     padding: 0 1rem;
@@ -2095,7 +2095,7 @@
 }
 
 .ilx-stitch-loc-icon {
-    color: var(--ilx-primary-container);
+    color: var(--barcode-scanner-primary-container);
     margin-right: 12px;
 }
 
@@ -2105,14 +2105,14 @@
     background: transparent;
     font-size: 1rem;
     font-weight: 600;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     appearance: none;
     outline: none;
     height: 100%;
 }
 
 .ilx-stitch-chevron {
-    color: var(--ilx-primary);
+    color: var(--barcode-scanner-primary);
 }
 
 .ilx-stitch-op-cards {
@@ -2120,21 +2120,21 @@
     flex-direction: column;
     gap: 16px;
     margin-bottom: 1.5rem;
-    background: var(--ilx-surface-container-low);
+    background: var(--barcode-scanner-surface-container-low);
     padding: 16px;
-    border-radius: var(--ilx-radius-xl);
+    border-radius: var(--barcode-scanner-radius-xl);
 }
 
 .ilx-stitch-op-card-vertical {
-    background: var(--ilx-surface-container-lowest);
+    background: var(--barcode-scanner-surface-container-lowest);
     border: none;
-    border-radius: var(--ilx-radius-xl);
+    border-radius: var(--barcode-scanner-radius-xl);
     padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    box-shadow: var(--ilx-shadow);
+    box-shadow: var(--barcode-scanner-shadow);
     position: relative;
     overflow: visible;
 }
@@ -2147,7 +2147,7 @@
 .ilx-stitch-op-icon-wrapper .ilx-stitch-op-icon {
     width: 64px;
     height: 64px;
-    border-radius: var(--ilx-radius-lg);
+    border-radius: var(--barcode-scanner-radius-lg);
     font-size: 1.75rem;
     margin-right: 0;
 }
@@ -2155,24 +2155,24 @@
 .ilx-stitch-op-icon {
     width: 48px;
     height: 48px;
-    border-radius: var(--ilx-radius-lg);
+    border-radius: var(--barcode-scanner-radius-lg);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.25rem;
     margin-right: 16px;
-    background: var(--ilx-surface-container-low);
-    color: var(--ilx-primary-container);
+    background: var(--barcode-scanner-surface-container-low);
+    color: var(--barcode-scanner-primary-container);
 }
 
 .ilx-stitch-op-icon.bg-pink-light {
     background: #fce4ec;
-    color: var(--ilx-primary-container);
+    color: var(--barcode-scanner-primary-container);
 }
 
 .ilx-stitch-op-icon.bg-gray-light {
-    background: var(--ilx-surface-container-low);
-    color: var(--ilx-on-surface);
+    background: var(--barcode-scanner-surface-container-low);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-stitch-badge-circle {
@@ -2191,30 +2191,30 @@
 }
 
 .ilx-stitch-badge-circle.badge-dark {
-    background: var(--ilx-primary);
+    background: var(--barcode-scanner-primary);
 }
 
 .ilx-stitch-badge-circle.badge-light {
-    background: var(--ilx-on-surface-variant);
+    background: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-stitch-op-title-large {
     margin: 0 0 4px 0;
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-stitch-op-subtitle-large {
     margin: 0;
     font-size: 0.9rem;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 /* Kinetic Warehouse classes */
 .ilx-kw-screen {
-    background-color: var(--ilx-surface);
-    color: var(--ilx-on-surface);
+    background-color: var(--barcode-scanner-surface);
+    color: var(--barcode-scanner-on-surface);
     font-family: "Inter", "Inter var", sans-serif;
     position: absolute;
     inset: 0;
@@ -2244,14 +2244,14 @@
     margin: 0;
     font-size: 1.125rem;
     font-weight: 800;
-    color: var(--ilx-primary-container);
+    color: var(--barcode-scanner-primary-container);
     letter-spacing: -0.02em;
 }
 
 .ilx-kw-icon-btn {
     background: none;
     border: none;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     font-size: 1.25rem;
     padding: 8px;
 }
@@ -2268,7 +2268,7 @@
 }
 
 .ilx-kw-header--elevated {
-    background: var(--ilx-surface-container-lowest);
+    background: var(--barcode-scanner-surface-container-lowest);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
 }
 
@@ -2280,8 +2280,8 @@
 }
 
 .ilx-kw-search-bar {
-    background: var(--ilx-surface-container-high);
-    border-radius: var(--ilx-radius-xl);
+    background: var(--barcode-scanner-surface-container-high);
+    border-radius: var(--barcode-scanner-radius-xl);
     height: 48px;
     display: flex;
     align-items: center;
@@ -2290,7 +2290,7 @@
 }
 
 .ilx-kw-search-icon {
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     font-size: 1.1rem;
 }
 
@@ -2299,7 +2299,7 @@
     background: transparent;
     flex: 1;
     font-size: 1rem;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     outline: none;
 }
 
@@ -2329,13 +2329,13 @@
 }
 
 .ilx-kw-chip--active {
-    background: var(--ilx-surface-container-low);
-    color: var(--ilx-on-surface);
+    background: var(--barcode-scanner-surface-container-low);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-kw-chip--default {
-    background: var(--ilx-surface-container-high);
-    color: var(--ilx-on-surface-variant);
+    background: var(--barcode-scanner-surface-container-high);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-kw-chip-label {
@@ -2346,9 +2346,9 @@
 .ilx-kw-filter-value-select {
     height: 24px;
     border-radius: 12px;
-    border: 1px solid var(--ilx-outline-variant);
-    background: var(--ilx-surface);
-    color: var(--ilx-on-surface);
+    border: 1px solid var(--barcode-scanner-outline-variant);
+    background: var(--barcode-scanner-surface);
+    color: var(--barcode-scanner-on-surface);
     font-size: 0.75rem;
     padding: 0 8px;
     cursor: pointer;
@@ -2357,9 +2357,9 @@
 .ilx-kw-filter-date-input {
     height: 24px;
     border-radius: 12px;
-    border: 1px solid var(--ilx-outline-variant);
-    background: var(--ilx-surface);
-    color: var(--ilx-on-surface);
+    border: 1px solid var(--barcode-scanner-outline-variant);
+    background: var(--barcode-scanner-surface);
+    color: var(--barcode-scanner-on-surface);
     font-size: 0.75rem;
     padding: 0 8px;
     cursor: pointer;
@@ -2368,9 +2368,9 @@
 .ilx-kw-chip-toggle {
     height: 24px;
     border-radius: 12px;
-    border: 1px solid var(--ilx-outline-variant);
-    background: var(--ilx-surface);
-    color: var(--ilx-on-surface);
+    border: 1px solid var(--barcode-scanner-outline-variant);
+    background: var(--barcode-scanner-surface);
+    color: var(--barcode-scanner-on-surface);
     font-size: 0.75rem;
     padding: 0 8px;
     cursor: pointer;
@@ -2391,8 +2391,8 @@
     display: flex;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    background: var(--ilx-surface-container-lowest);
-    border-bottom: 1px solid var(--ilx-outline-variant);
+    background: var(--barcode-scanner-surface-container-lowest);
+    border-bottom: 1px solid var(--barcode-scanner-outline-variant);
 }
 
 .ilx-kw-tab {
@@ -2403,9 +2403,9 @@
     gap: 0.35rem;
     padding: 0.6rem 0.5rem;
     border: none;
-    border-radius: var(--ilx-radius-default);
+    border-radius: var(--barcode-scanner-radius-default);
     background: transparent;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
@@ -2415,20 +2415,20 @@
 }
 
 .ilx-kw-tab:hover {
-    background: var(--ilx-surface-container-high);
-    color: var(--ilx-on-surface);
+    background: var(--barcode-scanner-surface-container-high);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-kw-tab.active {
-    background: var(--ilx-primary-container);
-    color: var(--ilx-on-primary-container);
+    background: var(--barcode-scanner-primary-container);
+    color: var(--barcode-scanner-on-primary-container);
 }
 
 .ilx-kw-tab-indicator {
     width: 24px;
     height: 3px;
     border-radius: 2px;
-    background: var(--ilx-primary);
+    background: var(--barcode-scanner-primary);
     margin-top: 0.15rem;
 }
 
@@ -2442,7 +2442,7 @@
     left: 0;
     right: 0;
     height: 80px;
-    background: var(--ilx-surface-container-lowest);
+    background: var(--barcode-scanner-surface-container-lowest);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -2458,7 +2458,7 @@
     flex-direction: column;
     align-items: center;
     gap: 4px;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     font-size: 0.7rem;
     font-weight: 600;
     flex: 1;
@@ -2478,22 +2478,22 @@
 }
 
 .ilx-kw-nav-item.active .ilx-kw-nav-pill {
-    background: var(--ilx-primary-container);
-    color: var(--ilx-surface-container-lowest);
+    background: var(--barcode-scanner-primary-container);
+    color: var(--barcode-scanner-surface-container-lowest);
 }
 
 .ilx-kw-nav-item.active span {
-    color: var(--ilx-primary-container);
+    color: var(--barcode-scanner-primary-container);
 }
 
 .ilx-kw-picking-list {
-    background-color: var(--ilx-surface);
+    background-color: var(--barcode-scanner-surface);
     display: flex;
     flex-direction: column;
 }
 
 .ilx-kw-picking-screen {
-    background-color: var(--ilx-surface);
+    background-color: var(--barcode-scanner-surface);
     display: flex;
     flex-direction: column;
 }
@@ -2505,10 +2505,10 @@
 }
 
 .ilx-kw-picking-card {
-    background: var(--ilx-surface-container-lowest);
-    border-radius: var(--ilx-radius-xl);
+    background: var(--barcode-scanner-surface-container-lowest);
+    border-radius: var(--barcode-scanner-radius-xl);
     padding: 1.2rem;
-    box-shadow: var(--ilx-shadow);
+    box-shadow: var(--barcode-scanner-shadow);
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -2538,7 +2538,7 @@
 .ilx-kw-picking-code {
     font-size: 0.8rem;
     font-weight: 800;
-    color: var(--ilx-primary-container);
+    color: var(--barcode-scanner-primary-container);
     letter-spacing: 0.05em;
 }
 
@@ -2546,7 +2546,7 @@
     margin: 0;
     font-size: 1.1rem;
     font-weight: 800;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-kw-status-tag {
@@ -2558,12 +2558,12 @@
 }
 
 .ilx-kw-status-tag--ready {
-    background: var(--ilx-success-bg);
-    color: var(--ilx-success);
+    background: var(--barcode-scanner-success-bg);
+    color: var(--barcode-scanner-success);
 }
 
 .ilx-kw-picking-chevron {
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-kw-divider {
@@ -2587,19 +2587,19 @@
 
 .ilx-kw-meta-icon {
     font-size: 1.1rem;
-    color: var(--ilx-primary-container);
+    color: var(--barcode-scanner-primary-container);
 }
 
 .ilx-kw-meta-text {
     font-size: 0.9rem;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-kw-tab-content .ilx-kw-card {
-    background: var(--ilx-surface-container-lowest);
-    border-radius: var(--ilx-radius-xl);
+    background: var(--barcode-scanner-surface-container-lowest);
+    border-radius: var(--barcode-scanner-radius-xl);
     padding: 1.2rem;
-    box-shadow: var(--ilx-shadow);
+    box-shadow: var(--barcode-scanner-shadow);
 }
 
 .ilx-kw-cta-banner {
@@ -2607,7 +2607,7 @@
     align-items: center;
     gap: 12px;
     padding: 1rem;
-    border-radius: var(--ilx-radius-xl);
+    border-radius: var(--barcode-scanner-radius-xl);
 }
 
 .ilx-kw-cta-icon {
@@ -2688,13 +2688,13 @@
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-kw-title {
     font-size: 1.05rem;
     font-weight: 700;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -2702,7 +2702,7 @@
 
 .ilx-kw-value {
     font-size: 0.95rem;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -2718,7 +2718,7 @@
     justify-content: space-between;
     gap: 0.75rem;
     padding: 6px 0;
-    border-bottom: 1px solid var(--ilx-outline-variant, #f0f0f0);
+    border-bottom: 1px solid var(--barcode-scanner-outline-variant, #f0f0f0);
 
     &:last-child {
         border-bottom: 0;
@@ -2729,7 +2729,7 @@
     flex: 1 1 auto;
     min-width: 0;
     font-size: 0.85rem;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     // A product display name carries its internal reference in brackets before
     // the description, so there is nothing to gain from cutting the tail: wrap
     // it instead. `anywhere` covers references long enough to overflow alone.
@@ -2741,7 +2741,7 @@
     flex: 0 0 auto;
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     // Never shrink and never ellipsize the number.
     white-space: nowrap;
     text-align: right;
@@ -2757,10 +2757,10 @@
 .ilx-kw-select {
     width: 100%;
     padding: 8px 12px;
-    border: 1px solid var(--ilx-outline-variant);
-    border-radius: var(--ilx-radius-md);
-    background: var(--ilx-surface);
-    color: var(--ilx-on-surface);
+    border: 1px solid var(--barcode-scanner-outline-variant);
+    border-radius: var(--barcode-scanner-radius-md);
+    background: var(--barcode-scanner-surface);
+    color: var(--barcode-scanner-on-surface);
     font-size: 0.9rem;
     font-family: inherit;
     outline: none;
@@ -2768,33 +2768,33 @@
 }
 
 .ilx-kw-select:focus {
-    border-color: var(--ilx-primary);
+    border-color: var(--barcode-scanner-primary);
 }
 
 .ilx-kw-chevron-right {
     position: absolute;
     right: 10px;
     pointer-events: none;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     font-size: 0.8rem;
 }
 
 .ilx-kw-btn-ghost {
     background: none;
-    border: 1px solid var(--ilx-outline-variant);
-    border-radius: var(--ilx-radius-md);
+    border: 1px solid var(--barcode-scanner-outline-variant);
+    border-radius: var(--barcode-scanner-radius-md);
     padding: 12px 16px;
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     cursor: pointer;
     transition: all 0.2s;
     font-family: inherit;
 }
 
 .ilx-kw-btn-ghost:hover {
-    background: var(--ilx-surface-container-low);
-    color: var(--ilx-on-surface);
+    background: var(--barcode-scanner-surface-container-low);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-kw-group-wrapper {
@@ -2817,7 +2817,7 @@
 .ilx-kw-group-indicator {
     width: 4px;
     height: 24px;
-    background: var(--ilx-primary-container);
+    background: var(--barcode-scanner-primary-container);
     border-radius: 2px;
 }
 
@@ -2825,12 +2825,12 @@
     margin: 0;
     font-size: 1.05rem;
     font-weight: 800;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-kw-group-badge {
-    background: var(--ilx-surface-container-low);
-    color: var(--ilx-primary-container);
+    background: var(--barcode-scanner-surface-container-low);
+    color: var(--barcode-scanner-primary-container);
     padding: 4px 12px;
     border-radius: 8px;
     font-weight: 800;
@@ -2849,8 +2849,8 @@
 
 /* Employee selector v2 */
 .ilx-emp-v2-screen {
-    background-color: var(--ilx-surface);
-    color: var(--ilx-on-surface);
+    background-color: var(--barcode-scanner-surface);
+    color: var(--barcode-scanner-on-surface);
     font-family: "Inter", "Inter var", sans-serif;
     position: absolute;
     inset: 0;
@@ -2870,7 +2870,7 @@
 .ilx-emp-v2-back-btn {
     background: none;
     border: none;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     font-size: 1.25rem;
     min-height: 48px;
     min-width: 48px;
@@ -2882,7 +2882,7 @@
 .ilx-emp-v2-header-title {
     font-size: 1.125rem;
     font-weight: 700;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     margin: 0;
 }
 
@@ -2898,8 +2898,8 @@
 
 .ilx-emp-v2-search-box {
     position: relative;
-    background: var(--ilx-surface-container-high);
-    border-radius: var(--ilx-radius-xl);
+    background: var(--barcode-scanner-surface-container-high);
+    border-radius: var(--barcode-scanner-radius-xl);
     height: 48px;
     display: flex;
     align-items: center;
@@ -2909,7 +2909,7 @@
 }
 
 .ilx-emp-v2-search-icon {
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     font-size: 1.1rem;
 }
 
@@ -2918,14 +2918,14 @@
     background: transparent;
     flex: 1;
     font-size: 1rem;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     outline: none;
 }
 
 .ilx-emp-v2-section-title {
     font-size: 0.75rem;
     font-weight: 700;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     letter-spacing: 0.05em;
     margin-bottom: 0.75rem;
 }
@@ -2941,16 +2941,16 @@
     align-items: center;
     gap: 12px;
     padding: 12px 16px;
-    background: var(--ilx-surface-container-lowest);
-    border-radius: var(--ilx-radius-xl);
-    box-shadow: var(--ilx-shadow);
+    background: var(--barcode-scanner-surface-container-lowest);
+    border-radius: var(--barcode-scanner-radius-xl);
+    box-shadow: var(--barcode-scanner-shadow);
     cursor: pointer;
     transition: transform 0.1s ease;
     border: none;
 }
 
 .ilx-emp-v2-card.selected {
-    border: 2px solid var(--ilx-primary-container);
+    border: 2px solid var(--barcode-scanner-primary-container);
     padding: 10px 14px;
 }
 
@@ -2962,9 +2962,9 @@
 .ilx-emp-v2-avatar {
     width: 48px;
     height: 48px;
-    border-radius: var(--ilx-radius-lg);
+    border-radius: var(--barcode-scanner-radius-lg);
     overflow: hidden;
-    background: var(--ilx-surface-container-high);
+    background: var(--barcode-scanner-surface-container-high);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2979,7 +2979,7 @@
 .ilx-emp-v2-avatar-placeholder {
     font-weight: 700;
     font-size: 1.1rem;
-    color: var(--ilx-primary);
+    color: var(--barcode-scanner-primary);
 }
 
 .ilx-emp-v2-info {
@@ -2992,12 +2992,12 @@
 
 .ilx-emp-v2-name {
     font-weight: 700;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-emp-v2-role {
     font-size: 0.85rem;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-emp-v2-dot-sep {
@@ -3005,12 +3005,12 @@
 }
 
 .ilx-emp-v2-icon-selected {
-    color: var(--ilx-primary-container);
+    color: var(--barcode-scanner-primary-container);
     font-size: 1.25rem;
 }
 
 .ilx-emp-v2-icon-chevron {
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-emp-v2-footer {
@@ -3024,8 +3024,8 @@
     width: 100%;
     padding: 1rem;
     border: none;
-    border-radius: var(--ilx-radius-xl);
-    background: var(--ilx-primary-container);
+    border-radius: var(--barcode-scanner-radius-xl);
+    background: var(--barcode-scanner-primary-container);
     color: white;
     font-weight: 700;
     font-size: 1rem;
@@ -3042,13 +3042,13 @@
     inset: 0;
     display: flex;
     flex-direction: column;
-    background-color: var(--ilx-surface, #f9f9f9);
+    background-color: var(--barcode-scanner-surface, #f9f9f9);
     font-family:
         "Inter",
         "Inter var",
         -apple-system,
         sans-serif;
-    color: var(--ilx-on-surface, #1a1c1c);
+    color: var(--barcode-scanner-on-surface, #1a1c1c);
     overflow: hidden;
 }
 
@@ -3066,7 +3066,7 @@
     margin: 0;
     font-size: 1.125rem;
     font-weight: 700;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     text-align: center;
     letter-spacing: -0.01em;
 }
@@ -3093,7 +3093,7 @@
 .ilx-v2-back-btn {
     background: none;
     border: none;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     font-size: 1.25rem;
     display: flex;
     align-items: center;
@@ -3104,7 +3104,7 @@
     flex: 1;
     font-size: 1.125rem;
     font-weight: 700;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     margin: 0;
     word-break: break-word;
 }
@@ -3128,10 +3128,10 @@
 }
 
 .ilx-mw-v2-card {
-    background: var(--ilx-surface-container-lowest);
-    border-radius: var(--ilx-radius-xl);
+    background: var(--barcode-scanner-surface-container-lowest);
+    border-radius: var(--barcode-scanner-radius-xl);
     padding: 1.25rem;
-    box-shadow: var(--ilx-shadow);
+    box-shadow: var(--barcode-scanner-shadow);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -3146,7 +3146,7 @@
 .ilx-mw-v2-eyebrow {
     font-size: 0.75rem;
     font-weight: 700;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -3155,11 +3155,11 @@
     margin: 0.25rem 0 0;
     font-size: 1rem;
     font-weight: 700;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-mw-v2-badge-todo {
-    background: var(--ilx-warning-bg);
+    background: var(--barcode-scanner-warning-bg);
     color: #e65100;
     padding: 4px 10px;
     border-radius: 6px;
@@ -3169,14 +3169,14 @@
 
 .ilx-mw-v2-progress-bg {
     height: 8px;
-    background: var(--ilx-surface-container-high);
+    background: var(--barcode-scanner-surface-container-high);
     border-radius: 4px;
     overflow: hidden;
 }
 
 .ilx-mw-v2-progress-fill {
     height: 100%;
-    background: var(--ilx-primary);
+    background: var(--barcode-scanner-primary);
     border-radius: 4px;
     transition: width 0.3s ease;
 }
@@ -3185,7 +3185,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 0.85rem;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-mw-v2-segmented {
@@ -3197,9 +3197,9 @@
     flex: 1;
     padding: 0.75rem;
     border: none;
-    border-radius: var(--ilx-radius-default);
-    background: var(--ilx-surface-container-high);
-    color: var(--ilx-on-surface-variant);
+    border-radius: var(--barcode-scanner-radius-default);
+    background: var(--barcode-scanner-surface-container-high);
+    color: var(--barcode-scanner-on-surface-variant);
     font-weight: 600;
     font-size: 0.85rem;
     cursor: pointer;
@@ -3207,7 +3207,7 @@
 }
 
 .ilx-mw-v2-segment-btn.active {
-    background: var(--ilx-primary-container);
+    background: var(--barcode-scanner-primary-container);
     color: white;
 }
 
@@ -3220,21 +3220,21 @@
 .ilx-v2-label {
     font-size: 0.82rem;
     font-weight: 700;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-mw-v2-input-box {
     display: flex;
     align-items: center;
     gap: 12px;
-    background: var(--ilx-surface-container-low);
-    border-radius: var(--ilx-radius-xl);
+    background: var(--barcode-scanner-surface-container-low);
+    border-radius: var(--barcode-scanner-radius-xl);
     padding: 0 1rem;
     height: 56px;
 }
 
 .ilx-mw-v2-input-icon {
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     font-size: 1.1rem;
 }
 
@@ -3243,13 +3243,13 @@
     border: none;
     background: transparent;
     font-size: 1rem;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     outline: none;
     height: 100%;
 }
 
 .ilx-mw-v2-input option {
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-mw-v2-qty-row {
@@ -3261,10 +3261,10 @@
 .ilx-mw-v2-qty-btn {
     width: 48px;
     height: 48px;
-    border-radius: var(--ilx-radius-md);
+    border-radius: var(--barcode-scanner-radius-md);
     border: none;
-    background: var(--ilx-surface-container-high);
-    color: var(--ilx-on-surface);
+    background: var(--barcode-scanner-surface-container-high);
+    color: var(--barcode-scanner-on-surface);
     font-size: 1.25rem;
     display: flex;
     align-items: center;
@@ -3275,10 +3275,10 @@
 .ilx-mw-v2-qty-input {
     flex: 1;
     height: 56px;
-    border-radius: var(--ilx-radius-md);
+    border-radius: var(--barcode-scanner-radius-md);
     border: none;
-    background: var(--ilx-surface-container-low);
-    color: var(--ilx-on-surface);
+    background: var(--barcode-scanner-surface-container-low);
+    color: var(--barcode-scanner-on-surface);
     font-size: 1.35rem;
     font-weight: 700;
     text-align: center;
@@ -3286,7 +3286,7 @@
 }
 
 .ilx-mw-v2-qty-btn--fulfill {
-    background: var(--ilx-primary-container);
+    background: var(--barcode-scanner-primary-container);
     color: white;
     font-size: 0.85rem;
     font-weight: 700;
@@ -3307,8 +3307,8 @@
     flex: 1;
     padding: 1rem;
     border: none;
-    border-radius: var(--ilx-radius-xl);
-    background: var(--ilx-primary-container);
+    border-radius: var(--barcode-scanner-radius-xl);
+    background: var(--barcode-scanner-primary-container);
     color: white;
     font-weight: 700;
     font-size: 1rem;
@@ -3319,9 +3319,9 @@
     flex: 1;
     padding: 1rem;
     border: 1px solid rgba(202, 196, 208, 0.2);
-    border-radius: var(--ilx-radius-xl);
+    border-radius: var(--barcode-scanner-radius-xl);
     background: transparent;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     font-weight: 600;
     font-size: 1rem;
     min-height: 56px;
@@ -3339,7 +3339,7 @@
 .ilx-tx-v2-icon {
     width: 24px;
     font-size: 1.1rem;
-    color: var(--ilx-primary-container);
+    color: var(--barcode-scanner-primary-container);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3350,11 +3350,11 @@
     flex: 1;
     font-weight: 500;
     font-size: 1rem;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
 }
 
 .ilx-tx-v2-chevron {
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     font-size: 0.9rem;
 }
 
@@ -3367,7 +3367,7 @@
 
 .ilx-tx-v2-items-badge {
     background: #8d6e2e;
-    color: var(--ilx-surface-container-lowest);
+    color: var(--barcode-scanner-surface-container-lowest);
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0.2rem 0.6rem;
@@ -3381,7 +3381,7 @@
 }
 
 .ilx-tx-v2-line-card {
-    background: var(--ilx-surface-container-lowest);
+    background: var(--barcode-scanner-surface-container-lowest);
     border-radius: 12px;
     padding: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
@@ -3395,7 +3395,7 @@
     position: absolute;
     top: -8px;
     right: -8px;
-    background: var(--ilx-surface-container-lowest);
+    background: var(--barcode-scanner-surface-container-lowest);
     color: #d9534f;
     border: none;
     border-radius: 50%;
@@ -3418,7 +3418,7 @@
 .ilx-tx-v2-line-name {
     font-weight: 700;
     font-size: 1.05rem;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     padding-right: 1rem;
     flex: 1;
 }
@@ -3438,7 +3438,7 @@
     border: none;
     text-align: right;
     font-weight: 800;
-    color: var(--ilx-primary-container);
+    color: var(--barcode-scanner-primary-container);
     font-size: 1.1rem;
     outline: none;
     padding: 0;
@@ -3453,7 +3453,7 @@
 .ilx-tx-v2-qty-unit {
     font-size: 0.75rem;
     font-weight: 600;
-    color: var(--ilx-primary-container);
+    color: var(--barcode-scanner-primary-container);
 }
 
 .ilx-tx-v2-line-lot {
@@ -3474,7 +3474,7 @@
 
 .ilx-tx-v2-line-divider {
     height: 1px;
-    background: var(--ilx-surface-container-low);
+    background: var(--barcode-scanner-surface-container-low);
     margin: 0.2rem 0;
 }
 
@@ -3487,7 +3487,7 @@
 }
 
 .ilx-tx-v2-line-bottom i {
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-qi-v2-content {
@@ -3507,13 +3507,13 @@
 .ilx-qi-v2-intro h2 {
     font-size: 1.8rem;
     font-weight: 800;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     margin-bottom: 0.5rem;
 }
 
 .ilx-qi-v2-intro p {
     font-size: 0.95rem;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     margin: 0;
 }
 
@@ -3524,7 +3524,7 @@
 }
 
 .ilx-qi-v2-card {
-    background: var(--ilx-surface-container-lowest);
+    background: var(--barcode-scanner-surface-container-lowest);
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
@@ -3556,14 +3556,14 @@
 .ilx-qi-v2-scan-title {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
     margin-bottom: 1.5rem;
     text-align: center;
 }
 
 .ilx-qi-v2-scan-subtitle {
     font-size: 0.9rem;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -3579,18 +3579,18 @@
     width: 100%;
     max-width: 260px;
     padding: 0.65rem 1rem;
-    border: 1px solid var(--ilx-outline-variant);
+    border: 1px solid var(--barcode-scanner-outline-variant);
     border-radius: 10px;
     text-align: center;
     font-size: 0.95rem;
-    color: var(--ilx-on-surface);
-    background: var(--ilx-surface);
+    color: var(--barcode-scanner-on-surface);
+    background: var(--barcode-scanner-surface);
     outline: none;
     margin: 0 auto;
 }
 
 .ilx-qi-v2-gs1-input:focus {
-    border-color: var(--ilx-primary);
+    border-color: var(--barcode-scanner-primary);
 }
 
 .ilx-qi-v2-barcode-btn {
@@ -3612,7 +3612,7 @@
 }
 
 .ilx-qi-v2-gs1-input::placeholder {
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
 .ilx-qi-v2-numpad {
@@ -3633,9 +3633,9 @@
     height: 64px;
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--ilx-on-surface);
-    background: var(--ilx-surface-container-lowest);
-    border: 2px solid var(--ilx-on-surface);
+    color: var(--barcode-scanner-on-surface);
+    background: var(--barcode-scanner-surface-container-lowest);
+    border: 2px solid var(--barcode-scanner-on-surface);
     border-radius: 8px;
     display: flex;
     align-items: center;
