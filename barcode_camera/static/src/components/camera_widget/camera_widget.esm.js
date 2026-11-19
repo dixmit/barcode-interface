@@ -40,8 +40,8 @@ function readWithCamera(env) {
  * It plugs into the base app through the `barcode_app_widgets` registry — no
  * patching of BarcodeScannerApp.
  */
-export class CameraFab extends Component {
-    static template = "barcode_camera.CameraFab";
+export class CameraWidget extends Component {
+    static template = "barcode_camera.CameraWidget";
     static props = {};
 
     setup() {
@@ -82,4 +82,4 @@ export class CameraFab extends Component {
     }
 }
 
-barcodeAppWidgets.add("camera_fab", {component: CameraFab});
+barcodeAppWidgets.add("camera_widget", {component: CameraWidget});
