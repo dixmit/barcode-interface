@@ -11,7 +11,7 @@ barcodeMenuTiles.add(
     {
         label: _t("Inventory Adjustment"),
         icon: "fa-balance-scale",
-        iconClass: "ilx-icon-adjustment",
+        iconClass: "barcode-scanner-icon-adjustment",
         action: ({navigate}) => navigate("inventory_location"),
     },
     {sequence: 40}

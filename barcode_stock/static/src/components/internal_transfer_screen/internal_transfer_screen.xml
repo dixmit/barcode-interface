@@ -2,122 +2,125 @@
 <templates xml:space="preserve">
     <t t-name="barcode_scanner.InternalTransferScreen">
         <div class="barcode-scanner-screen">
-            <header class="ilx-v2-header">
-                <button class="ilx-v2-back-button" t-on-click="goBack">
+            <header class="barcode-scanner-screen-header">
+                <button class="barcode-scanner-screen-back-button" t-on-click="goBack">
                     <i class="fa fa-arrow-left" />
                 </button>
-                <h1 class="ilx-v2-header-title">Internal Transfer</h1>
+                <h1 class="barcode-scanner-screen-header-title">Internal Transfer</h1>
                 <div style="width: 40px;" />
             </header>
 
-            <div class="ilx-v2-main">
-                <div class="ilx-v2-field-group">
-                    <div class="ilx-v2-label">ORIGIN LOCATION</div>
+            <div class="barcode-scanner-screen-main">
+                <div class="barcode-scanner-screen-field-group">
+                    <div class="barcode-scanner-screen-label">ORIGIN LOCATION</div>
                     <div
-                        class="ilx-tx-v2-select-card"
+                        class="barcode-scanner-transfer-select-card"
                         t-on-click="selectOriginLocation"
                     >
-                        <div class="ilx-tx-v2-icon">
+                        <div class="barcode-scanner-transfer-icon">
                             <i class="fa fa-map-marker" />
                         </div>
-                        <div class="ilx-tx-v2-text">
+                        <div class="barcode-scanner-transfer-text">
                             <t t-if="state.origin_location">
                                 <t t-esc="state.origin_location.display_name" />
                             </t>
                             <t t-else="">Select origin</t>
                         </div>
-                        <div class="ilx-tx-v2-chevron">
+                        <div class="barcode-scanner-transfer-chevron">
                             <i class="fa fa-chevron-down" />
                         </div>
                     </div>
                 </div>
 
-                <div class="ilx-v2-field-group">
-                    <div class="ilx-v2-label">DESTINATION LOCATION</div>
+                <div class="barcode-scanner-screen-field-group">
+                    <div class="barcode-scanner-screen-label">DESTINATION LOCATION</div>
                     <div
-                        class="ilx-tx-v2-select-card"
+                        class="barcode-scanner-transfer-select-card"
                         t-on-click="selectDestinationLocation"
                     >
-                        <div class="ilx-tx-v2-icon">
+                        <div class="barcode-scanner-transfer-icon">
                             <i class="fa fa-sign-in" />
                         </div>
-                        <div class="ilx-tx-v2-text">
+                        <div class="barcode-scanner-transfer-text">
                             <t t-if="state.destination_location">
                                 <t t-esc="state.destination_location.display_name" />
                             </t>
                             <t t-else="">Select destination</t>
                         </div>
-                        <div class="ilx-tx-v2-chevron">
+                        <div class="barcode-scanner-transfer-chevron">
                             <i class="fa fa-chevron-down" />
                         </div>
                     </div>
                 </div>
 
-                <div class="ilx-v2-field-group">
-                    <div class="ilx-v2-label">RESPONSIBLE</div>
-                    <div class="ilx-tx-v2-select-card" t-on-click="selectResponsible">
-                        <div class="ilx-tx-v2-icon">
+                <div class="barcode-scanner-screen-field-group">
+                    <div class="barcode-scanner-screen-label">RESPONSIBLE</div>
+                    <div
+                        class="barcode-scanner-transfer-select-card"
+                        t-on-click="selectResponsible"
+                    >
+                        <div class="barcode-scanner-transfer-icon">
                             <i class="fa fa-user-o" />
                         </div>
-                        <div class="ilx-tx-v2-text">
+                        <div class="barcode-scanner-transfer-text">
                             <t t-if="state.responsible">
                                 <t t-esc="state.responsible.name" />
                             </t>
                             <t t-else="">Select responsible</t>
                         </div>
-                        <div class="ilx-tx-v2-chevron">
+                        <div class="barcode-scanner-transfer-chevron">
                             <i class="fa fa-chevron-down" />
                         </div>
                     </div>
                 </div>
 
-                <div class="ilx-v2-field-group">
-                    <div class="ilx-tx-v2-section-header">
+                <div class="barcode-scanner-screen-field-group">
+                    <div class="barcode-scanner-transfer-section-header">
                         <div
-                            class="ilx-v2-label"
+                            class="barcode-scanner-screen-label"
                             style="margin:0;"
                         >DETAILED OPERATIONS</div>
-                        <div class="ilx-tx-v2-items-badge">
+                        <div class="barcode-scanner-transfer-items-badge">
                             <t t-esc="state.lines.length" /> ITEM<t
                             t-if="state.lines.length !== 1"
                         >S</t>
                         </div>
                     </div>
 
-                    <div class="ilx-tx-v2-lines-container">
+                    <div class="barcode-scanner-transfer-lines-container">
                         <t
                             t-foreach="state.lines"
                             t-as="line"
                             t-key="line.product_id + '_' + (line.lot_id || '')"
                         >
-                            <div class="ilx-tx-v2-line-card">
+                            <div class="barcode-scanner-transfer-line-card">
                                 <button
-                                    class="ilx-tx-v2-line-delete"
+                                    class="barcode-scanner-transfer-line-delete"
                                     t-on-click="() => this.removeLine(line)"
                                 >
                                     <i class="fa fa-times" />
                                 </button>
-                                <div class="ilx-tx-v2-line-top">
-                                    <div class="ilx-tx-v2-line-name">
+                                <div class="barcode-scanner-transfer-line-top">
+                                    <div class="barcode-scanner-transfer-line-name">
                                         <t t-esc="line.product_name" />
                                     </div>
-                                    <div class="ilx-tx-v2-quantity-pill">
+                                    <div class="barcode-scanner-transfer-quantity-pill">
                                         <input
-                                            class="ilx-tx-v2-quantity-input"
+                                            class="barcode-scanner-transfer-quantity-input"
                                             type="number"
                                             t-model="line.qty"
                                             min="1"
                                             t-att-readonly="line.tracking === 'serial'"
                                         />
                                         <span
-                                            class="ilx-tx-v2-quantity-unit"
+                                            class="barcode-scanner-transfer-quantity-unit"
                                         >UNITS</span>
                                     </div>
                                 </div>
-                                <div class="ilx-tx-v2-line-lot">
+                                <div class="barcode-scanner-transfer-line-lot">
                                     <t t-if="line.tracking !== 'none'">
                                         <select
-                                            class="ilx-tx-v2-lot-select"
+                                            class="barcode-scanner-transfer-lot-select"
                                             t-model="line.lot_id"
                                             t-on-change="(ev) => this.onLotChanged(line, ev)"
                                         >
@@ -138,9 +141,9 @@
                                         <t t-esc="line.lot_name || 'No lot'" />
                                     </t>
                                 </div>
-                                <div class="ilx-tx-v2-line-divider" />
+                                <div class="barcode-scanner-transfer-line-divider" />
                                 <div
-                                    class="ilx-tx-v2-line-bottom"
+                                    class="barcode-scanner-transfer-line-bottom"
                                     style="display: flex; justify-content: space-between; align-items: center;"
                                 >
                                     <span><i class="fa fa-cube" /> Reserved: <t
@@ -161,7 +164,7 @@
                     </div>
 
                     <button
-                        class="ilx-v2-button-primary"
+                        class="barcode-scanner-screen-button-primary"
                         style="margin-top:1rem; background: #ffffff; color: #111827; border: 1px solid #e5e7eb; box-shadow: none;"
                         t-on-click="addProduct"
                     >
@@ -170,9 +173,12 @@
                 </div>
             </div>
 
-            <footer class="ilx-v2-footer" style="display:flex; gap:1rem;">
+            <footer
+                class="barcode-scanner-screen-footer"
+                style="display:flex; gap:1rem;"
+            >
                 <button
-                    class="ilx-v2-button-primary"
+                    class="barcode-scanner-screen-button-primary"
                     style="background: #ffffff; color: #111827; border: 1px solid #e5e7eb; box-shadow: none;"
                     t-on-click="checkAvailability"
                     t-att-disabled="state.isCheckingAvailability or state.isValidating"
@@ -181,7 +187,7 @@
                     <span>CHECK</span>
                 </button>
                 <button
-                    class="ilx-v2-button-primary"
+                    class="barcode-scanner-screen-button-primary"
                     t-on-click="validateTransfer"
                     t-att-disabled="state.isValidating or state.isCheckingAvailability"
                 >

@@ -1025,9 +1025,9 @@
     -webkit-overflow-scrolling: touch;
 }
 
-/* ===== ilx- Design System Classes ===== */
+/* ===== barcode-scanner- Design System Classes ===== */
 
-.ilx-no-line,
+.barcode-scanner-no-line,
 .barcode-card,
 .picking-card,
 .move-card,
@@ -1037,7 +1037,7 @@
     border: 0;
 }
 
-.ilx-touch-target,
+.barcode-scanner-touch-target,
 .primary-action-btn,
 .exit-action-btn,
 .action-btn,
@@ -1052,7 +1052,7 @@
     min-height: var(--barcode-touch-target);
 }
 
-.ilx-gradient-background,
+.barcode-scanner-gradient-background,
 .primary-action-btn,
 .validate,
 .tab-picking.active {
@@ -1063,7 +1063,7 @@
     );
 }
 
-.ilx-gradient-text {
+.barcode-scanner-gradient-text {
     background: linear-gradient(
         135deg,
         var(--barcode-primary-start),
@@ -1074,7 +1074,7 @@
     color: transparent;
 }
 
-.ilx-glass,
+.barcode-scanner-glass,
 .barcode-card,
 .picking-card,
 .move-card,
@@ -1135,21 +1135,21 @@
     }
 }
 
-.ilx-queue-shell {
+.barcode-scanner-picking-list-shell {
     width: 100%;
     max-width: 680px;
     border-radius: 24px;
     padding: 1.25rem;
 }
 
-.ilx-queue-header {
+.barcode-scanner-picking-list-header {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
     margin-bottom: 1rem;
 }
 
-.ilx-queue-back {
+.barcode-scanner-picking-list-back {
     min-width: 48px;
     min-height: 48px;
     display: inline-flex;
@@ -1162,12 +1162,12 @@
     background: var(--barcode-scanner-surface-container-low);
 }
 
-.ilx-queue-header-copy {
+.barcode-scanner-picking-list-header-copy {
     flex: 1;
     min-width: 0;
 }
 
-.ilx-queue-header-eyebrow {
+.barcode-scanner-picking-list-header-eyebrow {
     display: block;
     margin-bottom: 0.2rem;
     font-size: 0.72rem;
@@ -1177,25 +1177,25 @@
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-queue-header-title {
+.barcode-scanner-picking-list-header-title {
     margin: 0;
     color: var(--barcode-scanner-on-surface);
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-.ilx-queue-header-subtitle {
+.barcode-scanner-picking-list-header-subtitle {
     margin: 0.35rem 0 0;
     color: var(--barcode-scanner-on-surface-variant);
     font-size: 0.95rem;
 }
 
-.ilx-queue-search {
+.barcode-scanner-picking-list-search {
     position: relative;
     margin-bottom: 1rem;
 }
 
-.ilx-queue-search-icon {
+.barcode-scanner-picking-list-search-icon {
     position: absolute;
     top: 50%;
     left: 1rem;
@@ -1203,10 +1203,10 @@
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-queue-search-input,
-.ilx-filter-date,
-.ilx-filter-select,
-.ilx-filter-reset {
+.barcode-scanner-picking-list-search-input,
+.barcode-scanner-filter-date,
+.barcode-scanner-filter-select,
+.barcode-scanner-filter-reset {
     min-height: 52px;
     border-radius: 16px;
     border: none;
@@ -1214,22 +1214,22 @@
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-queue-search-input {
+.barcode-scanner-picking-list-search-input {
     padding-left: 2.8rem;
 }
 
-.ilx-queue-search-input::placeholder {
+.barcode-scanner-picking-list-search-input::placeholder {
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-queue-summary-grid {
+.barcode-scanner-picking-list-summary-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.75rem;
     margin-bottom: 1rem;
 }
 
-.ilx-summary-card {
+.barcode-scanner-summary-card {
     padding: 0.95rem 1rem;
     border-radius: 18px;
     background: var(--barcode-scanner-surface-container-low);
@@ -1239,41 +1239,41 @@
     gap: 0.2rem;
 }
 
-.ilx-summary-card-success {
+.barcode-scanner-summary-card-success {
     background: var(--barcode-scanner-success-bg);
 }
 
-.ilx-summary-card-info {
+.barcode-scanner-summary-card-info {
     background: var(--barcode-scanner-info-bg);
 }
 
-.ilx-summary-card-warning {
+.barcode-scanner-summary-card-warning {
     background: var(--barcode-scanner-warning-bg);
 }
 
-.ilx-summary-card-label {
+.barcode-scanner-summary-card-label {
     font-size: 0.78rem;
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-summary-card-value {
+.barcode-scanner-summary-card-value {
     font-size: 1.35rem;
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-queue-filters {
+.barcode-scanner-picking-list-filters {
     display: grid;
     gap: 0.75rem;
     margin-bottom: 1rem;
 }
 
-.ilx-queue-filter-row {
+.barcode-scanner-picking-list-filter-row {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 0.75rem;
 }
 
-.ilx-filter-chip {
+.barcode-scanner-filter-chip {
     min-height: 52px;
     border: none;
     border-radius: 16px;
@@ -1286,42 +1286,42 @@
     font-weight: 600;
 }
 
-.ilx-filter-chip.is-active {
+.barcode-scanner-filter-chip.is-active {
     background: var(--barcode-scanner-primary-container);
     color: var(--barcode-scanner-surface-container-lowest);
 }
 
-.ilx-filter-select option {
+.barcode-scanner-filter-select option {
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-filter-reset {
+.barcode-scanner-filter-reset {
     font-weight: 600;
 }
 
-.ilx-group-bar {
+.barcode-scanner-group-bar {
     align-items: center;
     margin-bottom: 1rem;
 }
 
-.ilx-group-chip {
+.barcode-scanner-group-chip {
     background: var(--barcode-scanner-surface-container-low);
 }
 
-.ilx-group-add {
+.barcode-scanner-group-add {
     margin-left: auto;
 }
 
-.ilx-queue-group {
+.barcode-scanner-picking-list-group {
     margin-bottom: 0.9rem;
 }
 
-.ilx-queue-group-level-1,
-.ilx-queue-group-level-2 {
+.barcode-scanner-picking-list-group-level-1,
+.barcode-scanner-picking-list-group-level-2 {
     margin-left: 0.65rem;
 }
 
-.ilx-queue-group-header {
+.barcode-scanner-picking-list-group-header {
     width: 100%;
     display: flex;
     align-items: center;
@@ -1334,77 +1334,77 @@
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-queue-group-copy {
+.barcode-scanner-picking-list-group-copy {
     display: flex;
     flex-direction: column;
     gap: 0.15rem;
     align-items: flex-start;
 }
 
-.ilx-queue-group-eyebrow,
-.ilx-queue-group-summary {
+.barcode-scanner-picking-list-group-eyebrow,
+.barcode-scanner-picking-list-group-summary {
     font-size: 0.78rem;
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-queue-group-title {
+.barcode-scanner-picking-list-group-title {
     font-size: 1rem;
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-queue-group-chevron {
+.barcode-scanner-picking-list-group-chevron {
     transition: transform 0.2s ease;
 }
 
-.ilx-queue-group-chevron.is-open {
+.barcode-scanner-picking-list-group-chevron.is-open {
     transform: rotate(90deg);
 }
 
-.ilx-queue-group-body {
+.barcode-scanner-picking-list-group-body {
     margin-top: 0.75rem;
     display: grid;
     gap: 0.75rem;
 }
 
-.ilx-queue-card {
+.barcode-scanner-picking-list-card {
     padding: 1rem;
     border-radius: 20px;
     display: grid;
     gap: 0.8rem;
 }
 
-.ilx-queue-card-top,
-.ilx-queue-card-meta-row,
-.ilx-queue-card-status {
+.barcode-scanner-picking-list-card-top,
+.barcode-scanner-picking-list-card-meta-row,
+.barcode-scanner-picking-list-card-status {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 0.75rem;
 }
 
-.ilx-queue-card-headline {
+.barcode-scanner-picking-list-card-headline {
     display: grid;
     gap: 0.2rem;
     min-width: 0;
 }
 
-.ilx-queue-card-code {
+.barcode-scanner-picking-list-card-code {
     color: var(--barcode-scanner-on-surface);
     font-size: 1rem;
 }
 
-.ilx-queue-card-partner {
+.barcode-scanner-picking-list-card-partner {
     color: var(--barcode-scanner-on-surface-variant);
     font-size: 0.9rem;
 }
 
-.ilx-queue-card-arrow {
+.barcode-scanner-picking-list-card-arrow {
     color: var(--barcode-scanner-on-surface-variant);
     padding-top: 0.3rem;
 }
 
-.ilx-state-pill,
-.ilx-queue-meta-pill {
+.barcode-scanner-state-pill,
+.barcode-scanner-picking-list-meta-pill {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
@@ -1415,55 +1415,55 @@
     font-weight: 600;
 }
 
-.ilx-state-pill {
+.barcode-scanner-state-pill {
     background: var(--barcode-scanner-surface-container-high);
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-state-pill-assigned {
+.barcode-scanner-state-pill-assigned {
     background: var(--barcode-scanner-success-bg);
     color: var(--barcode-scanner-success);
 }
 
-.ilx-state-pill-confirmed,
-.ilx-state-pill-waiting {
+.barcode-scanner-state-pill-confirmed,
+.barcode-scanner-state-pill-waiting {
     background: var(--barcode-scanner-warning-bg);
     color: var(--barcode-scanner-warning);
 }
 
-.ilx-state-pill-draft {
+.barcode-scanner-state-pill-draft {
     background: var(--barcode-scanner-surface-container-high);
 }
 
-.ilx-queue-meta-pill {
+.barcode-scanner-picking-list-meta-pill {
     background: var(--barcode-scanner-surface-container-low);
     color: var(--barcode-scanner-on-surface);
     flex-wrap: wrap;
 }
 
-.ilx-queue-meta-pill.is-warning {
+.barcode-scanner-picking-list-meta-pill.is-warning {
     background: var(--barcode-scanner-warning-bg);
     color: var(--barcode-scanner-warning);
 }
 
-.ilx-queue-meta-pill.is-muted {
+.barcode-scanner-picking-list-meta-pill.is-muted {
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-queue-meta-pill.is-success {
+.barcode-scanner-picking-list-meta-pill.is-success {
     background: var(--barcode-scanner-success-bg);
     color: var(--barcode-scanner-success);
 }
 
-.ilx-queue-card-meta-row.is-secondary {
+.barcode-scanner-picking-list-card-meta-row.is-secondary {
     flex-wrap: wrap;
 }
 
-.ilx-queue-empty-state {
+.barcode-scanner-picking-list-empty-state {
     margin-top: 0.5rem;
 }
 
-.ilx-queue-footer {
+.barcode-scanner-picking-list-footer {
     margin-top: 1rem;
 }
 
@@ -1474,7 +1474,7 @@
         calc(env(safe-area-inset-bottom) + 7rem);
 }
 
-.ilx-picking-shell {
+.barcode-scanner-picking-shell {
     width: 100%;
     max-width: 720px;
     border-radius: 28px;
@@ -1490,7 +1490,7 @@
     -webkit-overflow-scrolling: touch;
 }
 
-.ilx-move-shell {
+.barcode-scanner-move-shell {
     width: 100%;
     max-width: 720px;
     border-radius: 28px;
@@ -1498,57 +1498,57 @@
     margin-bottom: 2rem;
 }
 
-.ilx-move-header {
+.barcode-scanner-move-header {
     margin-bottom: 1rem;
 }
 
-.ilx-move-title {
+.barcode-scanner-move-title {
     word-break: break-word;
 }
 
-.ilx-move-tracking-pill {
+.barcode-scanner-move-tracking-pill {
     white-space: nowrap;
 }
 
-.ilx-move-summary-grid {
+.barcode-scanner-move-summary-grid {
     margin-bottom: 1rem;
 }
 
-.ilx-move-mode-tabs {
+.barcode-scanner-move-mode-tabs {
     margin-bottom: 1rem;
 }
 
-.ilx-move-hero {
+.barcode-scanner-move-hero {
     grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
 }
 
-.ilx-move-hero-meta {
+.barcode-scanner-move-hero-meta {
     align-content: flex-start;
 }
 
-.ilx-move-content {
+.barcode-scanner-move-content {
     display: grid;
     gap: 0.85rem;
     margin-bottom: 1rem;
 }
 
-.ilx-move-card {
+.barcode-scanner-move-card {
     display: grid;
     gap: 0.9rem;
 }
 
-.ilx-move-field {
+.barcode-scanner-move-field {
     display: grid;
     gap: 0.45rem;
 }
 
-.ilx-move-field-label {
+.barcode-scanner-move-field-label {
     font-size: 0.82rem;
     font-weight: 700;
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-move-input {
+.barcode-scanner-move-input {
     min-height: 56px;
     border-radius: 16px;
     border: none;
@@ -1556,63 +1556,63 @@
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-move-input:focus {
+.barcode-scanner-move-input:focus {
     color: var(--barcode-scanner-on-surface);
     background: var(--barcode-scanner-surface-container-high);
     border-color: var(--barcode-scanner-primary-container);
 }
 
-.ilx-move-input option {
+.barcode-scanner-move-input option {
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-move-input-quantity {
+.barcode-scanner-move-input-quantity {
     font-size: 1.35rem;
     font-weight: 700;
     text-align: center;
 }
 
-.ilx-move-textarea {
+.barcode-scanner-move-textarea {
     min-height: 104px;
     resize: vertical;
 }
 
-.ilx-move-helper-pill {
+.barcode-scanner-move-helper-pill {
     justify-content: flex-start;
 }
 
-.ilx-move-segmented {
+.barcode-scanner-move-segmented {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.75rem;
 }
 
-.ilx-move-alert {
+.barcode-scanner-move-alert {
     margin-bottom: 0;
     border-radius: 16px;
 }
 
-.ilx-move-footer {
+.barcode-scanner-move-footer {
     margin-top: 0;
 }
 
-.ilx-picking-header {
+.barcode-scanner-picking-header {
     display: flex;
     gap: 1rem;
     align-items: flex-start;
     margin-bottom: 1rem;
 }
 
-.ilx-picking-header-copy {
+.barcode-scanner-picking-header-copy {
     flex: 1;
     min-width: 0;
 }
 
-.ilx-picking-summary-grid {
+.barcode-scanner-picking-summary-grid {
     margin-bottom: 1rem;
 }
 
-.ilx-picking-hero {
+.barcode-scanner-picking-hero {
     display: grid;
     grid-template-columns: minmax(0, 1.45fr) minmax(220px, 0.9fr);
     gap: 1rem;
@@ -1623,32 +1623,32 @@
     border: none;
 }
 
-.ilx-picking-hero-copy,
-.ilx-picking-hero-progress {
+.barcode-scanner-picking-hero-copy,
+.barcode-scanner-picking-hero-progress {
     display: grid;
     gap: 0.55rem;
 }
 
-.ilx-picking-hero-title,
-.ilx-picking-hero-progress-value {
+.barcode-scanner-picking-hero-title,
+.barcode-scanner-picking-hero-progress-value {
     font-size: 1.6rem;
     line-height: 1.1;
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-picking-hero-message,
-.ilx-picking-hero-progress-label {
+.barcode-scanner-picking-hero-message,
+.barcode-scanner-picking-hero-progress-label {
     margin: 0;
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-picking-hero-meta {
+.barcode-scanner-picking-hero-meta {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
 
-.ilx-progress-bar {
+.barcode-scanner-progress-bar {
     position: relative;
     height: 10px;
     border-radius: 999px;
@@ -1656,27 +1656,27 @@
     background: var(--barcode-scanner-surface-container-high);
 }
 
-.ilx-progress-bar-large {
+.barcode-scanner-progress-bar-large {
     height: 12px;
 }
 
-.ilx-progress-bar-value {
+.barcode-scanner-progress-bar-value {
     position: absolute;
     inset: 0 auto 0 0;
     border-radius: inherit;
     background: var(--barcode-scanner-primary);
 }
 
-.ilx-picking-tabs {
+.barcode-scanner-picking-tabs {
     gap: 0.75rem;
     margin-bottom: 1rem;
 }
 
-.ilx-picking-section {
+.barcode-scanner-picking-section {
     margin-bottom: 1rem;
 }
 
-.ilx-picking-secondary-actions {
+.barcode-scanner-picking-secondary-actions {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.75rem;
@@ -1684,7 +1684,7 @@
     margin-bottom: 1rem;
 }
 
-.ilx-picking-sticky-actions {
+.barcode-scanner-picking-sticky-actions {
     position: sticky;
     bottom: calc(env(safe-area-inset-bottom) + 0.75rem);
     z-index: 5;
@@ -1697,8 +1697,8 @@
     margin-bottom: calc(env(safe-area-inset-bottom) + 0.5rem);
 }
 
-.ilx-picking-move-card,
-.ilx-picking-done-card {
+.barcode-scanner-picking-move-card,
+.barcode-scanner-picking-done-card {
     width: 100%;
     text-align: left;
     border: 0;
@@ -1707,90 +1707,90 @@
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-picking-move-card.is-highlighted,
-.ilx-picking-done-card.is-highlighted {
+.barcode-scanner-picking-move-card.is-highlighted,
+.barcode-scanner-picking-done-card.is-highlighted {
     box-shadow:
         0 0 0 2px var(--barcode-scanner-primary-container),
         var(--barcode-shadow-soft);
 }
 
-.ilx-picking-move-card-top,
-.ilx-picking-done-card-top,
-.ilx-picking-quality-card-header {
+.barcode-scanner-picking-move-card-top,
+.barcode-scanner-picking-done-card-top,
+.barcode-scanner-picking-quality-card-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 0.75rem;
 }
 
-.ilx-picking-move-card-copy,
-.ilx-picking-done-card-top > div {
+.barcode-scanner-picking-move-card-copy,
+.barcode-scanner-picking-done-card-top > div {
     min-width: 0;
 }
 
-.ilx-picking-move-card-eyebrow,
-.ilx-picking-info-card-label,
-.ilx-picking-done-card-helper,
-.ilx-picking-info-card-meta {
+.barcode-scanner-picking-move-card-eyebrow,
+.barcode-scanner-picking-info-card-label,
+.barcode-scanner-picking-done-card-helper,
+.barcode-scanner-picking-info-card-meta {
     display: block;
     font-size: 0.78rem;
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-picking-move-card-stats,
-.ilx-picking-move-card-chips,
-.ilx-picking-done-card-meta {
+.barcode-scanner-picking-move-card-stats,
+.barcode-scanner-picking-move-card-chips,
+.barcode-scanner-picking-done-card-meta {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
 
-.ilx-picking-move-card-lots {
+.barcode-scanner-picking-move-card-lots {
     margin: 0;
     padding-left: 1rem;
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-picking-move-card-lots li {
+.barcode-scanner-picking-move-card-lots li {
     display: flex;
     justify-content: space-between;
     gap: 0.75rem;
 }
 
-.ilx-picking-empty-state {
+.barcode-scanner-picking-empty-state {
     margin-top: 0;
 }
 
-.ilx-picking-info-grid {
+.barcode-scanner-picking-info-grid {
     display: grid;
     gap: 0.85rem;
 }
 
-.ilx-picking-info-card,
-.ilx-picking-quality-card {
+.barcode-scanner-picking-info-card,
+.barcode-scanner-picking-quality-card {
     padding: 1rem;
     border-radius: 18px;
     background: var(--barcode-scanner-surface-container-low);
     border: none;
 }
 
-.ilx-picking-info-card-wide {
+.barcode-scanner-picking-info-card-wide {
     grid-column: 1 / -1;
 }
 
-.ilx-picking-quality-card {
+.barcode-scanner-picking-quality-card {
     display: grid;
     gap: 0.75rem;
 }
 
-.ilx-info-row-stacked {
+.barcode-scanner-info-row-stacked {
     flex-direction: column;
     align-items: stretch;
     gap: 0.65rem;
     border-bottom-color: var(--barcode-scanner-outline-variant);
 }
 
-.ilx-info-media-actions {
+.barcode-scanner-info-media-actions {
     margin-top: 0.25rem;
 }
 
@@ -1830,16 +1830,16 @@
     border: none !important;
 }
 
-.ilx-kw-main-spacer {
+.barcode-scanner-main-spacer {
     height: 100px;
 }
 
-.ilx-kw-divider {
+.barcode-scanner-divider {
     border-top: 1px solid rgba(202, 196, 208, 0.2);
     margin: 12px 0;
 }
 
-.ilx-kw-select-chip {
+.barcode-scanner-select-chip {
     appearance: none;
     outline: none;
     cursor: pointer;
@@ -1848,7 +1848,7 @@
     background: transparent !important;
 }
 
-.ilx-empty-text {
+.barcode-scanner-empty-text {
     color: var(--barcode-scanner-on-surface-variant);
 }
 
@@ -1857,7 +1857,7 @@
     font-size: 0.9rem;
 }
 
-.ilx-button-48 {
+.barcode-scanner-button-48 {
     width: 48px;
     height: 48px;
 }
@@ -1871,7 +1871,7 @@
 }
 
 /* Home Screen (stitch theme) */
-.ilx-home-screen {
+.barcode-scanner-home-screen {
     background-color: var(--barcode-scanner-surface);
     color: var(--barcode-scanner-on-surface);
     font-family: "Inter", "Inter var", sans-serif;
@@ -1882,18 +1882,18 @@
     overflow-y: auto;
 }
 
-.ilx-home-header {
+.barcode-scanner-home-header {
     padding: 2rem 1.5rem 1rem;
 }
 
-.ilx-home-top-bar {
+.barcode-scanner-home-top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1.5rem;
 }
 
-.ilx-home-menu-button {
+.barcode-scanner-home-menu-button {
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -1905,7 +1905,7 @@
     justify-content: center;
 }
 
-.ilx-home-avatar {
+.barcode-scanner-home-avatar {
     width: 40px;
     height: 40px;
     border-radius: 12px;
@@ -1913,13 +1913,13 @@
     background: var(--barcode-scanner-primary-container);
 }
 
-.ilx-home-avatar-image {
+.barcode-scanner-home-avatar-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.ilx-home-avatar-text {
+.barcode-scanner-home-avatar-text {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1930,7 +1930,7 @@
     font-size: 0.9rem;
 }
 
-.ilx-home-title {
+.barcode-scanner-home-title {
     font-size: 1.75rem;
     font-weight: 700;
     color: var(--barcode-scanner-on-surface);
@@ -1939,18 +1939,18 @@
     text-align: center;
 }
 
-.ilx-home-title-name {
+.barcode-scanner-home-title-name {
     color: var(--barcode-scanner-primary);
 }
 
-.ilx-home-subtitle {
+.barcode-scanner-home-subtitle {
     font-size: 0.9rem;
     color: var(--barcode-scanner-on-surface-variant);
     margin: 0.5rem 0 0;
     text-align: center;
 }
 
-.ilx-home-main {
+.barcode-scanner-home-main {
     flex: 1;
     padding: 0 1.5rem;
     max-width: 600px;
@@ -1958,13 +1958,13 @@
     width: 100%;
 }
 
-.ilx-home-grid {
+.barcode-scanner-home-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
 }
 
-.ilx-home-grid-item {
+.barcode-scanner-home-grid-item {
     background: var(--barcode-scanner-surface-container-lowest);
     border: none;
     border-radius: var(--barcode-scanner-radius-xl);
@@ -1980,12 +1980,12 @@
         box-shadow 0.15s ease;
 }
 
-.ilx-home-grid-item:hover {
+.barcode-scanner-home-grid-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 16px rgba(28, 27, 31, 0.1);
 }
 
-.ilx-home-grid-icon {
+.barcode-scanner-home-grid-icon {
     width: 48px;
     height: 48px;
     border-radius: var(--barcode-scanner-radius-lg);
@@ -1995,32 +1995,32 @@
     font-size: 1.5rem;
 }
 
-.ilx-icon-warehouse {
+.barcode-scanner-icon-warehouse {
     background: #fce4ec;
     color: var(--barcode-scanner-primary-container);
 }
 
-.ilx-icon-transfer {
+.barcode-scanner-icon-transfer {
     background: var(--barcode-scanner-surface-container-low);
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-icon-adjustment {
+.barcode-scanner-icon-adjustment {
     background: var(--barcode-scanner-info-bg);
     color: #1976d2;
 }
 
-.ilx-icon-scrap {
+.barcode-scanner-icon-scrap {
     background: var(--barcode-scanner-danger-bg);
     color: var(--barcode-scanner-error);
 }
 
-.ilx-icon-info {
+.barcode-scanner-icon-info {
     background: var(--barcode-scanner-success-bg);
     color: var(--barcode-scanner-success);
 }
 
-.ilx-home-grid-title {
+.barcode-scanner-home-grid-title {
     font-size: 0.85rem;
     font-weight: 700;
     color: var(--barcode-scanner-on-surface);
@@ -2029,7 +2029,7 @@
 }
 
 /* Stitch screen (Warehouse Operations) */
-.ilx-stitch-screen {
+.barcode-scanner-operation-screen {
     background-color: var(--barcode-scanner-surface);
     color: var(--barcode-scanner-on-surface);
     font-family: "Inter", "Inter var", sans-serif;
@@ -2043,7 +2043,7 @@
     padding-bottom: 2rem;
 }
 
-.ilx-stitch-header {
+.barcode-scanner-operation-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2051,7 +2051,7 @@
     background: transparent;
 }
 
-.ilx-stitch-header-title {
+.barcode-scanner-operation-header-title {
     margin: 0;
     font-size: 1.125rem;
     font-weight: 700;
@@ -2059,7 +2059,7 @@
     letter-spacing: -0.01em;
 }
 
-.ilx-stitch-menu-button {
+.barcode-scanner-operation-menu-button {
     background: none;
     border: none;
     color: var(--barcode-scanner-on-surface);
@@ -2071,7 +2071,7 @@
     justify-content: center;
 }
 
-.ilx-stitch-main {
+.barcode-scanner-operation-main {
     flex: 1;
     padding: 0 1.5rem;
     max-width: 600px;
@@ -2079,11 +2079,11 @@
     width: 100%;
 }
 
-.ilx-stitch-location {
+.barcode-scanner-operation-location {
     margin-bottom: 1.5rem;
 }
 
-.ilx-stitch-select-wrapper {
+.barcode-scanner-operation-select-wrapper {
     position: relative;
     background: var(--barcode-scanner-surface-container-lowest);
     border-radius: var(--barcode-scanner-radius-xl);
@@ -2094,12 +2094,12 @@
     height: 56px;
 }
 
-.ilx-stitch-location-icon {
+.barcode-scanner-operation-location-icon {
     color: var(--barcode-scanner-primary-container);
     margin-right: 12px;
 }
 
-.ilx-stitch-select {
+.barcode-scanner-operation-select {
     flex: 1;
     border: none;
     background: transparent;
@@ -2111,7 +2111,7 @@
     height: 100%;
 }
 
-.ilx-stitch-chevron {
+.barcode-scanner-operation-chevron {
     color: var(--barcode-scanner-primary);
 }
 
@@ -2175,7 +2175,7 @@
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-stitch-badge-circle {
+.barcode-scanner-operation-badge-circle {
     position: absolute;
     top: -8px;
     right: -8px;
@@ -2190,11 +2190,11 @@
     color: white;
 }
 
-.ilx-stitch-badge-circle.badge-dark {
+.barcode-scanner-operation-badge-circle.badge-dark {
     background: var(--barcode-scanner-primary);
 }
 
-.ilx-stitch-badge-circle.badge-light {
+.barcode-scanner-operation-badge-circle.badge-light {
     background: var(--barcode-scanner-on-surface-variant);
 }
 
@@ -2226,7 +2226,7 @@
     padding-bottom: 100px;
 }
 
-.ilx-kw-header {
+.barcode-scanner-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2234,13 +2234,13 @@
     background: transparent;
 }
 
-.ilx-kw-header-left {
+.barcode-scanner-header-left {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.ilx-kw-header-title {
+.barcode-scanner-header-title {
     margin: 0;
     font-size: 1.125rem;
     font-weight: 800;
@@ -2248,7 +2248,7 @@
     letter-spacing: -0.02em;
 }
 
-.ilx-kw-icon-button {
+.barcode-scanner-icon-button {
     background: none;
     border: none;
     color: var(--barcode-scanner-on-surface-variant);
@@ -2256,7 +2256,7 @@
     padding: 8px;
 }
 
-.ilx-kw-main {
+.barcode-scanner-main {
     flex: 1;
     padding: 0 1.5rem;
     max-width: 600px;
@@ -2267,19 +2267,19 @@
     gap: 24px;
 }
 
-.ilx-kw-header-elevated {
+.barcode-scanner-header-elevated {
     background: var(--barcode-scanner-surface-container-lowest);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
 }
 
-.ilx-kw-search-section {
+.barcode-scanner-search-section {
     padding: 1rem 0;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.ilx-kw-search-bar {
+.barcode-scanner-search-bar {
     background: var(--barcode-scanner-surface-container-high);
     border-radius: var(--barcode-scanner-radius-xl);
     height: 48px;
@@ -2289,12 +2289,12 @@
     gap: 12px;
 }
 
-.ilx-kw-search-icon {
+.barcode-scanner-search-icon {
     color: var(--barcode-scanner-on-surface-variant);
     font-size: 1.1rem;
 }
 
-.ilx-kw-search-input {
+.barcode-scanner-search-input {
     border: none;
     background: transparent;
     flex: 1;
@@ -2303,7 +2303,7 @@
     outline: none;
 }
 
-.ilx-kw-filter-chips {
+.barcode-scanner-filter-chips {
     display: flex;
     gap: 8px;
     overflow-x: auto;
@@ -2311,11 +2311,11 @@
     padding-bottom: 4px;
 }
 
-.ilx-kw-filter-chips::-webkit-scrollbar {
+.barcode-scanner-filter-chips::-webkit-scrollbar {
     display: none;
 }
 
-.ilx-kw-chip {
+.barcode-scanner-chip {
     height: 36px;
     border-radius: 18px;
     border: none;
@@ -2328,22 +2328,22 @@
     white-space: nowrap;
 }
 
-.ilx-kw-chip-active {
+.barcode-scanner-chip-active {
     background: var(--barcode-scanner-surface-container-low);
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-kw-chip-default {
+.barcode-scanner-chip-default {
     background: var(--barcode-scanner-surface-container-high);
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-kw-chip-label {
+.barcode-scanner-chip-label {
     font-size: 0.85rem;
     font-weight: 600;
 }
 
-.ilx-kw-filter-value-select {
+.barcode-scanner-filter-value-select {
     height: 24px;
     border-radius: 12px;
     border: 1px solid var(--barcode-scanner-outline-variant);
@@ -2354,7 +2354,7 @@
     cursor: pointer;
 }
 
-.ilx-kw-filter-date-input {
+.barcode-scanner-filter-date-input {
     height: 24px;
     border-radius: 12px;
     border: 1px solid var(--barcode-scanner-outline-variant);
@@ -2365,7 +2365,7 @@
     cursor: pointer;
 }
 
-.ilx-kw-chip-toggle {
+.barcode-scanner-chip-toggle {
     height: 24px;
     border-radius: 12px;
     border: 1px solid var(--barcode-scanner-outline-variant);
@@ -2378,7 +2378,7 @@
     align-items: center;
 }
 
-.ilx-kw-select-chip {
+.barcode-scanner-select-chip {
     appearance: none;
     cursor: pointer;
     padding-right: 24px;
@@ -2387,7 +2387,7 @@
     background-position: right 8px center;
 }
 
-.ilx-kw-tabs {
+.barcode-scanner-tabs {
     display: flex;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
@@ -2395,7 +2395,7 @@
     border-bottom: 1px solid var(--barcode-scanner-outline-variant);
 }
 
-.ilx-kw-tab {
+.barcode-scanner-tab {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -2414,17 +2414,17 @@
     min-height: 48px;
 }
 
-.ilx-kw-tab:hover {
+.barcode-scanner-tab:hover {
     background: var(--barcode-scanner-surface-container-high);
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-kw-tab.active {
+.barcode-scanner-tab.active {
     background: var(--barcode-scanner-primary-container);
     color: var(--barcode-scanner-on-primary-container);
 }
 
-.ilx-kw-tab-indicator {
+.barcode-scanner-tab-indicator {
     width: 24px;
     height: 3px;
     border-radius: 2px;
@@ -2432,7 +2432,7 @@
     margin-top: 0.15rem;
 }
 
-.ilx-kw-tab-content {
+.barcode-scanner-tab-content {
     padding: 16px;
 }
 
@@ -2486,25 +2486,25 @@
     color: var(--barcode-scanner-primary-container);
 }
 
-.ilx-kw-picking-list {
+.barcode-scanner-picking-list {
     background-color: var(--barcode-scanner-surface);
     display: flex;
     flex-direction: column;
 }
 
-.ilx-kw-picking-screen {
+.barcode-scanner-picking-screen {
     background-color: var(--barcode-scanner-surface);
     display: flex;
     flex-direction: column;
 }
 
-.ilx-kw-picking-cards {
+.barcode-scanner-picking-cards {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.ilx-kw-picking-card {
+.barcode-scanner-picking-card {
     background: var(--barcode-scanner-surface-container-lowest);
     border-radius: var(--barcode-scanner-radius-xl);
     padding: 1.2rem;
@@ -2518,38 +2518,38 @@
         box-shadow 0.15s ease;
 }
 
-.ilx-kw-picking-card:hover {
+.barcode-scanner-picking-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 16px rgba(28, 27, 31, 0.1);
 }
 
-.ilx-kw-picking-card-top {
+.barcode-scanner-picking-card-top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.ilx-kw-picking-card-info {
+.barcode-scanner-picking-card-info {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.ilx-kw-picking-code {
+.barcode-scanner-picking-code {
     font-size: 0.8rem;
     font-weight: 800;
     color: var(--barcode-scanner-primary-container);
     letter-spacing: 0.05em;
 }
 
-.ilx-kw-picking-partner {
+.barcode-scanner-picking-partner {
     margin: 0;
     font-size: 1.1rem;
     font-weight: 800;
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-kw-status-tag {
+.barcode-scanner-status-tag {
     padding: 4px 12px;
     border-radius: 4px;
     font-size: 0.75rem;
@@ -2557,45 +2557,45 @@
     letter-spacing: 0.05em;
 }
 
-.ilx-kw-status-tag-ready {
+.barcode-scanner-status-tag-ready {
     background: var(--barcode-scanner-success-bg);
     color: var(--barcode-scanner-success);
 }
 
-.ilx-kw-picking-chevron {
+.barcode-scanner-picking-chevron {
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-kw-divider {
+.barcode-scanner-divider {
     border: none;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
     margin: 0;
 }
 
-.ilx-kw-picking-card-bottom {
+.barcode-scanner-picking-card-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.ilx-kw-picking-meta-left,
-.ilx-kw-picking-meta-right {
+.barcode-scanner-picking-meta-left,
+.barcode-scanner-picking-meta-right {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.ilx-kw-meta-icon {
+.barcode-scanner-meta-icon {
     font-size: 1.1rem;
     color: var(--barcode-scanner-primary-container);
 }
 
-.ilx-kw-meta-text {
+.barcode-scanner-meta-text {
     font-size: 0.9rem;
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-kw-tab-content .ilx-kw-card {
+.barcode-scanner-tab-content .barcode-scanner-card {
     background: var(--barcode-scanner-surface-container-lowest);
     border-radius: var(--barcode-scanner-radius-xl);
     padding: 1.2rem;
@@ -2632,13 +2632,13 @@
     line-height: 1.3;
 }
 
-.ilx-kw-info-row {
+.barcode-scanner-info-row {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.ilx-kw-icon-box {
+.barcode-scanner-icon-box {
     width: 48px;
     height: 48px;
     border-radius: 14px;
@@ -2649,7 +2649,7 @@
     flex-shrink: 0;
 }
 
-.ilx-kw-icon-box-small {
+.barcode-scanner-icon-box-small {
     width: 36px;
     height: 36px;
     border-radius: 10px;
@@ -2660,22 +2660,22 @@
     flex-shrink: 0;
 }
 
-.ilx-kw-background-orange {
+.barcode-scanner-background-orange {
     background: #fff3e0;
     color: #e65100;
 }
 
-.ilx-kw-background-brown {
+.barcode-scanner-background-brown {
     background: #efebe9;
     color: #4e342e;
 }
 
-.ilx-kw-background-purple-light {
+.barcode-scanner-background-purple-light {
     background: #f3e5f5;
     color: #7b1fa2;
 }
 
-.ilx-kw-info-text {
+.barcode-scanner-info-text {
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -2683,7 +2683,7 @@
     flex: 1;
 }
 
-.ilx-kw-eyebrow {
+.barcode-scanner-eyebrow {
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -2691,7 +2691,7 @@
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-kw-title {
+.barcode-scanner-title {
     font-size: 1.05rem;
     font-weight: 700;
     color: var(--barcode-scanner-on-surface);
@@ -2700,7 +2700,7 @@
     white-space: nowrap;
 }
 
-.ilx-kw-value {
+.barcode-scanner-value {
     font-size: 0.95rem;
     color: var(--barcode-scanner-on-surface);
     overflow: hidden;
@@ -2709,10 +2709,10 @@
 }
 
 // One line of the Quick Info stock lists: a name on the left, the quantity on
-// the right. Both halves used to reuse `.ilx-kw-value`, which ellipsizes on a
+// the right. Both halves used to reuse `.barcode-scanner-value`, which ellipsizes on a
 // single line -- so on a PDA the product name was cut mid-word AND the number
 // itself got clipped, which is the one thing the operator scanned to find out.
-.ilx-kw-stock-row {
+.barcode-scanner-stock-row {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -2725,7 +2725,7 @@
     }
 }
 
-.ilx-kw-stock-row-name {
+.barcode-scanner-stock-row-name {
     flex: 1 1 auto;
     min-width: 0;
     font-size: 0.85rem;
@@ -2737,7 +2737,7 @@
     overflow-wrap: anywhere;
 }
 
-.ilx-kw-stock-row-quantity {
+.barcode-scanner-stock-row-quantity {
     flex: 0 0 auto;
     font-size: 0.85rem;
     font-weight: 600;
@@ -2748,13 +2748,13 @@
     font-variant-numeric: tabular-nums;
 }
 
-.ilx-kw-select-wrapper {
+.barcode-scanner-select-wrapper {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-.ilx-kw-select {
+.barcode-scanner-select {
     width: 100%;
     padding: 8px 12px;
     border: 1px solid var(--barcode-scanner-outline-variant);
@@ -2767,11 +2767,11 @@
     transition: border-color 0.2s;
 }
 
-.ilx-kw-select:focus {
+.barcode-scanner-select:focus {
     border-color: var(--barcode-scanner-primary);
 }
 
-.ilx-kw-chevron-right {
+.barcode-scanner-chevron-right {
     position: absolute;
     right: 10px;
     pointer-events: none;
@@ -2779,7 +2779,7 @@
     font-size: 0.8rem;
 }
 
-.ilx-kw-button-ghost {
+.barcode-scanner-button-ghost {
     background: none;
     border: 1px solid var(--barcode-scanner-outline-variant);
     border-radius: var(--barcode-scanner-radius-md);
@@ -2792,43 +2792,43 @@
     font-family: inherit;
 }
 
-.ilx-kw-button-ghost:hover {
+.barcode-scanner-button-ghost:hover {
     background: var(--barcode-scanner-surface-container-low);
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-kw-group-wrapper {
+.barcode-scanner-group-wrapper {
     margin-bottom: 0.5rem;
 }
 
-.ilx-kw-group-header {
+.barcode-scanner-group-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 1.5rem 0 1rem 0;
 }
 
-.ilx-kw-group-title-container {
+.barcode-scanner-group-title-container {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.ilx-kw-group-indicator {
+.barcode-scanner-group-indicator {
     width: 4px;
     height: 24px;
     background: var(--barcode-scanner-primary-container);
     border-radius: 2px;
 }
 
-.ilx-kw-group-title {
+.barcode-scanner-group-title {
     margin: 0;
     font-size: 1.05rem;
     font-weight: 800;
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-kw-group-badge {
+.barcode-scanner-group-badge {
     background: var(--barcode-scanner-surface-container-low);
     color: var(--barcode-scanner-primary-container);
     padding: 4px 12px;
@@ -2837,18 +2837,18 @@
     font-size: 0.85rem;
 }
 
-.ilx-kw-group-body {
+.barcode-scanner-group-body {
     padding-left: 0.25rem;
 }
 
-.ilx-kw-group-actions {
+.barcode-scanner-group-actions {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
 /* Employee selector v2 */
-.ilx-emp-v2-screen {
+.barcode-scanner-employee-screen {
     background-color: var(--barcode-scanner-surface);
     color: var(--barcode-scanner-on-surface);
     font-family: "Inter", "Inter var", sans-serif;
@@ -2859,7 +2859,7 @@
     overflow: hidden;
 }
 
-.ilx-emp-v2-header {
+.barcode-scanner-employee-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2867,7 +2867,7 @@
     background: transparent;
 }
 
-.ilx-emp-v2-back-button {
+.barcode-scanner-employee-back-button {
     background: none;
     border: none;
     color: var(--barcode-scanner-on-surface);
@@ -2879,14 +2879,14 @@
     justify-content: center;
 }
 
-.ilx-emp-v2-header-title {
+.barcode-scanner-employee-header-title {
     font-size: 1.125rem;
     font-weight: 700;
     color: var(--barcode-scanner-on-surface);
     margin: 0;
 }
 
-.ilx-emp-v2-main {
+.barcode-scanner-employee-main {
     flex: 1;
     padding: 0 1.5rem;
     max-width: 600px;
@@ -2896,7 +2896,7 @@
     min-height: 0;
 }
 
-.ilx-emp-v2-search-box {
+.barcode-scanner-employee-search-box {
     position: relative;
     background: var(--barcode-scanner-surface-container-high);
     border-radius: var(--barcode-scanner-radius-xl);
@@ -2908,12 +2908,12 @@
     margin-bottom: 1.5rem;
 }
 
-.ilx-emp-v2-search-icon {
+.barcode-scanner-employee-search-icon {
     color: var(--barcode-scanner-on-surface-variant);
     font-size: 1.1rem;
 }
 
-.ilx-emp-v2-search-input {
+.barcode-scanner-employee-search-input {
     border: none;
     background: transparent;
     flex: 1;
@@ -2922,7 +2922,7 @@
     outline: none;
 }
 
-.ilx-emp-v2-section-title {
+.barcode-scanner-employee-section-title {
     font-size: 0.75rem;
     font-weight: 700;
     color: var(--barcode-scanner-on-surface-variant);
@@ -2930,13 +2930,13 @@
     margin-bottom: 0.75rem;
 }
 
-.ilx-emp-v2-list {
+.barcode-scanner-employee-list {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.ilx-emp-v2-card {
+.barcode-scanner-employee-card {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -2949,17 +2949,17 @@
     border: none;
 }
 
-.ilx-emp-v2-card.selected {
+.barcode-scanner-employee-card.selected {
     border: 2px solid var(--barcode-scanner-primary-container);
     padding: 10px 14px;
 }
 
-.ilx-emp-v2-avatar-wrapper {
+.barcode-scanner-employee-avatar-wrapper {
     position: relative;
     flex-shrink: 0;
 }
 
-.ilx-emp-v2-avatar {
+.barcode-scanner-employee-avatar {
     width: 48px;
     height: 48px;
     border-radius: var(--barcode-scanner-radius-lg);
@@ -2970,19 +2970,19 @@
     justify-content: center;
 }
 
-.ilx-emp-v2-avatar img {
+.barcode-scanner-employee-avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.ilx-emp-v2-avatar-placeholder {
+.barcode-scanner-employee-avatar-placeholder {
     font-weight: 700;
     font-size: 1.1rem;
     color: var(--barcode-scanner-primary);
 }
 
-.ilx-emp-v2-info {
+.barcode-scanner-employee-info {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -2990,37 +2990,37 @@
     min-width: 0;
 }
 
-.ilx-emp-v2-name {
+.barcode-scanner-employee-name {
     font-weight: 700;
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-emp-v2-role {
+.barcode-scanner-employee-role {
     font-size: 0.85rem;
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-emp-v2-dot-separator {
+.barcode-scanner-employee-dot-separator {
     margin: 0 0.4rem;
 }
 
-.ilx-emp-v2-icon-selected {
+.barcode-scanner-employee-icon-selected {
     color: var(--barcode-scanner-primary-container);
     font-size: 1.25rem;
 }
 
-.ilx-emp-v2-icon-chevron {
+.barcode-scanner-employee-icon-chevron {
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-emp-v2-footer {
+.barcode-scanner-employee-footer {
     padding: 1rem 1.5rem calc(env(safe-area-inset-bottom) + 1rem);
     max-width: 600px;
     margin: 0 auto;
     width: 100%;
 }
 
-.ilx-emp-v2-confirm-button {
+.barcode-scanner-employee-confirm-button {
     width: 100%;
     padding: 1rem;
     border: none;
@@ -3032,7 +3032,7 @@
     min-height: 56px;
 }
 
-.ilx-emp-v2-confirm-button.disabled {
+.barcode-scanner-employee-confirm-button.disabled {
     opacity: 0.5;
 }
 
@@ -3052,7 +3052,7 @@
     overflow: hidden;
 }
 
-.ilx-v2-header {
+.barcode-scanner-screen-header {
     flex-shrink: 0;
     display: flex;
     justify-content: space-between;
@@ -3062,7 +3062,7 @@
     border-bottom: none;
 }
 
-.ilx-v2-header-title {
+.barcode-scanner-screen-header-title {
     margin: 0;
     font-size: 1.125rem;
     font-weight: 700;
@@ -3071,7 +3071,7 @@
     letter-spacing: -0.01em;
 }
 
-.ilx-v2-main {
+.barcode-scanner-screen-main {
     flex: 1;
     overflow-y: auto;
     padding: 0 1.5rem;
@@ -3082,7 +3082,7 @@
     flex-direction: column;
 }
 
-.ilx-mw-v2-header {
+.barcode-scanner-move-wizard-header {
     display: flex;
     align-items: center;
     padding: 1.2rem 1.5rem;
@@ -3090,7 +3090,7 @@
     background: transparent;
 }
 
-.ilx-v2-back-button {
+.barcode-scanner-screen-back-button {
     background: none;
     border: none;
     color: var(--barcode-scanner-on-surface);
@@ -3100,7 +3100,7 @@
     justify-content: center;
 }
 
-.ilx-mw-v2-title {
+.barcode-scanner-move-wizard-title {
     flex: 1;
     font-size: 1.125rem;
     font-weight: 700;
@@ -3109,7 +3109,7 @@
     word-break: break-word;
 }
 
-.ilx-mw-v2-main {
+.barcode-scanner-move-wizard-main {
     flex: 1;
     // Own the scroll so the footer (the confirm/back buttons) stays pinned and
     // visible: without min-height:0 a flex child cannot shrink below its
@@ -3127,7 +3127,7 @@
     gap: 1rem;
 }
 
-.ilx-mw-v2-card {
+.barcode-scanner-move-wizard-card {
     background: var(--barcode-scanner-surface-container-lowest);
     border-radius: var(--barcode-scanner-radius-xl);
     padding: 1.25rem;
@@ -3137,13 +3137,13 @@
     gap: 1rem;
 }
 
-.ilx-mw-v2-task-top {
+.barcode-scanner-move-wizard-task-top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.ilx-mw-v2-eyebrow {
+.barcode-scanner-move-wizard-eyebrow {
     font-size: 0.75rem;
     font-weight: 700;
     color: var(--barcode-scanner-on-surface-variant);
@@ -3151,14 +3151,14 @@
     letter-spacing: 0.05em;
 }
 
-.ilx-mw-v2-task-title {
+.barcode-scanner-move-wizard-task-title {
     margin: 0.25rem 0 0;
     font-size: 1rem;
     font-weight: 700;
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-mw-v2-badge-todo {
+.barcode-scanner-move-wizard-badge-todo {
     background: var(--barcode-scanner-warning-bg);
     color: #e65100;
     padding: 4px 10px;
@@ -3167,33 +3167,33 @@
     font-weight: 700;
 }
 
-.ilx-mw-v2-progress-background {
+.barcode-scanner-move-wizard-progress-background {
     height: 8px;
     background: var(--barcode-scanner-surface-container-high);
     border-radius: 4px;
     overflow: hidden;
 }
 
-.ilx-mw-v2-progress-fill {
+.barcode-scanner-move-wizard-progress-fill {
     height: 100%;
     background: var(--barcode-scanner-primary);
     border-radius: 4px;
     transition: width 0.3s ease;
 }
 
-.ilx-mw-v2-progress-labels {
+.barcode-scanner-move-wizard-progress-labels {
     display: flex;
     justify-content: space-between;
     font-size: 0.85rem;
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-mw-v2-segmented {
+.barcode-scanner-move-wizard-segmented {
     display: flex;
     gap: 8px;
 }
 
-.ilx-mw-v2-segment-button {
+.barcode-scanner-move-wizard-segment-button {
     flex: 1;
     padding: 0.75rem;
     border: none;
@@ -3206,24 +3206,24 @@
     min-height: 48px;
 }
 
-.ilx-mw-v2-segment-button.active {
+.barcode-scanner-move-wizard-segment-button.active {
     background: var(--barcode-scanner-primary-container);
     color: white;
 }
 
-.ilx-v2-field-group {
+.barcode-scanner-screen-field-group {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.ilx-v2-label {
+.barcode-scanner-screen-label {
     font-size: 0.82rem;
     font-weight: 700;
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-mw-v2-input-box {
+.barcode-scanner-move-wizard-input-box {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -3233,12 +3233,12 @@
     height: 56px;
 }
 
-.ilx-mw-v2-input-icon {
+.barcode-scanner-move-wizard-input-icon {
     color: var(--barcode-scanner-on-surface-variant);
     font-size: 1.1rem;
 }
 
-.ilx-mw-v2-input {
+.barcode-scanner-move-wizard-input {
     flex: 1;
     border: none;
     background: transparent;
@@ -3248,17 +3248,17 @@
     height: 100%;
 }
 
-.ilx-mw-v2-input option {
+.barcode-scanner-move-wizard-input option {
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-mw-v2-quantity-row {
+.barcode-scanner-move-wizard-quantity-row {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.ilx-mw-v2-quantity-button {
+.barcode-scanner-move-wizard-quantity-button {
     width: 48px;
     height: 48px;
     border-radius: var(--barcode-scanner-radius-md);
@@ -3272,7 +3272,7 @@
     cursor: pointer;
 }
 
-.ilx-mw-v2-quantity-input {
+.barcode-scanner-move-wizard-quantity-input {
     flex: 1;
     height: 56px;
     border-radius: var(--barcode-scanner-radius-md);
@@ -3285,7 +3285,7 @@
     outline: none;
 }
 
-.ilx-mw-v2-quantity-button-fulfill {
+.barcode-scanner-move-wizard-quantity-button-fulfill {
     background: var(--barcode-scanner-primary-container);
     color: white;
     font-size: 0.85rem;
@@ -3294,7 +3294,7 @@
     padding: 0 1rem;
 }
 
-.ilx-v2-footer {
+.barcode-scanner-screen-footer {
     display: flex;
     gap: 12px;
     padding: 1rem 1.5rem calc(env(safe-area-inset-bottom) + 1rem);
@@ -3303,7 +3303,7 @@
     width: 100%;
 }
 
-.ilx-v2-button-primary {
+.barcode-scanner-screen-button-primary {
     flex: 1;
     padding: 1rem;
     border: none;
@@ -3315,7 +3315,7 @@
     min-height: 56px;
 }
 
-.ilx-v2-button-secondary {
+.barcode-scanner-screen-button-secondary {
     flex: 1;
     padding: 1rem;
     border: 1px solid rgba(202, 196, 208, 0.2);
@@ -3327,7 +3327,7 @@
     min-height: 56px;
 }
 
-.ilx-tx-v2-select-card {
+.barcode-scanner-transfer-select-card {
     display: flex;
     align-items: center;
     background: #ecebed;
@@ -3336,7 +3336,7 @@
     cursor: pointer;
 }
 
-.ilx-tx-v2-icon {
+.barcode-scanner-transfer-icon {
     width: 24px;
     font-size: 1.1rem;
     color: var(--barcode-scanner-primary-container);
@@ -3346,26 +3346,26 @@
     margin-right: 0.8rem;
 }
 
-.ilx-tx-v2-text {
+.barcode-scanner-transfer-text {
     flex: 1;
     font-weight: 500;
     font-size: 1rem;
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-tx-v2-chevron {
+.barcode-scanner-transfer-chevron {
     color: var(--barcode-scanner-on-surface-variant);
     font-size: 0.9rem;
 }
 
-.ilx-tx-v2-section-header {
+.barcode-scanner-transfer-section-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 0.2rem;
 }
 
-.ilx-tx-v2-items-badge {
+.barcode-scanner-transfer-items-badge {
     background: #8d6e2e;
     color: var(--barcode-scanner-surface-container-lowest);
     font-size: 0.75rem;
@@ -3374,13 +3374,13 @@
     border-radius: 12px;
 }
 
-.ilx-tx-v2-lines-container {
+.barcode-scanner-transfer-lines-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.ilx-tx-v2-line-card {
+.barcode-scanner-transfer-line-card {
     background: var(--barcode-scanner-surface-container-lowest);
     border-radius: 12px;
     padding: 1rem;
@@ -3391,7 +3391,7 @@
     position: relative;
 }
 
-.ilx-tx-v2-line-delete {
+.barcode-scanner-transfer-line-delete {
     position: absolute;
     top: -8px;
     right: -8px;
@@ -3409,13 +3409,13 @@
     font-size: 0.8rem;
 }
 
-.ilx-tx-v2-line-top {
+.barcode-scanner-transfer-line-top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.ilx-tx-v2-line-name {
+.barcode-scanner-transfer-line-name {
     font-weight: 700;
     font-size: 1.05rem;
     color: var(--barcode-scanner-on-surface);
@@ -3423,7 +3423,7 @@
     flex: 1;
 }
 
-.ilx-tx-v2-quantity-pill {
+.barcode-scanner-transfer-quantity-pill {
     background: #fce4f3;
     border-radius: 6px;
     display: flex;
@@ -3432,7 +3432,7 @@
     gap: 0.3rem;
 }
 
-.ilx-tx-v2-quantity-input {
+.barcode-scanner-transfer-quantity-input {
     width: 30px;
     background: transparent;
     border: none;
@@ -3444,24 +3444,24 @@
     padding: 0;
 }
 
-.ilx-tx-v2-quantity-input::-webkit-outer-spin-button,
-.ilx-tx-v2-quantity-input::-webkit-inner-spin-button {
+.barcode-scanner-transfer-quantity-input::-webkit-outer-spin-button,
+.barcode-scanner-transfer-quantity-input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-.ilx-tx-v2-quantity-unit {
+.barcode-scanner-transfer-quantity-unit {
     font-size: 0.75rem;
     font-weight: 600;
     color: var(--barcode-scanner-primary-container);
 }
 
-.ilx-tx-v2-line-lot {
+.barcode-scanner-transfer-line-lot {
     font-size: 0.85rem;
     color: #777777;
 }
 
-.ilx-tx-v2-lot-select {
+.barcode-scanner-transfer-lot-select {
     border: none;
     background: transparent;
     padding: 0;
@@ -3472,13 +3472,13 @@
     width: auto;
 }
 
-.ilx-tx-v2-line-divider {
+.barcode-scanner-transfer-line-divider {
     height: 1px;
     background: var(--barcode-scanner-surface-container-low);
     margin: 0.2rem 0;
 }
 
-.ilx-tx-v2-line-bottom {
+.barcode-scanner-transfer-line-bottom {
     font-size: 0.85rem;
     color: #444444;
     display: flex;
@@ -3486,11 +3486,11 @@
     gap: 0.4rem;
 }
 
-.ilx-tx-v2-line-bottom i {
+.barcode-scanner-transfer-line-bottom i {
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-qi-v2-content {
+.barcode-scanner-quick-inventory-content {
     flex: 1;
     overflow-y: auto;
     padding: 0 1rem 1rem 1rem;
@@ -3498,32 +3498,32 @@
     flex-direction: column;
 }
 
-.ilx-qi-v2-intro {
+.barcode-scanner-quick-inventory-intro {
     text-align: center;
     margin-bottom: 2rem;
     margin-top: 1rem;
 }
 
-.ilx-qi-v2-intro h2 {
+.barcode-scanner-quick-inventory-intro h2 {
     font-size: 1.8rem;
     font-weight: 800;
     color: var(--barcode-scanner-on-surface);
     margin-bottom: 0.5rem;
 }
 
-.ilx-qi-v2-intro p {
+.barcode-scanner-quick-inventory-intro p {
     font-size: 0.95rem;
     color: var(--barcode-scanner-on-surface-variant);
     margin: 0;
 }
 
-.ilx-qi-v2-cards {
+.barcode-scanner-quick-inventory-cards {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.ilx-qi-v2-card {
+.barcode-scanner-quick-inventory-card {
     background: var(--barcode-scanner-surface-container-lowest);
     border-radius: 12px;
     padding: 1.5rem;
@@ -3533,7 +3533,7 @@
     overflow: hidden;
 }
 
-.ilx-qi-v2-card-icon {
+.barcode-scanner-quick-inventory-card-icon {
     width: 60px;
     height: 60px;
     border-radius: 12px;
@@ -3544,7 +3544,7 @@
     margin-bottom: 1rem;
 }
 
-.ilx-qi-v2-scan-view {
+.barcode-scanner-quick-inventory-scan-view {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -3553,7 +3553,7 @@
     align-items: center;
 }
 
-.ilx-qi-v2-scan-title {
+.barcode-scanner-quick-inventory-scan-title {
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--barcode-scanner-on-surface);
@@ -3561,21 +3561,21 @@
     text-align: center;
 }
 
-.ilx-qi-v2-scan-subtitle {
+.barcode-scanner-quick-inventory-scan-subtitle {
     font-size: 0.9rem;
     color: var(--barcode-scanner-on-surface-variant);
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.ilx-qi-v2-gs1-input-wrapper {
+.barcode-scanner-quick-inventory-gs1-input-wrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.ilx-qi-v2-gs1-input {
+.barcode-scanner-quick-inventory-gs1-input {
     width: 100%;
     max-width: 260px;
     padding: 0.65rem 1rem;
@@ -3589,11 +3589,11 @@
     margin: 0 auto;
 }
 
-.ilx-qi-v2-gs1-input:focus {
+.barcode-scanner-quick-inventory-gs1-input:focus {
     border-color: var(--barcode-scanner-primary);
 }
 
-.ilx-qi-v2-barcode-button {
+.barcode-scanner-quick-inventory-barcode-button {
     width: 100%;
     max-width: 260px;
     padding: 0.6rem 1rem;
@@ -3611,7 +3611,7 @@
     margin: 4px auto 0;
 }
 
-.ilx-qi-v2-gs1-input::placeholder {
+.barcode-scanner-quick-inventory-gs1-input::placeholder {
     color: var(--barcode-scanner-on-surface-variant);
 }
 
@@ -3621,7 +3621,7 @@
     justify-content: center;
 }
 
-.ilx-qi-v2-pad-grid {
+.barcode-scanner-quick-inventory-pad-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.8rem;
@@ -3629,7 +3629,7 @@
     max-width: 320px;
 }
 
-.ilx-qi-v2-pad-grid button {
+.barcode-scanner-quick-inventory-pad-grid button {
     height: 64px;
     font-size: 1.5rem;
     font-weight: 600;
@@ -3642,44 +3642,44 @@
     justify-content: center;
 }
 
-.ilx-qi-v2-pad-grid button:active {
+.barcode-scanner-quick-inventory-pad-grid button:active {
     background: #f3f3f3;
 }
 
 @media (max-width: 575.98px) {
-    .ilx-queue-summary-grid,
-    .ilx-queue-filter-row {
+    .barcode-scanner-picking-list-summary-grid,
+    .barcode-scanner-picking-list-filter-row {
         grid-template-columns: 1fr;
     }
 
-    .ilx-queue-header {
+    .barcode-scanner-picking-list-header {
         flex-direction: column;
     }
 
-    .ilx-queue-back {
+    .barcode-scanner-picking-list-back {
         width: 100%;
     }
 
-    .ilx-picking-header,
-    .ilx-picking-hero,
-    .ilx-picking-secondary-actions,
-    .ilx-picking-sticky-actions {
+    .barcode-scanner-picking-header,
+    .barcode-scanner-picking-hero,
+    .barcode-scanner-picking-secondary-actions,
+    .barcode-scanner-picking-sticky-actions {
         grid-template-columns: 1fr;
         flex-direction: column;
     }
 
-    .ilx-move-segmented {
+    .barcode-scanner-move-segmented {
         grid-template-columns: 1fr;
     }
 
-    .ilx-picking-hero-meta,
-    .ilx-picking-move-card-stats,
-    .ilx-picking-done-card-meta,
-    .top-actions-row.ilx-info-media-actions {
+    .barcode-scanner-picking-hero-meta,
+    .barcode-scanner-picking-move-card-stats,
+    .barcode-scanner-picking-done-card-meta,
+    .top-actions-row.barcode-scanner-info-media-actions {
         flex-direction: column;
     }
 
-    .ilx-picking-sticky-actions {
+    .barcode-scanner-picking-sticky-actions {
         bottom: calc(env(safe-area-inset-bottom) + 0.35rem);
     }
 }

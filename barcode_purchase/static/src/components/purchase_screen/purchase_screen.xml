@@ -1,40 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
     <t t-name="barcode_purchase.PurchaseScreen">
-        <div class="ilx-po-v2-screen">
-            <header class="ilx-po-v2-header">
-                <button class="ilx-po-v2-back-button" t-on-click="goBack">
+        <div class="barcode-scanner-purchase-order-screen">
+            <header class="barcode-scanner-purchase-order-header">
+                <button
+                    class="barcode-scanner-purchase-order-back-button"
+                    t-on-click="goBack"
+                >
                     <i class="fa fa-arrow-left" />
                 </button>
-                <h1 class="ilx-po-v2-header-title">Create Purchase Order</h1>
+                <h1
+                    class="barcode-scanner-purchase-order-header-title"
+                >Create Purchase Order</h1>
                 <div style="width: 48px;" />
             </header>
 
-            <main class="ilx-po-v2-main">
-                <div class="ilx-po-v2-card">
-                    <div class="ilx-po-v2-field-group">
-                        <label class="ilx-po-v2-label">VENDOR</label>
-                        <div class="ilx-po-v2-input-box" t-on-click="selectSupplier">
-                            <i class="fa fa-building-o ilx-po-v2-input-icon" />
-                            <span class="ilx-po-v2-input-text">
+            <main class="barcode-scanner-purchase-order-main">
+                <div class="barcode-scanner-purchase-order-card">
+                    <div class="barcode-scanner-purchase-order-field-group">
+                        <label
+                            class="barcode-scanner-purchase-order-label"
+                        >VENDOR</label>
+                        <div
+                            class="barcode-scanner-purchase-order-input-box"
+                            t-on-click="selectSupplier"
+                        >
+                            <i
+                                class="fa fa-building-o barcode-scanner-purchase-order-input-icon"
+                            />
+                            <span class="barcode-scanner-purchase-order-input-text">
                                 <t t-if="state.supplier">
                                     <t t-esc="state.supplier.name" />
                                 </t>
                                 <t t-else="">Select supplier</t>
                             </span>
-                            <i class="fa fa-chevron-down ilx-po-v2-input-chevron" />
+                            <i
+                                class="fa fa-chevron-down barcode-scanner-purchase-order-input-chevron"
+                            />
                         </div>
                     </div>
 
-                    <div class="ilx-po-v2-grid-2">
-                        <div class="ilx-po-v2-field-group">
-                            <label class="ilx-po-v2-label">DESTINATION</label>
+                    <div class="barcode-scanner-purchase-order-grid-2">
+                        <div class="barcode-scanner-purchase-order-field-group">
+                            <label
+                                class="barcode-scanner-purchase-order-label"
+                            >DESTINATION</label>
                             <div
-                                class="ilx-po-v2-input-box"
+                                class="barcode-scanner-purchase-order-input-box"
                                 t-on-click="selectDestinationLocation"
                             >
-                                <i class="fa fa-map-marker ilx-po-v2-input-icon" />
-                                <span class="ilx-po-v2-input-text">
+                                <i
+                                    class="fa fa-map-marker barcode-scanner-purchase-order-input-icon"
+                                />
+                                <span class="barcode-scanner-purchase-order-input-text">
                                     <t t-if="state.destinationLocation">
                                         <t
                                             t-esc="state.destinationLocation.display_name"
@@ -44,11 +62,18 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="ilx-po-v2-field-group">
-                            <label class="ilx-po-v2-label">BUYER</label>
-                            <div class="ilx-po-v2-input-box" t-on-click="selectBuyer">
-                                <i class="fa fa-user-o ilx-po-v2-input-icon" />
-                                <span class="ilx-po-v2-input-text">
+                        <div class="barcode-scanner-purchase-order-field-group">
+                            <label
+                                class="barcode-scanner-purchase-order-label"
+                            >BUYER</label>
+                            <div
+                                class="barcode-scanner-purchase-order-input-box"
+                                t-on-click="selectBuyer"
+                            >
+                                <i
+                                    class="fa fa-user-o barcode-scanner-purchase-order-input-icon"
+                                />
+                                <span class="barcode-scanner-purchase-order-input-text">
                                     <t t-if="state.buyer">
                                         <t t-esc="state.buyer.name" />
                                     </t>
@@ -58,11 +83,16 @@
                         </div>
                     </div>
 
-                    <div class="ilx-po-v2-field-group" style="margin-bottom: 0;">
-                        <label class="ilx-po-v2-label">VENDOR REFERENCE</label>
-                        <div class="ilx-po-v2-input-box">
+                    <div
+                        class="barcode-scanner-purchase-order-field-group"
+                        style="margin-bottom: 0;"
+                    >
+                        <label
+                            class="barcode-scanner-purchase-order-label"
+                        >VENDOR REFERENCE</label>
+                        <div class="barcode-scanner-purchase-order-input-box">
                             <input
-                                class="ilx-po-v2-raw-input"
+                                class="barcode-scanner-purchase-order-raw-input"
                                 type="text"
                                 placeholder="e.g. PO-2023-001"
                                 t-model="state.vendorRef"
@@ -71,45 +101,49 @@
                     </div>
                 </div>
 
-                <div class="ilx-po-v2-lines-header">
+                <div class="barcode-scanner-purchase-order-lines-header">
                     <span
-                        class="ilx-po-v2-label"
+                        class="barcode-scanner-purchase-order-label"
                         style="margin: 0; font-size: 0.8rem;"
                     >ORDER LINES</span>
-                    <div class="ilx-po-v2-badge"><t
+                    <div class="barcode-scanner-purchase-order-badge"><t
                         t-esc="state.lines.length"
                     /> ITEMS</div>
                 </div>
 
-                <div class="ilx-po-v2-lines-container">
+                <div class="barcode-scanner-purchase-order-lines-container">
                     <t
                         t-foreach="state.lines"
                         t-as="line"
                         t-key="line.product_id + '_' + (line.lot_name || '')"
                     >
-                        <div class="ilx-po-v2-line-card">
-                            <div class="ilx-po-v2-line-top">
-                                <div class="ilx-po-v2-line-title">
+                        <div class="barcode-scanner-purchase-order-line-card">
+                            <div class="barcode-scanner-purchase-order-line-top">
+                                <div class="barcode-scanner-purchase-order-line-title">
                                     <h4>
                                         <t t-esc="line.product_name" />
                                     </h4>
-                                    <span class="ilx-po-v2-sku">SKU: <t
+                                    <span
+                                        class="barcode-scanner-purchase-order-sku"
+                                    >SKU: <t
                                         t-esc="line.default_code || 'N/A'"
                                     /></span>
                                 </div>
                                 <button
-                                    class="ilx-po-v2-delete"
+                                    class="barcode-scanner-purchase-order-delete"
                                     t-on-click="() => this.removeLine(line)"
                                 >
                                     <i class="fa fa-trash-o" />
                                 </button>
                             </div>
 
-                            <div class="ilx-po-v2-line-table">
-                                <div class="ilx-po-v2-col">
-                                    <span class="ilx-po-v2-col-header">QTY</span>
+                            <div class="barcode-scanner-purchase-order-line-table">
+                                <div class="barcode-scanner-purchase-order-col">
+                                    <span
+                                        class="barcode-scanner-purchase-order-col-header"
+                                    >QTY</span>
                                     <input
-                                        class="ilx-po-v2-col-val ilx-po-v2-input-inline"
+                                        class="barcode-scanner-purchase-order-col-val barcode-scanner-purchase-order-input-inline"
                                         type="number"
                                         min="0"
                                         step="any"
@@ -117,12 +151,17 @@
                                         t-att-readonly="line.tracking === 'serial' and line.lot_name"
                                         t-on-change="() => this.refreshPrices()"
                                     />
-                                    <span class="ilx-po-v2-uom" t-esc="line.uom_name" />
+                                    <span
+                                        class="barcode-scanner-purchase-order-uom"
+                                        t-esc="line.uom_name"
+                                    />
                                 </div>
-                                <div class="ilx-po-v2-col">
-                                    <span class="ilx-po-v2-col-header">PRICE</span>
+                                <div class="barcode-scanner-purchase-order-col">
+                                    <span
+                                        class="barcode-scanner-purchase-order-col-header"
+                                    >PRICE</span>
                                     <input
-                                        class="ilx-po-v2-col-val ilx-po-v2-input-inline"
+                                        class="barcode-scanner-purchase-order-col-val barcode-scanner-purchase-order-input-inline"
                                         type="number"
                                         step="any"
                                         min="0"
@@ -130,21 +169,27 @@
                                         t-model.number="line.price_unit"
                                     />
                                 </div>
-                                <div class="ilx-po-v2-col">
-                                    <span class="ilx-po-v2-col-header">LOT</span>
+                                <div class="barcode-scanner-purchase-order-col">
                                     <span
-                                        class="ilx-po-v2-col-val"
+                                        class="barcode-scanner-purchase-order-col-header"
+                                    >LOT</span>
+                                    <span
+                                        class="barcode-scanner-purchase-order-col-val"
                                         style="font-weight: 400;"
                                     >
                                         <t t-esc="line.lot_name || '-'" />
                                     </span>
                                 </div>
                                 <div
-                                    class="ilx-po-v2-col"
+                                    class="barcode-scanner-purchase-order-col"
                                     style="align-items: flex-end;"
                                 >
-                                    <span class="ilx-po-v2-col-header">SUBTOTAL</span>
-                                    <span class="ilx-po-v2-col-val ilx-po-v2-subtotal">
+                                    <span
+                                        class="barcode-scanner-purchase-order-col-header"
+                                    >SUBTOTAL</span>
+                                    <span
+                                        class="barcode-scanner-purchase-order-col-val barcode-scanner-purchase-order-subtotal"
+                                    >
                                         <t t-esc="lineSubtotal(line)" />
                                     </span>
                                 </div>
@@ -153,39 +198,42 @@
                     </t>
                     <div
                         t-if="state.lines.length === 0"
-                        class="text-center p-4 ilx-empty-text"
+                        class="text-center p-4 barcode-scanner-empty-text"
                     >
                         No products yet. Scan or add one.
                     </div>
                 </div>
 
-                <button class="ilx-po-v2-add-button" t-on-click="addProduct">
+                <button
+                    class="barcode-scanner-purchase-order-add-button"
+                    t-on-click="addProduct"
+                >
                     <i class="fa fa-plus-circle" /> ADD PRODUCT
                 </button>
 
-                <div class="ilx-po-v2-checkbox-wrapper">
+                <div class="barcode-scanner-purchase-order-checkbox-wrapper">
                     <input
                         type="checkbox"
                         id="auto_validate"
-                        class="ilx-po-v2-checkbox"
+                        class="barcode-scanner-purchase-order-checkbox"
                         t-model="state.autoValidate"
                     />
                     <label
                         for="auto_validate"
-                        class="ilx-po-v2-checkbox-label"
+                        class="barcode-scanner-purchase-order-checkbox-label"
                     >Validate automatically</label>
                 </div>
             </main>
 
-            <footer class="ilx-po-v2-footer">
+            <footer class="barcode-scanner-purchase-order-footer">
                 <button
-                    class="ilx-po-v2-draft-button"
+                    class="barcode-scanner-purchase-order-draft-button"
                     t-on-click="() => this.saveDraft()"
                 >
                     <i class="fa fa-save" /> Save Draft
                 </button>
                 <button
-                    class="ilx-po-v2-confirm-button"
+                    class="barcode-scanner-purchase-order-confirm-button"
                     t-att-disabled="state.saving"
                     t-on-click="() => this.createPurchase()"
                 >

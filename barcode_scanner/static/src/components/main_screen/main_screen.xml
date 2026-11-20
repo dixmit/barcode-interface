@@ -1,46 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
     <t t-name="barcode_scanner.MainScreen">
-        <div class="ilx-home-screen">
-            <header class="ilx-home-header">
-                <div class="ilx-home-top-bar">
-                    <button class="ilx-home-menu-button" t-on-click="goHome">
+        <div class="barcode-scanner-home-screen">
+            <header class="barcode-scanner-home-header">
+                <div class="barcode-scanner-home-top-bar">
+                    <button
+                        class="barcode-scanner-home-menu-button"
+                        t-on-click="goHome"
+                    >
                         <i class="fa fa-th" />
                     </button>
-                    <div class="ilx-home-avatar">
+                    <div class="barcode-scanner-home-avatar">
                         <img
                             t-if="showAvatarImage"
                             t-att-src="avatarUrl"
                             t-on-error="onAvatarError"
-                            class="ilx-home-avatar-image"
+                            class="barcode-scanner-home-avatar-image"
                             alt="Avatar"
                         />
-                        <span t-else="" class="ilx-home-avatar-text">
+                        <span t-else="" class="barcode-scanner-home-avatar-text">
                             <t t-esc="userInitials" />
                         </span>
                     </div>
                 </div>
 
-                <h3 class="ilx-home-title">
+                <h3 class="barcode-scanner-home-title">
                     <t t-esc="greeting" />,<br />
-                    <span class="ilx-home-title-name"><t t-esc="userName" />.</span>
+                    <span class="barcode-scanner-home-title-name"><t
+                    t-esc="userName"
+                />.</span>
                 </h3>
                 <p
-                    class="ilx-home-subtitle"
+                    class="barcode-scanner-home-subtitle"
                 >Ready for today's distribution schedule.</p>
             </header>
 
-            <main class="ilx-home-main">
-                <div class="ilx-home-grid">
+            <main class="barcode-scanner-home-main">
+                <div class="barcode-scanner-home-grid">
                     <t t-foreach="menuTiles" t-as="tile" t-key="tile.id">
                         <button
-                            class="ilx-home-grid-item"
+                            class="barcode-scanner-home-grid-item"
                             t-on-click="() => this.onTileClick(tile)"
                         >
-                            <div t-att-class="'ilx-home-grid-icon ' + tile.iconClass">
+                            <div
+                                t-att-class="'barcode-scanner-home-grid-icon ' + tile.iconClass"
+                            >
                                 <i t-att-class="'fa ' + tile.icon" />
                             </div>
-                            <span class="ilx-home-grid-title" t-esc="tile.label" />
+                            <span
+                                class="barcode-scanner-home-grid-title"
+                                t-esc="tile.label"
+                            />
                         </button>
                     </t>
                 </div>

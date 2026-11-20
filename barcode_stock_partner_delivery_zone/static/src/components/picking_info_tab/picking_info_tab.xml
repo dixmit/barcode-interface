@@ -8,18 +8,20 @@
         t-inherit-mode="extension"
     >
         <xpath
-            expr="//div[hasclass('ilx-kw-card')]/div[hasclass('ilx-kw-info-row')][1]"
+            expr="//div[hasclass('barcode-scanner-card')]/div[hasclass('barcode-scanner-info-row')][1]"
             position="after"
         >
-            <div class="ilx-kw-info-row mt-3">
-                <div class="ilx-kw-icon-box-small ilx-kw-background-purple-light">
+            <div class="barcode-scanner-info-row mt-3">
+                <div
+                    class="barcode-scanner-icon-box-small barcode-scanner-background-purple-light"
+                >
                     <i class="fa fa-map-signs" />
                 </div>
-                <div class="ilx-kw-info-text w-100">
-                    <span class="ilx-kw-eyebrow">Delivery Zone</span>
-                    <div class="ilx-kw-select-wrapper mt-1">
+                <div class="barcode-scanner-info-text w-100">
+                    <span class="barcode-scanner-eyebrow">Delivery Zone</span>
+                    <div class="barcode-scanner-select-wrapper mt-1">
                         <select
-                            class="ilx-kw-select"
+                            class="barcode-scanner-select"
                             t-att-disabled="zoneState.saving or zoneState.failed"
                             t-on-change="onDeliveryZoneChange"
                         >

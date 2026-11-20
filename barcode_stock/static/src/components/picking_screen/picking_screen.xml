@@ -1,61 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
     <t t-name="barcode_scanner.PickingScreen">
-        <div class="barcode-scanner-list-screen ilx-kw-picking-screen bg-surface-low">
+        <div
+            class="barcode-scanner-list-screen barcode-scanner-picking-screen bg-surface-low"
+        >
             <t t-if="!state.picking">
                 <div class="text-center p-4">
                     Loading...
                 </div>
             </t>
             <t t-else="">
-                <header class="ilx-kw-header ilx-kw-header-elevated">
-                    <div class="ilx-kw-header-left">
+                <header class="barcode-scanner-header barcode-scanner-header-elevated">
+                    <div class="barcode-scanner-header-left">
                         <button
-                            class="ilx-kw-icon-button color-primary-container"
+                            class="barcode-scanner-icon-button color-primary-container"
                             t-on-click="goBack"
                         >
                             <i class="fa fa-arrow-left" />
                         </button>
-                        <h1 class="ilx-kw-header-title color-on-surface">
+                        <h1 class="barcode-scanner-header-title color-on-surface">
                             <t t-esc="state.picking.name" />
                         </h1>
                     </div>
                 </header>
 
-                <div class="ilx-kw-tabs bg-surface-lowest">
+                <div class="barcode-scanner-tabs bg-surface-lowest">
                     <button
-                        t-att-class="state.activeTab === 'info' ? 'ilx-kw-tab active' : 'ilx-kw-tab'"
+                        t-att-class="state.activeTab === 'info' ? 'barcode-scanner-tab active' : 'barcode-scanner-tab'"
                         t-on-click="() => setTab('info')"
                     >
                         <i class="fa fa-info-circle me-1" /> Information
                         <div
                         t-if="state.activeTab === 'info'"
-                        class="ilx-kw-tab-indicator"
+                        class="barcode-scanner-tab-indicator"
                     />
                     </button>
                     <button
-                        t-att-class="state.activeTab === 'todo' ? 'ilx-kw-tab active' : 'ilx-kw-tab'"
+                        t-att-class="state.activeTab === 'todo' ? 'barcode-scanner-tab active' : 'barcode-scanner-tab'"
                         t-on-click="() => setTab('todo')"
                     >
                         <i class="fa fa-list me-1" /> To Do
                         <div
                         t-if="state.activeTab === 'todo'"
-                        class="ilx-kw-tab-indicator"
+                        class="barcode-scanner-tab-indicator"
                     />
                     </button>
                     <button
-                        t-att-class="state.activeTab === 'done' ? 'ilx-kw-tab active' : 'ilx-kw-tab'"
+                        t-att-class="state.activeTab === 'done' ? 'barcode-scanner-tab active' : 'barcode-scanner-tab'"
                         t-on-click="() => setTab('done')"
                     >
                         <i class="fa fa-check-circle me-1" /> Done
                         <div
                         t-if="state.activeTab === 'done'"
-                        class="ilx-kw-tab-indicator"
+                        class="barcode-scanner-tab-indicator"
                     />
                     </button>
                 </div>
 
-                <main class="ilx-kw-main ilx-kw-tab-content mt-3">
+                <main class="barcode-scanner-main barcode-scanner-tab-content mt-3">
                     <t t-if="state.activeTab === 'info'">
                         <PickingInfoTab
                             picking="state.picking"
@@ -80,7 +82,7 @@
                             onDeleteLine="deleteMoveLine"
                         />
                     </t>
-                    <div class="ilx-kw-main-spacer" />
+                    <div class="barcode-scanner-main-spacer" />
                 </main>
 
                 <div class="barcode-scanner-bottom-navigation">

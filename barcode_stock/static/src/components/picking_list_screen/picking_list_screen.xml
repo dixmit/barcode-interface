@@ -6,22 +6,22 @@
             t-as="groupKey"
             t-key="groupKey"
         >
-            <div class="ilx-kw-group-wrapper">
+            <div class="barcode-scanner-group-wrapper">
                 <t t-if="groupKey !== 'all'">
                     <div
-                        class="ilx-kw-group-header"
+                        class="barcode-scanner-group-header"
                         t-on-click="() => component.toggleGroup(path + '-' + groupKey)"
                     >
-                        <div class="ilx-kw-group-title-container">
-                            <div class="ilx-kw-group-indicator" />
-                            <h2 class="ilx-kw-group-title">
+                        <div class="barcode-scanner-group-title-container">
+                            <div class="barcode-scanner-group-indicator" />
+                            <h2 class="barcode-scanner-group-title">
                                 <t t-esc="component.getGroupLevelLabel(level)" />: <t
                                 t-esc="groupKey"
                             />
                             </h2>
                         </div>
-                        <div class="ilx-kw-group-actions">
-                            <span class="ilx-kw-group-badge">
+                        <div class="barcode-scanner-group-actions">
+                            <span class="barcode-scanner-group-badge">
                                 <t
                                 t-esc="component.countGroupEntries(groups[groupKey])"
                             /> Items
@@ -32,66 +32,68 @@
 
                 <div
                     t-if="!component.state.collapsedGroups[path + '-' + groupKey]"
-                    class="ilx-kw-group-body"
+                    class="barcode-scanner-group-body"
                 >
                     <t t-if="Array.isArray(groups[groupKey])">
-                        <div class="ilx-kw-picking-cards">
+                        <div class="barcode-scanner-picking-cards">
                             <t t-foreach="groups[groupKey]" t-as="p" t-key="p.id">
                                 <article
-                                    class="ilx-kw-picking-card"
+                                    class="barcode-scanner-picking-card"
                                     t-on-click="() => component.openPicking(p.id)"
                                 >
-                                    <div class="ilx-kw-picking-card-top">
-                                        <div class="ilx-kw-picking-card-info">
-                                            <span class="ilx-kw-picking-code">
+                                    <div class="barcode-scanner-picking-card-top">
+                                        <div class="barcode-scanner-picking-card-info">
+                                            <span class="barcode-scanner-picking-code">
                                                 <t t-esc="p.name" />
                                             </span>
-                                            <h3 class="ilx-kw-picking-partner">
+                                            <h3 class="barcode-scanner-picking-partner">
                                                 <t
                                                     t-esc="component.getPartnerName(p)"
                                                 />
                                             </h3>
                                         </div>
                                         <div
-                                            class="ilx-kw-picking-card-status-col"
+                                            class="barcode-scanner-picking-card-status-col"
                                             style="display: flex; align-items: center; gap: 4px;"
                                         >
                                             <span
-                                                t-att-class="p.state === 'assigned' ? 'ilx-kw-status-tag ilx-kw-status-tag-ready' : 'ilx-kw-status-tag'"
+                                                t-att-class="p.state === 'assigned' ? 'barcode-scanner-status-tag barcode-scanner-status-tag-ready' : 'barcode-scanner-status-tag'"
                                             >
                                                 <t
                                                     t-esc="component.getStateLabel(p).toUpperCase()"
                                                 />
                                             </span>
                                             <i
-                                                class="fa fa-chevron-right ilx-kw-picking-chevron"
+                                                class="fa fa-chevron-right barcode-scanner-picking-chevron"
                                             />
                                         </div>
                                     </div>
 
-                                    <div class="ilx-kw-divider" />
+                                    <div class="barcode-scanner-divider" />
 
-                                    <div class="ilx-kw-picking-card-bottom">
-                                        <div class="ilx-kw-picking-meta-left">
-                                            <i class="fa fa-cubes ilx-kw-meta-icon" />
-                                            <span class="ilx-kw-meta-text">
+                                    <div class="barcode-scanner-picking-card-bottom">
+                                        <div class="barcode-scanner-picking-meta-left">
+                                            <i
+                                                class="fa fa-cubes barcode-scanner-meta-icon"
+                                            />
+                                            <span class="barcode-scanner-meta-text">
                                                 <t t-esc="component.getSkuSummary(p)" />
                                             </span>
                                         </div>
 
-                                        <div class="ilx-kw-picking-meta-right">
+                                        <div class="barcode-scanner-picking-meta-right">
                                             <t t-if="component.isUrgentPicking(p)">
                                                 <span
-                                                    class="ilx-kw-meta-text text-danger"
+                                                    class="barcode-scanner-meta-text text-danger"
                                                 ><i
                                                     class="fa fa-exclamation-triangle me-1"
                                                 />Urgent</span>
                                             </t>
                                             <t t-else="">
                                                 <i
-                                                    class="fa fa-clock-o ilx-kw-meta-icon"
+                                                    class="fa fa-clock-o barcode-scanner-meta-icon"
                                                 />
-                                                <span class="ilx-kw-meta-text">
+                                                <span class="barcode-scanner-meta-text">
                                                     <t
                                                         t-esc="component.getScheduleSummary(p)"
                                                     />
@@ -116,30 +118,37 @@
         </t>
     </t>
     <t t-name="barcode_scanner.PickingListScreen">
-        <div class="barcode-scanner-list-screen ilx-kw-picking-list">
-            <header class="ilx-kw-header ilx-kw-header-elevated">
-                <button type="button" class="ilx-kw-icon-button" t-on-click="goBack">
+        <div class="barcode-scanner-list-screen barcode-scanner-picking-list">
+            <header class="barcode-scanner-header barcode-scanner-header-elevated">
+                <button
+                    type="button"
+                    class="barcode-scanner-icon-button"
+                    t-on-click="goBack"
+                >
                     <i class="fa fa-arrow-left" />
                 </button>
-                <h1 class="ilx-kw-header-title">Picking Operations</h1>
+                <h1 class="barcode-scanner-header-title">Picking Operations</h1>
                 <div class="header-spacer" />
             </header>
 
-            <main class="ilx-kw-main">
-                <div class="ilx-kw-search-section">
-                    <div class="ilx-kw-search-bar">
-                        <i class="fa fa-search ilx-kw-search-icon" />
+            <main class="barcode-scanner-main">
+                <div class="barcode-scanner-search-section">
+                    <div class="barcode-scanner-search-bar">
+                        <i class="fa fa-search barcode-scanner-search-icon" />
                         <input
                             name="search"
                             type="text"
-                            class="ilx-kw-search-input"
+                            class="barcode-scanner-search-input"
                             placeholder="Scan or search pickings..."
                             t-model="state.search"
                         />
                     </div>
 
-                    <div class="ilx-kw-filter-tools" t-on-click.stop="() => {}">
-                        <div class="ilx-kw-filter-toolbar">
+                    <div
+                        class="barcode-scanner-filter-tools"
+                        t-on-click.stop="() => {}"
+                    >
+                        <div class="barcode-scanner-filter-toolbar">
                             <button
                                 type="button"
                                 class="barcode-scanner-filter-tool-button"
@@ -168,7 +177,7 @@
                             <div class="barcode-scanner-filter-tool-spacer" />
                             <button
                                 type="button"
-                                class="barcode-scanner-filter-tool-button ilx-kw-star-button"
+                                class="barcode-scanner-filter-tool-button barcode-scanner-star-button"
                                 t-att-class="{active: isCurrentFilterDefault}"
                                 t-att-title="starTitle"
                                 t-on-click="() => this.toggleDefaultFilter()"
@@ -262,7 +271,7 @@
                                     >
                                         <input
                                             type="date"
-                                            class="ilx-kw-filter-date-input"
+                                            class="barcode-scanner-filter-date-input"
                                             t-att-value="state.filterValues.date ? state.filterValues.date.substring(7) : ''"
                                             t-on-change="(ev) => this.setCustomDate(ev.target.value)"
                                         />
@@ -349,7 +358,7 @@
                     </div>
                 </div>
 
-                <div class="ilx-kw-picking-cards">
+                <div class="barcode-scanner-picking-cards">
                     <t t-if="state.loading">
                         <div class="text-center p-4">Loading queue...</div>
                     </t>
@@ -362,7 +371,9 @@
                         </t>
                     </t>
                     <t t-else="">
-                        <div class="empty-state ilx-queue-empty-state">
+                        <div
+                            class="empty-state barcode-scanner-picking-list--empty-state"
+                        >
                             <div class="empty-title">No pending pickings</div>
                             <div class="empty-subtitle">
                                 Adjust filters or scan a picking name to continue.

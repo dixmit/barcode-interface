@@ -1,52 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
     <t t-name="barcode_scanner.PickingInfoTab" owl="1">
-        <div class="ilx-kw-tab-content">
-            <div class="ilx-kw-card">
-                <div class="ilx-kw-info-row">
-                    <div class="ilx-kw-icon-box-small ilx-kw-background-orange">
+        <div class="barcode-scanner-tab-content">
+            <div class="barcode-scanner-card">
+                <div class="barcode-scanner-info-row">
+                    <div
+                        class="barcode-scanner-icon-box-small barcode-scanner-background-orange"
+                    >
                         <i class="fa fa-building" />
                     </div>
-                    <div class="ilx-kw-info-text">
-                        <span class="ilx-kw-eyebrow">PARTNER</span>
-                        <strong class="ilx-kw-title">
+                    <div class="barcode-scanner-info-text">
+                        <span class="barcode-scanner-eyebrow">PARTNER</span>
+                        <strong class="barcode-scanner-title">
                             <t t-esc="props.picking.partner_id?.[1] || 'No partner'" />
                         </strong>
                     </div>
                 </div>
-                <div class="ilx-kw-info-row mt-3">
-                    <div class="ilx-kw-icon-box-small ilx-kw-background-purple-light">
+                <div class="barcode-scanner-info-row mt-3">
+                    <div
+                        class="barcode-scanner-icon-box-small barcode-scanner-background-purple-light"
+                    >
                         <i class="fa fa-map-marker" />
                     </div>
-                    <div class="ilx-kw-info-text">
-                        <span class="ilx-kw-eyebrow">From</span>
-                        <span class="ilx-kw-value">
+                    <div class="barcode-scanner-info-text">
+                        <span class="barcode-scanner-eyebrow">From</span>
+                        <span class="barcode-scanner-value">
                             <t t-esc="props.picking.location_id?.[1]" />
                         </span>
                     </div>
                 </div>
-                <div class="ilx-kw-info-row mt-3">
-                    <div class="ilx-kw-icon-box-small ilx-kw-background-purple-light">
+                <div class="barcode-scanner-info-row mt-3">
+                    <div
+                        class="barcode-scanner-icon-box-small barcode-scanner-background-purple-light"
+                    >
                         <i class="fa fa-arrow-right" />
                     </div>
-                    <div class="ilx-kw-info-text">
-                        <span class="ilx-kw-eyebrow">To</span>
-                        <span class="ilx-kw-value">
+                    <div class="barcode-scanner-info-text">
+                        <span class="barcode-scanner-eyebrow">To</span>
+                        <span class="barcode-scanner-value">
                             <t t-esc="props.picking.location_dest_id?.[1]" />
                         </span>
                     </div>
                 </div>
                 <div
-                    class="ilx-kw-info-row mt-3"
+                    class="barcode-scanner-info-row mt-3"
                     t-on-click="onSelectResponsible"
                     style="cursor: pointer;"
                 >
-                    <div class="ilx-kw-icon-box-small ilx-kw-background-purple-light">
+                    <div
+                        class="barcode-scanner-icon-box-small barcode-scanner-background-purple-light"
+                    >
                         <i class="fa fa-user" />
                     </div>
-                    <div class="ilx-kw-info-text">
-                        <span class="ilx-kw-eyebrow">Responsible</span>
-                        <span class="ilx-kw-value">
+                    <div class="barcode-scanner-info-text">
+                        <span class="barcode-scanner-eyebrow">Responsible</span>
+                        <span class="barcode-scanner-value">
                             <t t-esc="props.picking.user_id?.[1] || 'Unassigned'" />
                         </span>
                     </div>
@@ -55,31 +63,35 @@
                         style="color: var(--barcode-scanner-on-surface-variant); font-size: 0.8rem;"
                     />
                 </div>
-                <div class="ilx-kw-info-row mt-3">
-                    <div class="ilx-kw-icon-box-small ilx-kw-background-purple-light">
+                <div class="barcode-scanner-info-row mt-3">
+                    <div
+                        class="barcode-scanner-icon-box-small barcode-scanner-background-purple-light"
+                    >
                         <i class="fa fa-calendar" />
                     </div>
-                    <div class="ilx-kw-info-text w-100">
-                        <span class="ilx-kw-eyebrow">Scheduled Date</span>
-                        <div class="ilx-kw-select-wrapper mt-1">
+                    <div class="barcode-scanner-info-text w-100">
+                        <span class="barcode-scanner-eyebrow">Scheduled Date</span>
+                        <div class="barcode-scanner-select-wrapper mt-1">
                             <input
                                 type="datetime-local"
                                 name="scheduled_date"
-                                class="ilx-kw-select"
+                                class="barcode-scanner-select"
                                 t-model="props.picking.scheduled_date"
                             />
                         </div>
                     </div>
                 </div>
-                <div class="ilx-kw-info-row mt-3">
-                    <div class="ilx-kw-icon-box-small ilx-kw-background-purple-light">
+                <div class="barcode-scanner-info-row mt-3">
+                    <div
+                        class="barcode-scanner-icon-box-small barcode-scanner-background-purple-light"
+                    >
                         <i class="fa fa-sticky-note-o" />
                     </div>
-                    <div class="ilx-kw-info-text w-100">
-                        <span class="ilx-kw-eyebrow">Notes</span>
-                        <div class="ilx-kw-select-wrapper mt-1">
+                    <div class="barcode-scanner-info-text w-100">
+                        <span class="barcode-scanner-eyebrow">Notes</span>
+                        <div class="barcode-scanner-select-wrapper mt-1">
                             <textarea
-                                class="ilx-kw-select"
+                                class="barcode-scanner-select"
                                 rows="2"
                                 placeholder="Add notes..."
                                 t-att-value="notePlainText"
@@ -93,7 +105,7 @@
 
             <div class="mt-4 mb-4">
                 <button
-                    class="ilx-kw-button-ghost w-100"
+                    class="barcode-scanner-button-ghost w-100"
                     t-on-click="() => env.services.barcodeRouter.navigate('main')"
                 >
                     Back to Dashboard

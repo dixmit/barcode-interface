@@ -1,14 +1,14 @@
 // Scrap reason chips. Reuses the shared design tokens (--barcode-scanner-*) defined by
 // barcode_scanner so the look matches the rest of the suite.
 
-.ilx-scrap-reasons {
+.barcode-scanner-scrap-reasons {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 4px;
 }
 
-.ilx-scrap-reason {
+.barcode-scanner-scrap-reason {
     padding: 10px 16px;
     border-radius: 20px;
     border: 1px solid var(--barcode-scanner-outline-variant);
@@ -18,7 +18,7 @@
     font-weight: 600;
     cursor: pointer;
 
-    &.ilx-scrap-reason-active {
+    &.barcode-scanner-scrap-reason-active {
         background: var(--barcode-scanner-primary);
         color: var(--barcode-scanner-on-primary);
         border-color: var(--barcode-scanner-primary);
@@ -26,7 +26,7 @@
 }
 
 // Destination row: where the scrapped goods go.
-.ilx-scrap-destination {
+.barcode-scanner-scrap-destination {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -37,15 +37,15 @@
     color: var(--barcode-scanner-on-surface);
     font-size: 0.9rem;
 
-    .ilx-scrap-destination-label {
+    .barcode-scanner-scrap-destination-label {
         color: var(--barcode-scanner-on-surface-variant);
     }
 
-    .ilx-scrap-destination-name {
+    .barcode-scanner-scrap-destination-name {
         font-weight: 600;
     }
 
-    .ilx-scrap-destination-select {
+    .barcode-scanner-scrap-destination-select {
         flex: 1;
         min-width: 0;
         padding: 6px 8px;
@@ -56,25 +56,25 @@
         font-weight: 600;
     }
 
-    &.ilx-scrap-destination-missing {
+    &.barcode-scanner-scrap-destination-missing {
         background: var(--barcode-scanner-danger-bg);
         color: var(--barcode-scanner-error);
     }
 }
 
 // Quick creation of a scrap reason.
-.ilx-scrap-reason-new {
+.barcode-scanner-scrap-reason-new {
     border-style: dashed;
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-scrap-reason-form {
+.barcode-scanner-scrap-reason-form {
     display: flex;
     align-items: center;
     gap: 8px;
     width: 100%;
 
-    .ilx-emp-v2-search-input {
+    .barcode-scanner-employee-search-input {
         flex: 1;
         min-width: 0;
         padding: 8px 12px;

@@ -6,27 +6,33 @@
                 <div class="text-center p-4">Loading move...</div>
             </t>
             <t t-else="">
-                <header class="ilx-mw-v2-header">
+                <header class="barcode-scanner-move-wizard-header">
                     <button
-                        class="ilx-v2-back-button ilx-button-48"
+                        class="barcode-scanner-screen-back-button barcode-scanner-button-48"
                         t-on-click="goBack"
                     >
                         <i class="fa fa-arrow-left" />
                     </button>
-                    <h2 class="ilx-mw-v2-title">
+                    <h2 class="barcode-scanner-move-wizard-title">
                         <t t-esc="state.move?.product_id?.[1]" />
                     </h2>
-                    <button class="ilx-v2-back-button ilx-button-48 invisible">
+                    <button
+                        class="barcode-scanner-screen-back-button barcode-scanner-button-48 invisible"
+                    >
                         <i class="fa fa-ellipsis-v" />
                     </button>
                 </header>
 
-                <div class="ilx-mw-v2-main">
-                    <div class="ilx-mw-v2-card">
-                        <div class="ilx-mw-v2-task-top">
+                <div class="barcode-scanner-move-wizard-main">
+                    <div class="barcode-scanner-move-wizard-card">
+                        <div class="barcode-scanner-move-wizard-task-top">
                             <div>
-                                <span class="ilx-mw-v2-eyebrow">TASK STATUS</span>
-                                <h3 class="ilx-mw-v2-task-title">Move Operation</h3>
+                                <span
+                                    class="barcode-scanner-move-wizard-eyebrow"
+                                >TASK STATUS</span>
+                                <h3
+                                    class="barcode-scanner-move-wizard-task-title"
+                                >Move Operation</h3>
                                 <div
                                     style="font-size: 0.875rem; color: var(--barcode-scanner-on-surface-variant, #6b7280); margin-top: 2px;"
                                 >
@@ -34,17 +40,17 @@
                                     <t t-esc="state.move?.product_id?.[1]" />
                                 </div>
                             </div>
-                            <div class="ilx-mw-v2-badge-todo">
+                            <div class="barcode-scanner-move-wizard-badge-todo">
                                 <i class="fa fa-clipboard" /> TO DO
                             </div>
                         </div>
-                        <div class="ilx-mw-v2-progress-background">
+                        <div class="barcode-scanner-move-wizard-progress-background">
                             <div
-                                class="ilx-mw-v2-progress-fill"
+                                class="barcode-scanner-move-wizard-progress-fill"
                                 t-att-style="'width: ' + (demandQty > 0 ? (doneQty / demandQty) * 100 : 0) + '%'"
                             />
                         </div>
-                        <div class="ilx-mw-v2-progress-labels">
+                        <div class="barcode-scanner-move-wizard-progress-labels">
                             <span><t t-esc="doneQty" /> Picked</span>
                             <span>
                                 <strong><t t-esc="demandQty" /> Required</strong>
@@ -57,32 +63,34 @@
                     >
                         <div
                             t-if="canUseExistingLot and canCreateLot"
-                            class="ilx-mw-v2-segmented"
+                            class="barcode-scanner-move-wizard-segmented"
                         >
                             <button
-                                t-att-class="state.mode === 'pick' ? 'ilx-mw-v2-segment-button active' : 'ilx-mw-v2-segment-button'"
+                                t-att-class="state.mode === 'pick' ? 'barcode-scanner-move-wizard-segment-button active' : 'barcode-scanner-move-wizard-segment-button'"
                                 t-on-click="() => setMode('pick')"
                             >
                                 Pick Existing Lot
                             </button>
                             <button
-                                t-att-class="state.mode === 'create_lot' ? 'ilx-mw-v2-segment-button active' : 'ilx-mw-v2-segment-button'"
+                                t-att-class="state.mode === 'create_lot' ? 'barcode-scanner-move-wizard-segment-button active' : 'barcode-scanner-move-wizard-segment-button'"
                                 t-on-click="() => setMode('create_lot')"
                             >
                                 Create New Lot
                             </button>
                         </div>
 
-                        <div class="ilx-v2-field-group">
-                            <label class="ilx-v2-label">
+                        <div class="barcode-scanner-screen-field-group">
+                            <label class="barcode-scanner-screen-label">
                                 <t t-esc="lotFieldLabel" />
                             </label>
                             <t t-if="canUseExistingLot and state.mode === 'pick'">
-                                <div class="ilx-mw-v2-input-box">
-                                    <i class="fa fa-barcode ilx-mw-v2-input-icon" />
+                                <div class="barcode-scanner-move-wizard-input-box">
+                                    <i
+                                        class="fa fa-barcode barcode-scanner-move-wizard-input-icon"
+                                    />
                                     <select
                                         name="lot_id"
-                                        class="ilx-mw-v2-input"
+                                        class="barcode-scanner-move-wizard-input"
                                         t-on-change="onLotChange"
                                     >
                                         <option
@@ -113,11 +121,13 @@
                                 </div>
                             </t>
                             <t t-if="canCreateLot and state.mode === 'create_lot'">
-                                <div class="ilx-mw-v2-input-box mb-2">
-                                    <i class="fa fa-barcode ilx-mw-v2-input-icon" />
+                                <div class="barcode-scanner-move-wizard-input-box mb-2">
+                                    <i
+                                        class="fa fa-barcode barcode-scanner-move-wizard-input-icon"
+                                    />
                                     <input
                                         name="new_lot_name"
-                                        class="ilx-mw-v2-input"
+                                        class="barcode-scanner-move-wizard-input"
                                         t-model="state.newLotName"
                                         placeholder="Enter lot/serial"
                                         data-enable-barcode="true"
@@ -127,15 +137,17 @@
                         </div>
                     </t>
 
-                    <div class="ilx-v2-field-group">
-                        <label class="ilx-v2-label">Quantity to pick</label>
+                    <div class="barcode-scanner-screen-field-group">
+                        <label
+                            class="barcode-scanner-screen-label"
+                        >Quantity to pick</label>
                         <div
-                            class="ilx-mw-v2-quantity-row"
+                            class="barcode-scanner-move-wizard-quantity-row"
                             role="group"
                             aria-label="Quantity stepper"
                         >
                             <button
-                                class="ilx-mw-v2-quantity-button"
+                                class="barcode-scanner-move-wizard-quantity-button"
                                 t-att-disabled="!canDecrement or state.loading"
                                 t-att-aria-label="'Decrease quantity by one'"
                                 t-on-click="() => this.adjustQty(-1)"
@@ -143,7 +155,7 @@
                                 <i class="fa fa-minus" />
                             </button>
                             <input
-                                class="ilx-mw-v2-quantity-input"
+                                class="barcode-scanner-move-wizard-quantity-input"
                                 type="number"
                                 t-model="state.qtyPicked"
                                 t-att-max="quantityInputMax"
@@ -152,7 +164,7 @@
                                 data-enable-barcode="true"
                             />
                             <button
-                                class="ilx-mw-v2-quantity-button"
+                                class="barcode-scanner-move-wizard-quantity-button"
                                 t-att-disabled="!canIncrement or state.loading"
                                 t-att-aria-label="'Increase quantity by one'"
                                 t-on-click="() => this.adjustQty(1)"
@@ -161,7 +173,7 @@
                             </button>
                             <button
                                 t-if="canFulfill"
-                                class="ilx-mw-v2-quantity-button ilx-mw-v2-quantity-button-fulfill"
+                                class="barcode-scanner-move-wizard-quantity-button barcode-scanner-move-wizard-quantity-button-fulfill"
                                 t-att-aria-label="'Fulfill remaining'"
                                 t-on-click="fulfillRemaining"
                             >
@@ -171,42 +183,46 @@
                     </div>
 
                     <t t-if="canEditLocations">
-                        <div class="ilx-v2-field-group">
-                            <label class="ilx-v2-label">Source location</label>
+                        <div class="barcode-scanner-screen-field-group">
+                            <label
+                                class="barcode-scanner-screen-label"
+                            >Source location</label>
                             <div
-                                class="ilx-tx-v2-select-card"
+                                class="barcode-scanner-transfer-select-card"
                                 t-on-click="selectSourceLocation"
                             >
-                                <div class="ilx-tx-v2-icon">
+                                <div class="barcode-scanner-transfer-icon">
                                     <i class="fa fa-map-marker" />
                                 </div>
-                                <div class="ilx-tx-v2-text">
+                                <div class="barcode-scanner-transfer-text">
                                     <t t-if="shownSourceLocation">
                                         <t t-esc="shownSourceLocation.display_name" />
                                     </t>
                                     <t t-else="">Select source</t>
                                 </div>
-                                <div class="ilx-tx-v2-chevron">
+                                <div class="barcode-scanner-transfer-chevron">
                                     <i class="fa fa-chevron-down" />
                                 </div>
                             </div>
                         </div>
-                        <div class="ilx-v2-field-group">
-                            <label class="ilx-v2-label">Destination location</label>
+                        <div class="barcode-scanner-screen-field-group">
+                            <label
+                                class="barcode-scanner-screen-label"
+                            >Destination location</label>
                             <div
-                                class="ilx-tx-v2-select-card"
+                                class="barcode-scanner-transfer-select-card"
                                 t-on-click="selectDestLocation"
                             >
-                                <div class="ilx-tx-v2-icon">
+                                <div class="barcode-scanner-transfer-icon">
                                     <i class="fa fa-sign-in" />
                                 </div>
-                                <div class="ilx-tx-v2-text">
+                                <div class="barcode-scanner-transfer-text">
                                     <t t-if="shownDestLocation">
                                         <t t-esc="shownDestLocation.display_name" />
                                     </t>
                                     <t t-else="">Select destination</t>
                                 </div>
-                                <div class="ilx-tx-v2-chevron">
+                                <div class="barcode-scanner-transfer-chevron">
                                     <i class="fa fa-chevron-down" />
                                 </div>
                             </div>
@@ -214,12 +230,18 @@
                     </t>
                 </div>
 
-                <footer class="ilx-v2-footer">
-                    <button class="ilx-v2-button-primary" t-on-click="confirmPick">
+                <footer class="barcode-scanner-screen-footer">
+                    <button
+                        class="barcode-scanner-screen-button-primary"
+                        t-on-click="confirmPick"
+                    >
                         <t t-esc="confirmLabel" />
                         <i class="fa fa-arrow-right ms-2" />
                     </button>
-                    <button class="ilx-v2-button-secondary" t-on-click="goBack">
+                    <button
+                        class="barcode-scanner-screen-button-secondary"
+                        t-on-click="goBack"
+                    >
                         <t t-esc="backLabel" />
                     </button>
                 </footer>

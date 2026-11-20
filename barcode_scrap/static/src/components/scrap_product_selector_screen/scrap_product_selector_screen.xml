@@ -1,48 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
     <t t-name="barcode_scrap.ScrapProductSelectorScreen">
-        <div class="ilx-emp-v2-screen">
-            <header class="ilx-emp-v2-header">
-                <button class="ilx-emp-v2-back-button" t-on-click="goBack">
+        <div class="barcode-scanner-employee-screen">
+            <header class="barcode-scanner-employee-header">
+                <button
+                    class="barcode-scanner-employee-back-button"
+                    t-on-click="goBack"
+                >
                     <i class="fa fa-arrow-left" />
                 </button>
-                <h1 class="ilx-emp-v2-header-title">Add Product</h1>
+                <h1 class="barcode-scanner-employee-header-title">Add Product</h1>
             </header>
 
-            <main class="ilx-emp-v2-main">
-                <div class="ilx-emp-v2-search-box">
-                    <i class="fa fa-search ilx-emp-v2-search-icon" />
+            <main class="barcode-scanner-employee-main">
+                <div class="barcode-scanner-employee-search-box">
+                    <i class="fa fa-search barcode-scanner-employee-search-icon" />
                     <input
                         type="text"
-                        class="ilx-emp-v2-search-input"
+                        class="barcode-scanner-employee-search-input"
                         placeholder="Scan or search a product..."
                         t-att-value="state.search"
                         t-on-input="onSearchInput"
                     />
                 </div>
 
-                <h2 class="ilx-emp-v2-section-title">
+                <h2 class="barcode-scanner-employee-section-title">
                     <t t-if="state.search">PRODUCTS</t>
                     <t t-else="">IN THIS LOCATION</t>
                 </h2>
-                <div class="ilx-emp-v2-list">
+                <div class="barcode-scanner-employee-list">
                     <t t-if="state.loading">
                         <div class="text-center p-4">Loading products...</div>
                     </t>
                     <t t-else="">
                         <t t-foreach="state.results" t-as="prod" t-key="prod.id">
                             <div
-                                class="ilx-emp-v2-card"
+                                class="barcode-scanner-employee-card"
                                 t-on-click="() => this.pickProduct(prod)"
                             >
-                                <div class="ilx-emp-v2-info">
-                                    <span class="ilx-emp-v2-name">
+                                <div class="barcode-scanner-employee-info">
+                                    <span class="barcode-scanner-employee-name">
                                         <t t-esc="prod.display_name" />
                                     </span>
                                 </div>
-                                <div class="ilx-emp-v2-status">
+                                <div class="barcode-scanner-employee-status">
                                     <i
-                                        class="fa fa-plus-circle ilx-emp-v2-icon-chevron"
+                                        class="fa fa-plus-circle barcode-scanner-employee-icon-chevron"
                                     />
                                 </div>
                             </div>

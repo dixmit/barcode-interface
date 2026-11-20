@@ -2,41 +2,41 @@
 <templates xml:space="preserve">
     <t t-name="barcode_scanner.QuickInfoScreen">
         <div class="barcode-scanner-screen">
-            <header class="ilx-v2-header">
-                <button class="ilx-v2-back-button" t-on-click="goBack">
+            <header class="barcode-scanner-screen-header">
+                <button class="barcode-scanner-screen-back-button" t-on-click="goBack">
                     <i class="fa fa-arrow-left" />
                 </button>
-                <h1 class="ilx-v2-header-title">Quick Info</h1>
+                <h1 class="barcode-scanner-screen-header-title">Quick Info</h1>
                 <div style="width: 48px;" />
             </header>
 
             <t t-if="state.resultDetails">
-                <div class="ilx-v2-main" style="padding: 0;">
+                <div class="barcode-scanner-screen-main" style="padding: 0;">
                     <div
-                        class="ilx-kw-tab-content"
+                        class="barcode-scanner-tab-content"
                         style="flex: 1; display: flex; flex-direction: column;"
                     >
                         <div
-                            class="ilx-kw-card"
+                            class="barcode-scanner-card"
                             style="flex: 1; display: flex; flex-direction: column; gap: 12px;"
                         >
-                            <div class="ilx-kw-info-row">
+                            <div class="barcode-scanner-info-row">
                                 <div
-                                    class="ilx-kw-icon-box"
-                                    t-att-class="state.resultType === 'product' ? 'ilx-kw-background-orange' : 'ilx-kw-background-brown'"
+                                    class="barcode-scanner-icon-box"
+                                    t-att-class="state.resultType === 'product' ? 'barcode-scanner-background-orange' : 'barcode-scanner-background-brown'"
                                     style="width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;"
                                 >
                                     <i
                                         t-att-class="'fa ' + (state.resultType === 'product' ? 'fa-archive' : 'fa-map-marker')"
                                     />
                                 </div>
-                                <div class="ilx-kw-info-text">
-                                    <span class="ilx-kw-eyebrow">
+                                <div class="barcode-scanner-info-text">
+                                    <span class="barcode-scanner-eyebrow">
                                         <t
                                             t-esc="state.resultType === 'product' ? 'PRODUCT' : 'LOCATION'"
                                         />
                                     </span>
-                                    <strong class="ilx-kw-title">
+                                    <strong class="barcode-scanner-title">
                                         <t
                                             t-esc="state.resultDetails.display_name || state.resultDetails.name"
                                         />
@@ -44,64 +44,66 @@
                                 </div>
                             </div>
                             <t t-if="state.resultType === 'product'">
-                                <div class="ilx-kw-info-row mt-3">
+                                <div class="barcode-scanner-info-row mt-3">
                                     <div
-                                        class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
+                                        class="barcode-scanner-icon-box-small barcode-scanner-background-purple-light"
                                     >
                                         <i class="fa fa-barcode" />
                                     </div>
-                                    <div class="ilx-kw-info-text">
-                                        <span class="ilx-kw-eyebrow">Barcode</span>
-                                        <span class="ilx-kw-value">
+                                    <div class="barcode-scanner-info-text">
+                                        <span
+                                            class="barcode-scanner-eyebrow"
+                                        >Barcode</span>
+                                        <span class="barcode-scanner-value">
                                             <t
                                                 t-esc="state.resultDetails.barcode || '—'"
                                             />
                                         </span>
                                     </div>
                                 </div>
-                                <div class="ilx-kw-info-row mt-3">
+                                <div class="barcode-scanner-info-row mt-3">
                                     <div
-                                        class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
+                                        class="barcode-scanner-icon-box-small barcode-scanner-background-purple-light"
                                     >
                                         <i class="fa fa-tag" />
                                     </div>
-                                    <div class="ilx-kw-info-text">
-                                        <span class="ilx-kw-eyebrow">SKU</span>
-                                        <span class="ilx-kw-value">
+                                    <div class="barcode-scanner-info-text">
+                                        <span class="barcode-scanner-eyebrow">SKU</span>
+                                        <span class="barcode-scanner-value">
                                             <t
                                                 t-esc="state.resultDetails.default_code || '—'"
                                             />
                                         </span>
                                     </div>
                                 </div>
-                                <div class="ilx-kw-info-row mt-3">
+                                <div class="barcode-scanner-info-row mt-3">
                                     <div
-                                        class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
+                                        class="barcode-scanner-icon-box-small barcode-scanner-background-purple-light"
                                     >
                                         <i class="fa fa-dollar" />
                                     </div>
-                                    <div class="ilx-kw-info-text">
+                                    <div class="barcode-scanner-info-text">
                                         <span
-                                            class="ilx-kw-eyebrow"
+                                            class="barcode-scanner-eyebrow"
                                         >Cost / Sale Price</span>
-                                        <span class="ilx-kw-value">$<t
+                                        <span class="barcode-scanner-value">$<t
                                             t-esc="state.resultDetails.standard_price"
                                         /> / $<t
                                             t-esc="state.resultDetails.list_price"
                                         /></span>
                                     </div>
                                 </div>
-                                <div class="ilx-kw-info-row mt-3">
+                                <div class="barcode-scanner-info-row mt-3">
                                     <div
-                                        class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
+                                        class="barcode-scanner-icon-box-small barcode-scanner-background-purple-light"
                                     >
                                         <i class="fa fa-cube" />
                                     </div>
-                                    <div class="ilx-kw-info-text">
+                                    <div class="barcode-scanner-info-text">
                                         <span
-                                            class="ilx-kw-eyebrow"
+                                            class="barcode-scanner-eyebrow"
                                         >Tracking / Type</span>
-                                        <span class="ilx-kw-value">
+                                        <span class="barcode-scanner-value">
                                             <t
                                             t-set="trackingLabels"
                                             t-value="{'serial': 'By Serial', 'lot': 'By Lots', 'none': 'No Tracking'}"
@@ -116,15 +118,17 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="ilx-kw-info-row mt-3">
+                                <div class="barcode-scanner-info-row mt-3">
                                     <div
-                                        class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
+                                        class="barcode-scanner-icon-box-small barcode-scanner-background-purple-light"
                                     >
                                         <i class="fa fa-cubes" />
                                     </div>
-                                    <div class="ilx-kw-info-text">
-                                        <span class="ilx-kw-eyebrow">On Hand</span>
-                                        <span class="ilx-kw-value">
+                                    <div class="barcode-scanner-info-text">
+                                        <span
+                                            class="barcode-scanner-eyebrow"
+                                        >On Hand</span>
+                                        <span class="barcode-scanner-value">
                                             <t
                                                 t-esc="state.resultDetails.qty_available"
                                             />
@@ -136,17 +140,20 @@
                                 </div>
                                 <t t-if="state.productStock.length">
                                     <div
-                                        class="ilx-kw-info-row mt-3"
+                                        class="barcode-scanner-info-row mt-3"
                                         style="align-items: flex-start;"
                                     >
                                         <div
-                                            class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
+                                            class="barcode-scanner-icon-box-small barcode-scanner-background-purple-light"
                                         >
                                             <i class="fa fa-map-marker" />
                                         </div>
-                                        <div class="ilx-kw-info-text" style="flex: 1;">
+                                        <div
+                                            class="barcode-scanner-info-text"
+                                            style="flex: 1;"
+                                        >
                                             <span
-                                                class="ilx-kw-eyebrow"
+                                                class="barcode-scanner-eyebrow"
                                             >Stock by Location (<t
                                                 t-esc="state.productStock.length"
                                             />)</span>
@@ -156,16 +163,18 @@
                                                     t-as="item"
                                                     t-key="item.locationId"
                                                 >
-                                                    <div class="ilx-kw-stock-row">
+                                                    <div
+                                                        class="barcode-scanner-stock-row"
+                                                    >
                                                         <span
-                                                            class="ilx-kw-stock-row-name"
+                                                            class="barcode-scanner-stock-row-name"
                                                         >
                                                             <t
                                                                 t-esc="item.locationName"
                                                             />
                                                         </span>
                                                         <span
-                                                            class="ilx-kw-stock-row-quantity"
+                                                            class="barcode-scanner-stock-row-quantity"
                                                         >
                                                             <t t-esc="item.quantity" />
                                                         </span>
@@ -177,19 +186,22 @@
                                 </t>
                                 <t t-if="state.lot">
                                     <div
-                                        class="ilx-kw-info-row mt-3"
+                                        class="barcode-scanner-info-row mt-3"
                                         style="align-items: flex-start;"
                                     >
                                         <div
-                                            class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
+                                            class="barcode-scanner-icon-box-small barcode-scanner-background-purple-light"
                                         >
                                             <i class="fa fa-tags" />
                                         </div>
-                                        <div class="ilx-kw-info-text" style="flex: 1;">
+                                        <div
+                                            class="barcode-scanner-info-text"
+                                            style="flex: 1;"
+                                        >
                                             <span
-                                                class="ilx-kw-eyebrow"
+                                                class="barcode-scanner-eyebrow"
                                             >Scanned Lot / Serial</span>
-                                            <span class="ilx-kw-value">
+                                            <span class="barcode-scanner-value">
                                                 <t t-esc="state.lot.name" />
                                             </span>
                                             <t t-if="state.lotStock.length">
@@ -199,16 +211,18 @@
                                                         t-as="item"
                                                         t-key="item.locationId"
                                                     >
-                                                        <div class="ilx-kw-stock-row">
+                                                        <div
+                                                            class="barcode-scanner-stock-row"
+                                                        >
                                                             <span
-                                                                class="ilx-kw-stock-row-name"
+                                                                class="barcode-scanner-stock-row-name"
                                                             >
                                                                 <t
                                                                     t-esc="item.locationName"
                                                                 />
                                                             </span>
                                                             <span
-                                                                class="ilx-kw-stock-row-quantity"
+                                                                class="barcode-scanner-stock-row-quantity"
                                                             >
                                                                 <t
                                                                     t-esc="item.quantity"
@@ -220,7 +234,7 @@
                                             </t>
                                             <t t-else="">
                                                 <span
-                                                    class="ilx-kw-value"
+                                                    class="barcode-scanner-value"
                                                     style="font-size: 0.85rem;"
                                                 >No stock on hand for this lot</span>
                                             </t>
@@ -229,30 +243,34 @@
                                 </t>
                             </t>
                             <t t-if="state.resultType === 'location'">
-                                <div class="ilx-kw-info-row mt-3">
+                                <div class="barcode-scanner-info-row mt-3">
                                     <div
-                                        class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
+                                        class="barcode-scanner-icon-box-small barcode-scanner-background-purple-light"
                                     >
                                         <i class="fa fa-barcode" />
                                     </div>
-                                    <div class="ilx-kw-info-text">
-                                        <span class="ilx-kw-eyebrow">Barcode</span>
-                                        <span class="ilx-kw-value">
+                                    <div class="barcode-scanner-info-text">
+                                        <span
+                                            class="barcode-scanner-eyebrow"
+                                        >Barcode</span>
+                                        <span class="barcode-scanner-value">
                                             <t
                                                 t-esc="state.resultDetails.barcode || '—'"
                                             />
                                         </span>
                                     </div>
                                 </div>
-                                <div class="ilx-kw-info-row mt-3">
+                                <div class="barcode-scanner-info-row mt-3">
                                     <div
-                                        class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
+                                        class="barcode-scanner-icon-box-small barcode-scanner-background-purple-light"
                                     >
                                         <i class="fa fa-flag" />
                                     </div>
-                                    <div class="ilx-kw-info-text">
-                                        <span class="ilx-kw-eyebrow">Usage</span>
-                                        <span class="ilx-kw-value">
+                                    <div class="barcode-scanner-info-text">
+                                        <span
+                                            class="barcode-scanner-eyebrow"
+                                        >Usage</span>
+                                        <span class="barcode-scanner-value">
                                             <t
                                                 t-set="usageLabels"
                                                 t-value="{'customer': 'Customer', 'internal': 'Internal', 'supplier': 'Vendor', 'transit': 'Transit', 'view': 'View', 'inventory': 'Inventory Adjustment', 'production': 'Manufacturing', 'loss': 'Inventory Loss'}"
@@ -265,17 +283,20 @@
                                 </div>
                                 <t t-if="state.locationStock.length">
                                     <div
-                                        class="ilx-kw-info-row mt-3"
+                                        class="barcode-scanner-info-row mt-3"
                                         style="align-items: flex-start;"
                                     >
                                         <div
-                                            class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
+                                            class="barcode-scanner-icon-box-small barcode-scanner-background-purple-light"
                                         >
                                             <i class="fa fa-cubes" />
                                         </div>
-                                        <div class="ilx-kw-info-text" style="flex: 1;">
+                                        <div
+                                            class="barcode-scanner-info-text"
+                                            style="flex: 1;"
+                                        >
                                             <span
-                                                class="ilx-kw-eyebrow"
+                                                class="barcode-scanner-eyebrow"
                                             >Current Stock (<t
                                                 t-esc="state.locationStock.length"
                                             />)</span>
@@ -285,16 +306,18 @@
                                                     t-as="item"
                                                     t-key="item.productId"
                                                 >
-                                                    <div class="ilx-kw-stock-row">
+                                                    <div
+                                                        class="barcode-scanner-stock-row"
+                                                    >
                                                         <span
-                                                            class="ilx-kw-stock-row-name"
+                                                            class="barcode-scanner-stock-row-name"
                                                         >
                                                             <t
                                                                 t-esc="item.productName"
                                                             />
                                                         </span>
                                                         <span
-                                                            class="ilx-kw-stock-row-quantity"
+                                                            class="barcode-scanner-stock-row-quantity"
                                                         >
                                                             <t t-esc="item.quantity" />
                                                         </span>
@@ -339,20 +362,27 @@
                 </div>
             </t>
             <t t-else="">
-                <div class="ilx-v2-main ilx-qi-v2-scan-view">
-                    <h2 class="ilx-qi-v2-scan-title">Quick Information</h2>
+                <div
+                    class="barcode-scanner-screen-main barcode-scanner-quick-inventory-scan-view"
+                >
+                    <h2
+                        class="barcode-scanner-quick-inventory-scan-title"
+                    >Quick Information</h2>
                     <p
-                        class="ilx-qi-v2-scan-subtitle"
+                        class="barcode-scanner-quick-inventory-scan-subtitle"
                     >Scan a product or location barcode</p>
 
-                    <div class="ilx-qi-v2-cards" style="width: 100%;">
+                    <div
+                        class="barcode-scanner-quick-inventory-cards"
+                        style="width: 100%;"
+                    >
                         <div
-                            class="ilx-qi-v2-card"
+                            class="barcode-scanner-quick-inventory-card"
                             t-on-click="openProductSelector"
                             style="align-items: center; text-align: center;"
                         >
                             <div
-                                class="ilx-qi-v2-card-icon"
+                                class="barcode-scanner-quick-inventory-card-icon"
                                 style="background: #6A4C73; color: white; width: 64px; height: 64px; border-radius: 16px; margin-bottom: 0.5rem; position: relative; z-index: 2;"
                             >
                                 <i class="fa fa-archive" />
@@ -366,12 +396,12 @@
                             >Product</h3>
                         </div>
                         <div
-                            class="ilx-qi-v2-card"
+                            class="barcode-scanner-quick-inventory-card"
                             t-on-click="openLocationSelector"
                             style="align-items: center; text-align: center;"
                         >
                             <div
-                                class="ilx-qi-v2-card-icon"
+                                class="barcode-scanner-quick-inventory-card-icon"
                                 style="background: #8D6E2E; color: white; width: 64px; height: 64px; border-radius: 16px; margin-bottom: 0.5rem; position: relative; z-index: 2;"
                             >
                                 <i class="fa fa-map-marker" />
@@ -385,11 +415,11 @@
                             >Location</h3>
                         </div>
                         <div
-                            class="ilx-qi-v2-card"
+                            class="barcode-scanner-quick-inventory-card"
                             style="align-items: center; text-align: center; cursor: default;"
                         >
                             <div
-                                class="ilx-qi-v2-card-icon"
+                                class="barcode-scanner-quick-inventory-card-icon"
                                 style="background: #2E7D32; color: white; width: 64px; height: 64px; border-radius: 16px; margin-bottom: 0.5rem; position: relative; z-index: 2;"
                             >
                                 <i class="fa fa-barcode" />
@@ -402,7 +432,7 @@
                                 style="margin: 0 0 0.75rem 0; font-size: 1.25rem; font-weight: 800; color: #2E7D32; position: relative; z-index: 2;"
                             >Manual Barcode</h3>
                             <input
-                                class="ilx-qi-v2-gs1-input"
+                                class="barcode-scanner-quick-inventory-gs1-input"
                                 placeholder="Enter barcode"
                                 t-model="state.barcode"
                                 t-on-keydown="onInputKeydown"
@@ -410,7 +440,7 @@
                                 style="position: relative; z-index: 2;"
                             />
                             <button
-                                class="ilx-qi-v2-barcode-button"
+                                class="barcode-scanner-quick-inventory-barcode-button"
                                 t-on-click="searchBarcode"
                                 style="position: relative; z-index: 2;"
                             >

@@ -1,13 +1,13 @@
 // Odoo-style filter controls for the picking list: dropdown menus for filters
 // and grouping, removable facet chips, and the ★ default-filter toggle. Reuses
 // the shared design tokens defined by barcode_scanner.
-.ilx-kw-search-section {
-    .ilx-kw-filter-tools {
+.barcode-scanner-search-section {
+    .barcode-scanner-filter-tools {
         position: relative;
         z-index: 20;
     }
 
-    .ilx-kw-filter-toolbar {
+    .barcode-scanner-filter-toolbar {
         position: relative;
         display: flex;
         align-items: center;
@@ -62,7 +62,7 @@
         flex: 1;
     }
 
-    .ilx-kw-star-button {
+    .barcode-scanner-star-button {
         width: 36px;
         padding: 0;
         justify-content: center;
@@ -194,7 +194,7 @@
     .barcode-scanner-filter-menu-custom-date {
         padding: 6px 10px 10px 38px;
 
-        .ilx-kw-filter-date-input {
+        .barcode-scanner-filter-date-input {
             width: 100%;
         }
     }
