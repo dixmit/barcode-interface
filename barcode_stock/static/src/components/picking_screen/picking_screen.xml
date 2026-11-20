@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
     <t t-name="barcode_scanner.PickingScreen">
-        <div class="ilx-kw-screen ilx-kw-picking-screen bg-surface-low">
+        <div class="barcode-scanner-list-screen ilx-kw-picking-screen bg-surface-low">
             <t t-if="!state.picking">
                 <div class="text-center p-4">
                     Loading...
@@ -83,48 +83,48 @@
                     <div class="ilx-kw-main-spacer" />
                 </main>
 
-                <div class="ilx-kw-bottom-nav">
+                <div class="barcode-scanner-bottom-navigation">
                     <button
-                        class="ilx-kw-nav-item flex-1"
+                        class="barcode-scanner-bottom-navigation-item flex-1"
                         t-on-click="savePicking"
                         t-att-disabled="state.isSaving"
                     >
-                        <div class="ilx-kw-nav-pill">
+                        <div class="barcode-scanner-bottom-navigation-pill">
                             <i class="fa fa-save" />
                         </div>
                         <span>SAVE</span>
                     </button>
 
                     <button
-                        class="ilx-kw-nav-item active flex-1"
+                        class="barcode-scanner-bottom-navigation-item active flex-1"
                         t-on-click="validatePicking"
                         t-att-disabled="state.isValidating"
                     >
-                        <div class="ilx-kw-nav-pill">
+                        <div class="barcode-scanner-bottom-navigation-pill">
                             <i class="fa fa-check-circle" />
                         </div>
                         <span>VALIDATE</span>
                     </button>
 
                     <button
-                        class="ilx-kw-nav-item flex-1"
+                        class="barcode-scanner-bottom-navigation-item flex-1"
                         t-on-click="cancelReservation"
                         t-if="pendingMovesCount > 0"
                         t-att-disabled="state.isValidating"
                     >
-                        <div class="ilx-kw-nav-pill">
+                        <div class="barcode-scanner-bottom-navigation-pill">
                             <i class="fa fa-times" />
                         </div>
                         <span>Cancel reservation</span>
                     </button>
 
                     <button
-                        class="ilx-kw-nav-item flex-1"
+                        class="barcode-scanner-bottom-navigation-item flex-1"
                         t-if="pendingMovesCount == 0"
                         t-on-click="checkAvailability"
                         t-att-disabled="state.isValidating"
                     >
-                        <div class="ilx-kw-nav-pill">
+                        <div class="barcode-scanner-bottom-navigation-pill">
                             <i class="fa fa-refresh" />
                         </div>
                         <span>AVAILABILITY</span>

@@ -35,7 +35,7 @@
         color: var(--barcode-scanner-on-surface);
     }
 
-    .ilx-quality-inspection-sub {
+    .barcode-scanner-quality-inspection-subtitle {
         margin-top: 4px;
         font-size: 0.82rem;
         color: var(--barcode-scanner-on-surface-variant);
@@ -51,12 +51,12 @@
     background: var(--barcode-scanner-surface-container-high);
     color: var(--barcode-scanner-on-surface-variant);
 
-    &.ilx-quality-badge-ok {
+    &.barcode-scanner-quality-badge-passed {
         background: var(--barcode-scanner-success-bg);
         color: var(--barcode-scanner-success);
     }
 
-    &.ilx-quality-badge-ko {
+    &.barcode-scanner-quality-badge-failed {
         background: var(--barcode-scanner-danger-bg);
         color: var(--barcode-scanner-error);
     }
@@ -88,11 +88,11 @@
     border-top: 1px solid var(--barcode-scanner-outline-variant);
     font-size: 0.9rem;
 
-    .ilx-quality-answer-ok {
+    .barcode-scanner-quality-answer-passed {
         color: var(--barcode-scanner-success);
     }
 
-    .ilx-quality-answer-ko {
+    .barcode-scanner-quality-answer-failed {
         color: var(--barcode-scanner-error);
     }
 
@@ -149,7 +149,7 @@
         font-size: 1rem;
     }
 
-    .ilx-quality-measure-uom {
+    .barcode-scanner-quality-measure-unit {
         font-size: 0.9rem;
         color: var(--barcode-scanner-on-surface-variant);
     }

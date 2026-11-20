@@ -12,14 +12,14 @@
         </t>
         <t t-else="">
             <div
-                class="ilx-kw-cta-banner"
+                class="barcode-scanner-call-to-action-banner"
                 style="background: var(--barcode-scanner-surface-container-low);"
             >
                 <i
-                    class="fa fa-inbox ilx-kw-cta-icon"
+                    class="fa fa-inbox barcode-scanner-call-to-action-icon"
                     style="color: var(--barcode-scanner-on-surface-variant);"
                 />
-                <div class="ilx-kw-cta-text">
+                <div class="barcode-scanner-call-to-action-text">
                     <strong
                         style="color: var(--barcode-scanner-on-surface);"
                     >No confirmed scans yet</strong>

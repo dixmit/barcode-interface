@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
     <t t-name="barcode_scanner.InternalTransferScreen">
-        <div class="ilx-v2-screen">
+        <div class="barcode-scanner-screen">
             <header class="ilx-v2-header">
                 <button class="ilx-v2-back-button" t-on-click="goBack">
                     <i class="fa fa-arrow-left" />

@@ -99,7 +99,7 @@
                                         />
                                         <span
                                             t-if="diff(line) !== null"
-                                            class="ilx-inv-diff"
+                                            class="barcode-scanner-inventory-difference"
                                             t-att-class="diffClass(line)"
                                             t-esc="formatDiff(diff(line))"
                                         />

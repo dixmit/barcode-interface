@@ -11,8 +11,8 @@
             expr="//div[@t-if=&quot;state.openMenu === 'filters'&quot;]"
             position="inside"
         >
-            <div class="ilx-kw-menu-section">
-                <div class="ilx-kw-menu-title">Delivery Zone</div>
+            <div class="barcode-scanner-filter-menu-section">
+                <div class="barcode-scanner-filter-menu-title">Delivery Zone</div>
                 <t
                     t-foreach="zoneFilterOptions"
                     t-as="opt"
@@ -20,7 +20,7 @@
                 >
                     <button
                         type="button"
-                        class="ilx-kw-menu-option"
+                        class="barcode-scanner-filter-menu-option"
                         t-att-class="{selected: isZoneOptionSelected(opt.value)}"
                         t-on-click="() => this.setZoneFilter(opt.value)"
                     >

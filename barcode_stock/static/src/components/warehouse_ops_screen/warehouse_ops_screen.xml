@@ -34,31 +34,37 @@
                 </div>
 
                 <t t-if="selectedWarehouse">
-                    <div class="ilx-stitch-op-cards bg-transparent p-0">
+                    <div class="barcode-scanner-operation-cards bg-transparent p-0">
                         <button
-                            class="ilx-stitch-op-card-vertical"
+                            class="barcode-scanner-operation-card-vertical"
                             t-on-click="() => openPickings('incoming')"
                         >
-                            <div class="ilx-stitch-op-icon-wrapper">
-                                <div class="ilx-stitch-op-icon bg-pink-light">
+                            <div class="barcode-scanner-operation-icon-wrapper">
+                                <div
+                                    class="barcode-scanner-operation-icon bg-pink-light"
+                                >
                                     <i class="fa fa-download" />
                                 </div>
                                 <div class="ilx-stitch-badge-circle badge-dark">
                                     <t t-esc="selectedWarehouse.receipts" />
                                 </div>
                             </div>
-                            <h3 class="ilx-stitch-op-title-large">Receipts</h3>
+                            <h3
+                                class="barcode-scanner-operation-title-large"
+                            >Receipts</h3>
                             <p
-                                class="ilx-stitch-op-subtitle-large"
+                                class="barcode-scanner-operation-subtitle-large"
                             >Validate incoming goods</p>
                         </button>
 
                         <button
-                            class="ilx-stitch-op-card-vertical"
+                            class="barcode-scanner-operation-card-vertical"
                             t-on-click="() => openPickings('internal')"
                         >
-                            <div class="ilx-stitch-op-icon-wrapper">
-                                <div class="ilx-stitch-op-icon bg-gray-light">
+                            <div class="barcode-scanner-operation-icon-wrapper">
+                                <div
+                                    class="barcode-scanner-operation-icon bg-gray-light"
+                                >
                                     <i class="fa fa-exchange" />
                                 </div>
                                 <div class="ilx-stitch-badge-circle badge-dark">
@@ -66,28 +72,32 @@
                                 </div>
                             </div>
                             <h3
-                                class="ilx-stitch-op-title-large"
+                                class="barcode-scanner-operation-title-large"
                             >Internal Transfers</h3>
                             <p
-                                class="ilx-stitch-op-subtitle-large"
+                                class="barcode-scanner-operation-subtitle-large"
                             >Move stock between locations</p>
                         </button>
 
                         <button
-                            class="ilx-stitch-op-card-vertical"
+                            class="barcode-scanner-operation-card-vertical"
                             t-on-click="() => openPickings('outgoing')"
                         >
-                            <div class="ilx-stitch-op-icon-wrapper">
-                                <div class="ilx-stitch-op-icon bg-pink-light">
+                            <div class="barcode-scanner-operation-icon-wrapper">
+                                <div
+                                    class="barcode-scanner-operation-icon bg-pink-light"
+                                >
                                     <i class="fa fa-truck" />
                                 </div>
                                 <div class="ilx-stitch-badge-circle badge-dark">
                                     <t t-esc="selectedWarehouse.delivery" />
                                 </div>
                             </div>
-                            <h3 class="ilx-stitch-op-title-large">Delivery Orders</h3>
+                            <h3
+                                class="barcode-scanner-operation-title-large"
+                            >Delivery Orders</h3>
                             <p
-                                class="ilx-stitch-op-subtitle-large"
+                                class="barcode-scanner-operation-subtitle-large"
                             >Pick and ship items</p>
                         </button>
                     </div>

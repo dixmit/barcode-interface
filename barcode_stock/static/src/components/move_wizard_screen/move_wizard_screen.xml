@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
     <t t-name="barcode_scanner.MoveWizardScreen">
-        <div class="ilx-v2-screen">
+        <div class="barcode-scanner-screen">
             <t t-if="state.loading">
                 <div class="text-center p-4">Loading move...</div>
             </t>

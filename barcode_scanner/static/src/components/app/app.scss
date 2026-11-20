@@ -1852,7 +1852,7 @@
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-empty-text-sm {
+.barcode-scanner-empty-text-small {
     color: var(--barcode-scanner-on-surface-variant);
     font-size: 0.9rem;
 }
@@ -1866,7 +1866,7 @@
     visibility: hidden;
 }
 
-.ilx-radius-xl {
+.barcode-scanner-radius-xl {
     border-radius: var(--barcode-scanner-radius-xl);
 }
 
@@ -2115,7 +2115,7 @@
     color: var(--barcode-scanner-primary);
 }
 
-.ilx-stitch-op-cards {
+.barcode-scanner-operation-cards {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -2125,7 +2125,7 @@
     border-radius: var(--barcode-scanner-radius-xl);
 }
 
-.ilx-stitch-op-card-vertical {
+.barcode-scanner-operation-card-vertical {
     background: var(--barcode-scanner-surface-container-lowest);
     border: none;
     border-radius: var(--barcode-scanner-radius-xl);
@@ -2139,12 +2139,12 @@
     overflow: visible;
 }
 
-.ilx-stitch-op-icon-wrapper {
+.barcode-scanner-operation-icon-wrapper {
     position: relative;
     margin-bottom: 1rem;
 }
 
-.ilx-stitch-op-icon-wrapper .ilx-stitch-op-icon {
+.barcode-scanner-operation-icon-wrapper .barcode-scanner-operation-icon {
     width: 64px;
     height: 64px;
     border-radius: var(--barcode-scanner-radius-lg);
@@ -2152,7 +2152,7 @@
     margin-right: 0;
 }
 
-.ilx-stitch-op-icon {
+.barcode-scanner-operation-icon {
     width: 48px;
     height: 48px;
     border-radius: var(--barcode-scanner-radius-lg);
@@ -2165,12 +2165,12 @@
     color: var(--barcode-scanner-primary-container);
 }
 
-.ilx-stitch-op-icon.bg-pink-light {
+.barcode-scanner-operation-icon.bg-pink-light {
     background: #fce4ec;
     color: var(--barcode-scanner-primary-container);
 }
 
-.ilx-stitch-op-icon.bg-gray-light {
+.barcode-scanner-operation-icon.bg-gray-light {
     background: var(--barcode-scanner-surface-container-low);
     color: var(--barcode-scanner-on-surface);
 }
@@ -2198,21 +2198,21 @@
     background: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-stitch-op-title-large {
+.barcode-scanner-operation-title-large {
     margin: 0 0 4px 0;
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--barcode-scanner-on-surface);
 }
 
-.ilx-stitch-op-subtitle-large {
+.barcode-scanner-operation-subtitle-large {
     margin: 0;
     font-size: 0.9rem;
     color: var(--barcode-scanner-on-surface-variant);
 }
 
 /* Kinetic Warehouse classes */
-.ilx-kw-screen {
+.barcode-scanner-list-screen {
     background-color: var(--barcode-scanner-surface);
     color: var(--barcode-scanner-on-surface);
     font-family: "Inter", "Inter var", sans-serif;
@@ -2436,7 +2436,7 @@
     padding: 16px;
 }
 
-.ilx-kw-bottom-nav {
+.barcode-scanner-bottom-navigation {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -2451,7 +2451,7 @@
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
 }
 
-.ilx-kw-nav-item {
+.barcode-scanner-bottom-navigation-item {
     background: none;
     border: none;
     display: flex;
@@ -2466,7 +2466,7 @@
     justify-content: center;
 }
 
-.ilx-kw-nav-pill {
+.barcode-scanner-bottom-navigation-pill {
     width: 48px;
     height: 32px;
     border-radius: 16px;
@@ -2477,12 +2477,12 @@
     transition: background-color 0.2s;
 }
 
-.ilx-kw-nav-item.active .ilx-kw-nav-pill {
+.barcode-scanner-bottom-navigation-item.active .barcode-scanner-bottom-navigation-pill {
     background: var(--barcode-scanner-primary-container);
     color: var(--barcode-scanner-surface-container-lowest);
 }
 
-.ilx-kw-nav-item.active span {
+.barcode-scanner-bottom-navigation-item.active span {
     color: var(--barcode-scanner-primary-container);
 }
 
@@ -2602,7 +2602,7 @@
     box-shadow: var(--barcode-scanner-shadow);
 }
 
-.ilx-kw-cta-banner {
+.barcode-scanner-call-to-action-banner {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -2610,24 +2610,24 @@
     border-radius: var(--barcode-scanner-radius-xl);
 }
 
-.ilx-kw-cta-icon {
+.barcode-scanner-call-to-action-icon {
     font-size: 1.5rem;
     flex-shrink: 0;
 }
 
-.ilx-kw-cta-text {
+.barcode-scanner-call-to-action-text {
     display: flex;
     flex-direction: column;
     gap: 4px;
     min-width: 0;
 }
 
-.ilx-kw-cta-text strong {
+.barcode-scanner-call-to-action-text strong {
     font-size: 0.95rem;
     font-weight: 700;
 }
 
-.ilx-kw-cta-text span {
+.barcode-scanner-call-to-action-text span {
     font-size: 0.8rem;
     line-height: 1.3;
 }
@@ -3037,7 +3037,7 @@
 }
 
 /* Move Wizard v2 */
-.ilx-v2-screen {
+.barcode-scanner-screen {
     position: absolute;
     inset: 0;
     display: flex;
@@ -3615,7 +3615,7 @@
     color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-qi-v2-numpad {
+.barcode-scanner-quick-inventory-number-pad {
     width: 100%;
     display: flex;
     justify-content: center;

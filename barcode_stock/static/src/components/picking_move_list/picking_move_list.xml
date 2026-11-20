@@ -16,14 +16,14 @@
         </t>
         <t t-else="">
             <div
-                class="ilx-kw-cta-banner"
+                class="barcode-scanner-call-to-action-banner"
                 style="background: var(--barcode-scanner-success-bg);"
             >
                 <i
-                    class="fa fa-check-circle ilx-kw-cta-icon"
+                    class="fa fa-check-circle barcode-scanner-call-to-action-icon"
                     style="color: var(--barcode-scanner-success);"
                 />
-                <div class="ilx-kw-cta-text">
+                <div class="barcode-scanner-call-to-action-text">
                     <strong
                         style="color: var(--barcode-scanner-success);"
                     >All operations completed</strong>
