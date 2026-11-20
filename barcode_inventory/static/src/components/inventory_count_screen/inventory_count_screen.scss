@@ -1,18 +1,18 @@
 // Difference between the counted quantity and the stock, under the count.
-.ilx-inv-diff {
+.barcode-scanner-inventory-difference {
     font-size: 0.8rem;
     font-weight: 600;
 
-    &.ilx-inv-diff-up {
-        color: var(--ilx-success);
+    &.barcode-scanner-inventory-difference-up {
+        color: var(--barcode-scanner-success);
     }
 
-    &.ilx-inv-diff-down {
-        color: var(--ilx-error);
+    &.barcode-scanner-inventory-difference-down {
+        color: var(--barcode-scanner-error);
     }
 
-    &.ilx-inv-diff-none {
-        color: var(--ilx-on-surface-variant);
+    &.barcode-scanner-inventory-difference-none {
+        color: var(--barcode-scanner-on-surface-variant);
         font-weight: normal;
     }
 }

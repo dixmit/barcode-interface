@@ -3,28 +3,28 @@
     <t t-name="barcode_scanner.PickingDoneCard" owl="1">
         <button
             type="button"
-            class="ilx-kw-picking-card ilx-picking-done-card"
-            t-att-class="props.highlighted ? 'ilx-kw-picking-card ilx-picking-done-card is-highlighted' : 'ilx-kw-picking-card ilx-picking-done-card'"
+            class="barcode-scanner-picking-card barcode-scanner-picking-done-card"
+            t-att-class="props.highlighted ? 'barcode-scanner-picking-card barcode-scanner-picking-done-card is-highlighted' : 'barcode-scanner-picking-card barcode-scanner-picking-done-card'"
             t-on-click="() => props.onDelete(props.line.id)"
             style="border: none; text-align: left; width: 100%; cursor: pointer;"
         >
-            <div class="ilx-kw-picking-card-top">
-                <div class="ilx-kw-picking-card-info">
+            <div class="barcode-scanner-picking-card-top">
+                <div class="barcode-scanner-picking-card-info">
                     <span
-                        class="ilx-kw-picking-code"
+                        class="barcode-scanner-picking-code"
                         style="color: #4caf50;"
                     >Completed</span>
-                    <h3 class="ilx-kw-picking-partner mb-1">
+                    <h3 class="barcode-scanner-picking-partner mb-1">
                         <t t-esc="props.line.product_id[1]" />
                     </h3>
                     <span
-                        class="ilx-kw-picking-code"
+                        class="barcode-scanner-picking-code"
                         style="color: var(--kw-on-surface-variant); font-weight: normal; font-size: 0.75rem;"
                     >Tap to remove this confirmation</span>
                 </div>
-                <div class="ilx-kw-picking-card-status">
+                <div class="barcode-scanner-picking-card-status">
                     <span
-                        class="ilx-kw-status-tag ilx-kw-status-tag--ready"
+                        class="barcode-scanner-status-tag barcode-scanner-status-tag-ready"
                         style="background: #e8f5e9; color: #2e7d32;"
                     >
                         <i class="fa fa-check me-1" role="img" aria-label="Done" />
@@ -33,23 +33,23 @@
                 </div>
             </div>
             <t t-if="props.line.lot_id or props.line.lot_name">
-                <hr class="ilx-kw-divider" />
-                <div class="ilx-kw-picking-card-bottom">
-                    <div class="ilx-kw-picking-meta-left">
+                <hr class="barcode-scanner-divider" />
+                <div class="barcode-scanner-picking-card-bottom">
+                    <div class="barcode-scanner-picking-meta-left">
                         <i
-                            class="fa fa-tag ilx-kw-meta-icon"
+                            class="fa fa-tag barcode-scanner-meta-icon"
                             style="color: var(--kw-on-surface-variant);"
                         />
                         <span
                             t-if="props.line.lot_id"
-                            class="ilx-kw-meta-text"
+                            class="barcode-scanner-meta-text"
                             style="color: var(--kw-on-surface-variant);"
                         >
                             <t t-esc="props.line.lot_id[1]" />
                         </span>
                         <span
                             t-elif="props.line.lot_name"
-                            class="ilx-kw-meta-text"
+                            class="barcode-scanner-meta-text"
                             style="color: var(--kw-on-surface-variant);"
                         >
                             <t t-esc="props.line.lot_name" />

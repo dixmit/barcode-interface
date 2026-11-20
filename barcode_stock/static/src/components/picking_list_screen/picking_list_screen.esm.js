@@ -404,7 +404,7 @@ export class PickingListScreen extends Component {
     }
 
     getStateBadgeClass(picking) {
-        return `ilx-state-pill ilx-state-pill--${picking.state || "default"}`;
+        return `barcode-scanner-state-pill barcode-scanner-state-pill-${picking.state || "default"}`;
     }
 
     getPickingSearchText(picking) {

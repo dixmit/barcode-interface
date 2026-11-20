@@ -2,24 +2,29 @@
 <templates xml:space="preserve">
 
     <t t-name="barcode_inventory.InventoryLocationScreen">
-        <div class="ilx-emp-v2-screen">
-            <header class="ilx-emp-v2-header">
-                <button class="ilx-emp-v2-back-btn" t-on-click="goBack">
+        <div class="barcode-scanner-employee-screen">
+            <header class="barcode-scanner-employee-header">
+                <button
+                    class="barcode-scanner-employee-back-button"
+                    t-on-click="goBack"
+                >
                     <i class="fa fa-arrow-left" />
                 </button>
-                <h1 class="ilx-emp-v2-header-title">Inventory Adjustment</h1>
+                <h1
+                    class="barcode-scanner-employee-header-title"
+                >Inventory Adjustment</h1>
             </header>
 
-            <main class="ilx-emp-v2-main">
-                <div t-if="!state.canApply" class="ilx-inv-no-access">
+            <main class="barcode-scanner-employee-main">
+                <div t-if="!state.canApply" class="barcode-scanner-inventory-no-access">
                     <i class="fa fa-lock" />
                     <span>Only inventory administrators can apply a count.</span>
                 </div>
-                <div t-else="" class="ilx-emp-v2-search-box">
-                    <i class="fa fa-search ilx-emp-v2-search-icon" />
+                <div t-else="" class="barcode-scanner-employee-search-box">
+                    <i class="fa fa-search barcode-scanner-employee-search-icon" />
                     <input
                         type="text"
-                        class="ilx-emp-v2-search-input"
+                        class="barcode-scanner-employee-search-input"
                         placeholder="Scan or search a location..."
                         t-model="state.search"
                     />
@@ -27,36 +32,36 @@
 
                 <h2
                     t-if="state.canApply"
-                    class="ilx-emp-v2-section-title"
+                    class="barcode-scanner-employee-section-title"
                 >SELECT A LOCATION TO COUNT</h2>
-                <div t-if="state.canApply" class="ilx-emp-v2-list">
+                <div t-if="state.canApply" class="barcode-scanner-employee-list">
                     <t t-if="state.loading">
                         <div class="text-center p-4">Loading locations...</div>
                     </t>
                     <t t-else="">
                         <t t-foreach="filteredLocations" t-as="loc" t-key="loc.id">
                             <div
-                                class="ilx-emp-v2-card"
+                                class="barcode-scanner-employee-card"
                                 t-on-click="() => this.selectLocation(loc)"
                             >
-                                <div class="ilx-emp-v2-avatar-wrapper">
-                                    <div class="ilx-emp-v2-avatar">
+                                <div class="barcode-scanner-employee-avatar-wrapper">
+                                    <div class="barcode-scanner-employee-avatar">
                                         <div
-                                            class="ilx-emp-v2-avatar-placeholder"
+                                            class="barcode-scanner-employee-avatar-placeholder"
                                             style="background: #EAEAEA; color: #4A2B4D; font-size: 1.2rem;"
                                         >
                                             <i class="fa fa-map-marker" />
                                         </div>
                                     </div>
                                 </div>
-                                <div class="ilx-emp-v2-info">
-                                    <span class="ilx-emp-v2-name">
+                                <div class="barcode-scanner-employee-info">
+                                    <span class="barcode-scanner-employee-name">
                                         <t t-esc="loc.display_name" />
                                     </span>
                                 </div>
-                                <div class="ilx-emp-v2-status">
+                                <div class="barcode-scanner-employee-status">
                                     <i
-                                        class="fa fa-chevron-right ilx-emp-v2-icon-chevron"
+                                        class="fa fa-chevron-right barcode-scanner-employee-icon-chevron"
                                     />
                                 </div>
                             </div>

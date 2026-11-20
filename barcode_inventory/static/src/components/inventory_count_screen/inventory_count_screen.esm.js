@@ -431,9 +431,11 @@ export class InventoryCountScreen extends Component {
     diffClass(line) {
         const diff = this.diff(line);
         if (diff > 0) {
-            return "ilx-inv-diff-up";
+            return "barcode-scanner-inventory-difference-up";
         }
-        return diff < 0 ? "ilx-inv-diff-down" : "ilx-inv-diff-none";
+        return diff < 0
+            ? "barcode-scanner-inventory-difference-down"
+            : "barcode-scanner-inventory-difference-none";
     }
 
     removeLine(line) {

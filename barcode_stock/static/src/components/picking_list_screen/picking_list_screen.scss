@@ -1,20 +1,20 @@
 // Odoo-style filter controls for the picking list: dropdown menus for filters
 // and grouping, removable facet chips, and the ★ default-filter toggle. Reuses
 // the shared design tokens defined by barcode_scanner.
-.ilx-kw-search-section {
-    .ilx-kw-filter-tools {
+.barcode-scanner-search-section {
+    .barcode-scanner-filter-tools {
         position: relative;
         z-index: 20;
     }
 
-    .ilx-kw-filter-toolbar {
+    .barcode-scanner-filter-toolbar {
         position: relative;
         display: flex;
         align-items: center;
         gap: 8px;
     }
 
-    .ilx-kw-tool-btn {
+    .barcode-scanner-filter-tool-button {
         height: 36px;
         border-radius: 18px;
         border: none;
@@ -26,8 +26,8 @@
         gap: 8px;
         white-space: nowrap;
         cursor: pointer;
-        background: var(--ilx-surface-container-high);
-        color: var(--ilx-on-surface-variant);
+        background: var(--barcode-scanner-surface-container-high);
+        color: var(--barcode-scanner-on-surface-variant);
 
         .fa-caret-down {
             font-size: 0.8rem;
@@ -35,22 +35,22 @@
         }
 
         &.has-value {
-            background: var(--ilx-surface-container-low);
-            color: var(--ilx-on-surface);
+            background: var(--barcode-scanner-surface-container-low);
+            color: var(--barcode-scanner-on-surface);
         }
 
         &.active {
-            background: var(--ilx-primary-container);
-            color: var(--ilx-on-surface);
+            background: var(--barcode-scanner-primary-container);
+            color: var(--barcode-scanner-on-surface);
         }
     }
 
-    .ilx-kw-tool-count {
+    .barcode-scanner-filter-tool-count {
         min-width: 18px;
         height: 18px;
         padding: 0 5px;
         border-radius: 9px;
-        background: var(--ilx-primary);
+        background: var(--barcode-scanner-primary);
         color: #fff;
         font-size: 0.7rem;
         display: inline-flex;
@@ -58,11 +58,11 @@
         justify-content: center;
     }
 
-    .ilx-kw-tool-spacer {
+    .barcode-scanner-filter-tool-spacer {
         flex: 1;
     }
 
-    .ilx-kw-star-btn {
+    .barcode-scanner-star-button {
         width: 36px;
         padding: 0;
         justify-content: center;
@@ -72,20 +72,20 @@
         }
 
         &.active {
-            color: var(--ilx-primary);
-            background: var(--ilx-surface-container-low);
+            color: var(--barcode-scanner-primary);
+            background: var(--barcode-scanner-surface-container-low);
         }
     }
 
     // Active-filter / grouping facet chips.
-    .ilx-kw-facets {
+    .barcode-scanner-filter-facets {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
         margin-top: 12px;
     }
 
-    .ilx-kw-facet {
+    .barcode-scanner-filter-facet {
         display: inline-flex;
         align-items: center;
         height: 30px;
@@ -94,15 +94,15 @@
         gap: 4px;
         font-size: 0.8rem;
         font-weight: 600;
-        background: var(--ilx-primary-container);
-        color: var(--ilx-on-surface);
+        background: var(--barcode-scanner-primary-container);
+        color: var(--barcode-scanner-on-surface);
 
-        &.ilx-kw-facet--group {
-            background: var(--ilx-tertiary-container);
+        &.barcode-scanner-filter-facet-group {
+            background: var(--barcode-scanner-tertiary-container);
         }
     }
 
-    .ilx-kw-facet-remove {
+    .barcode-scanner-filter-facet-remove {
         width: 22px;
         height: 22px;
         border: none;
@@ -122,7 +122,7 @@
     }
 
     // Dropdown menu opened by the toolbar buttons.
-    .ilx-kw-menu {
+    .barcode-scanner-filter-menu {
         position: absolute;
         top: calc(100% + 8px);
         left: 0;
@@ -132,69 +132,69 @@
         max-width: #{"min(320px, calc(100vw - 3rem))"};
         max-height: 60vh;
         overflow-y: auto;
-        background: var(--ilx-surface);
-        border: 1px solid var(--ilx-outline-variant);
-        border-radius: var(--ilx-radius-lg);
+        background: var(--barcode-scanner-surface);
+        border: 1px solid var(--barcode-scanner-outline-variant);
+        border-radius: var(--barcode-scanner-radius-lg);
         box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
         padding: 8px;
         z-index: 50;
     }
 
-    .ilx-kw-menu-section + .ilx-kw-menu-section {
+    .barcode-scanner-filter-menu-section + .barcode-scanner-filter-menu-section {
         margin-top: 4px;
         padding-top: 8px;
-        border-top: 1px solid var(--ilx-outline-variant);
+        border-top: 1px solid var(--barcode-scanner-outline-variant);
     }
 
-    .ilx-kw-menu-title {
+    .barcode-scanner-filter-menu-title {
         font-size: 0.72rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.04em;
-        color: var(--ilx-on-surface-variant);
+        color: var(--barcode-scanner-on-surface-variant);
         padding: 6px 10px;
     }
 
-    .ilx-kw-menu-option {
+    .barcode-scanner-filter-menu-option {
         width: 100%;
         display: flex;
         align-items: center;
         gap: 10px;
         border: none;
         background: transparent;
-        color: var(--ilx-on-surface);
+        color: var(--barcode-scanner-on-surface);
         font-size: 0.9rem;
         font-weight: 500;
         text-align: left;
         padding: 10px;
-        border-radius: var(--ilx-radius-default);
+        border-radius: var(--barcode-scanner-radius-default);
         cursor: pointer;
 
         .fa {
             font-size: 0.95rem;
-            color: var(--ilx-on-surface-variant);
+            color: var(--barcode-scanner-on-surface-variant);
             width: 18px;
             text-align: center;
         }
 
         &:hover {
-            background: var(--ilx-surface-container-high);
+            background: var(--barcode-scanner-surface-container-high);
         }
 
         &.selected {
-            color: var(--ilx-primary);
+            color: var(--barcode-scanner-primary);
             font-weight: 600;
 
             .fa {
-                color: var(--ilx-primary);
+                color: var(--barcode-scanner-primary);
             }
         }
     }
 
-    .ilx-kw-menu-custom-date {
+    .barcode-scanner-filter-menu-custom-date {
         padding: 6px 10px 10px 38px;
 
-        .ilx-kw-filter-date-input {
+        .barcode-scanner-filter-date-input {
             width: 100%;
         }
     }

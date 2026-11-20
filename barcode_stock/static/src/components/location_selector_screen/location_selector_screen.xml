@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
     <t t-name="barcode_scanner.LocationSelectorScreen">
-        <div class="ilx-emp-v2-screen">
-            <header class="ilx-emp-v2-header">
-                <button class="ilx-emp-v2-back-btn" t-on-click="goBack">
+        <div class="barcode-scanner-employee-screen">
+            <header class="barcode-scanner-employee-header">
+                <button
+                    class="barcode-scanner-employee-back-button"
+                    t-on-click="goBack"
+                >
                     <i class="fa fa-arrow-left" />
                 </button>
-                <h1 class="ilx-emp-v2-header-title">
+                <h1 class="barcode-scanner-employee-header-title">
                     <t t-if="props.params.title">
                         <t t-esc="props.params.title" />
                     </t>
@@ -14,57 +17,59 @@
                 </h1>
             </header>
 
-            <main class="ilx-emp-v2-main">
-                <div class="ilx-emp-v2-search-box">
-                    <i class="fa fa-search ilx-emp-v2-search-icon" />
+            <main class="barcode-scanner-employee-main">
+                <div class="barcode-scanner-employee-search-box">
+                    <i class="fa fa-search barcode-scanner-employee-search-icon" />
                     <input
                         type="text"
-                        class="ilx-emp-v2-search-input"
+                        class="barcode-scanner-employee-search-input"
                         placeholder="Search location..."
                         t-model="state.search"
                     />
                 </div>
 
-                <h2 class="ilx-emp-v2-section-title">AVAILABLE LOCATIONS</h2>
-                <div class="ilx-emp-v2-list">
+                <h2
+                    class="barcode-scanner-employee-section-title"
+                >AVAILABLE LOCATIONS</h2>
+                <div class="barcode-scanner-employee-list">
                     <t t-if="state.loading">
                         <div class="text-center p-4">Loading locations...</div>
                     </t>
                     <t t-else="">
                         <t t-foreach="filteredLocations" t-as="loc" t-key="loc.id">
                             <div
-                                t-att-class="state.selectedLocation?.id === loc.id ? 'ilx-emp-v2-card selected' : 'ilx-emp-v2-card'"
+                                t-att-class="state.selectedLocation?.id === loc.id ? 'barcode-scanner-employee-card selected' : 'barcode-scanner-employee-card'"
                                 t-on-click="() => this.selectLocation(loc)"
                             >
-                                <div class="ilx-emp-v2-avatar-wrapper">
-                                    <div class="ilx-emp-v2-avatar">
+                                <div class="barcode-scanner-employee-avatar-wrapper">
+                                    <div class="barcode-scanner-employee-avatar">
                                         <div
-                                            class="ilx-emp-v2-avatar-placeholder"
+                                            class="barcode-scanner-employee-avatar-placeholder"
                                             style="background: #EAEAEA; color: #4A2B4D; font-size: 1.2rem;"
                                         >
                                             <i class="fa fa-map-marker" />
                                         </div>
                                     </div>
                                 </div>
-                                <div class="ilx-emp-v2-info">
-                                    <span class="ilx-emp-v2-name">
+                                <div class="barcode-scanner-employee-info">
+                                    <span class="barcode-scanner-employee-name">
                                         <t t-esc="loc.display_name" />
                                     </span>
-                                    <span class="ilx-emp-v2-role">
+                                    <span class="barcode-scanner-employee-role">
                                         <t
                                             t-esc="loc.usage ? loc.usage.toUpperCase() : 'LOCATION'"
                                         />
                                     </span>
                                 </div>
-                                <div class="ilx-emp-v2-status">
+                                <div class="barcode-scanner-employee-status">
                                     <t t-if="state.selectedLocation?.id === loc.id">
                                         <i
-                                            class="fa fa-check-circle ilx-emp-v2-icon-selected"
+                                            class="fa fa-check-circle barcode-scanner-employee-icon-selected"
                                         />
                                     </t>
                                     <t t-else="">
                                         <i
-                                            class="fa fa-chevron-right ilx-emp-v2-icon-chevron"
+                                            class="fa fa-chevron-right barcode-scanner-employee-icon-chevron"
                                         />
                                     </t>
                                 </div>
@@ -79,9 +84,9 @@
                 </div>
             </main>
 
-            <footer class="ilx-emp-v2-footer">
+            <footer class="barcode-scanner-employee-footer">
                 <button
-                    class="ilx-emp-v2-confirm-btn"
+                    class="barcode-scanner-employee-confirm-button"
                     t-on-click="confirmSelection"
                     t-att-disabled="!state.selectedLocation"
                     t-att-style="!state.selectedLocation ? 'opacity: 0.5; cursor: not-allowed;' : ''"

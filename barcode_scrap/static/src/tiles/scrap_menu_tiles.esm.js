@@ -11,7 +11,7 @@ barcodeMenuTiles.add(
     {
         label: _t("Scrap Products"),
         icon: "fa-trash-o",
-        iconClass: "ilx-icon-scrap",
+        iconClass: "barcode-scanner-icon-scrap",
         action: ({navigate}) => navigate("scrap_location"),
     },
     {sequence: 60}

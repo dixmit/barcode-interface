@@ -1,50 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
     <t t-name="barcode_inventory.InventoryCountScreen">
-        <div class="ilx-emp-v2-screen">
-            <header class="ilx-emp-v2-header">
-                <button class="ilx-emp-v2-back-btn" t-on-click="goBack">
+        <div class="barcode-scanner-employee-screen">
+            <header class="barcode-scanner-employee-header">
+                <button
+                    class="barcode-scanner-employee-back-button"
+                    t-on-click="goBack"
+                >
                     <i class="fa fa-arrow-left" />
                 </button>
-                <h1 class="ilx-emp-v2-header-title">
+                <h1 class="barcode-scanner-employee-header-title">
                     <t t-esc="state.locationName || 'Inventory Count'" />
                 </h1>
             </header>
 
-            <main class="ilx-emp-v2-main">
+            <main class="barcode-scanner-employee-main">
                 <!-- Tap to add a product by hand, like the back office. -->
                 <button
-                    class="ilx-emp-v2-search-box"
+                    class="barcode-scanner-employee-search-box"
                     style="width:100%; border:none; text-align:left; cursor:pointer;"
                     t-att-disabled="state.applying"
                     t-on-click="addProduct"
                 >
-                    <i class="fa fa-plus ilx-emp-v2-search-icon" />
+                    <i class="fa fa-plus barcode-scanner-employee-search-icon" />
                     <span style="color:#8a8a8a;">Scan, or add a product...</span>
                 </button>
 
-                <h2 class="ilx-emp-v2-section-title">
+                <h2 class="barcode-scanner-employee-section-title">
                     COUNT — SCAN OR TYPE THE COUNTED QTY
                 </h2>
                 <!-- Bottom padding so the last line can scroll clear of the
                      floating camera button (fixed, bottom-right), which would
                      otherwise sit on top of that line's delete button. -->
-                <div class="ilx-emp-v2-list" style="padding-bottom: 6rem;">
+                <div
+                    class="barcode-scanner-employee-list"
+                    style="padding-bottom: 6rem;"
+                >
                     <t t-if="state.loading">
                         <div class="text-center p-4">Loading stock...</div>
                     </t>
                     <t t-else="">
                         <t t-foreach="state.lines" t-as="line" t-key="line._id">
                             <div
-                                class="ilx-emp-v2-card"
+                                class="barcode-scanner-employee-card"
                                 t-att-id="'inv-count-line-' + line._id"
                                 t-attf-style="transition: background-color .4s ease; {{ line._flash ? 'background-color:#fff5cc; box-shadow:0 0 0 2px #ffd54a inset;' : '' }}"
                             >
-                                <div class="ilx-emp-v2-info">
-                                    <span class="ilx-emp-v2-name">
+                                <div class="barcode-scanner-employee-info">
+                                    <span class="barcode-scanner-employee-name">
                                         <t t-esc="line.product_name" />
                                     </span>
-                                    <span class="ilx-emp-v2-role">
+                                    <span class="barcode-scanner-employee-role">
                                         <t t-if="line.lot_fixed">
                                             <i class="fa fa-tag" />
                                             <t t-esc="line.lot_name" /> ·
@@ -59,7 +65,7 @@
                                     <t t-if="needsLotInput(line)">
                                         <input
                                             type="text"
-                                            class="ilx-emp-v2-search-input"
+                                            class="barcode-scanner-employee-search-input"
                                             style="margin-top:6px; padding:6px 8px;"
                                             placeholder="Lot / Serial number"
                                             t-att-disabled="state.applying"
@@ -79,7 +85,7 @@
                                     </t>
                                 </div>
                                 <div
-                                    class="ilx-emp-v2-status"
+                                    class="barcode-scanner-employee-status"
                                     style="display:flex; flex-direction:row; align-items:center; gap:10px;"
                                 >
                                     <div
@@ -91,7 +97,7 @@
                                             min="0"
                                             step="any"
                                             t-att-disabled="state.applying"
-                                            class="ilx-emp-v2-search-input"
+                                            class="barcode-scanner-employee-search-input"
                                             style="width:90px; text-align:center; padding:6px 8px;"
                                             t-att-placeholder="formatQty(line.theoretical_qty)"
                                             t-att-value="line.counted"
@@ -99,7 +105,7 @@
                                         />
                                         <span
                                             t-if="diff(line) !== null"
-                                            class="ilx-inv-diff"
+                                            class="barcode-scanner-inventory-difference"
                                             t-att-class="diffClass(line)"
                                             t-esc="formatDiff(diff(line))"
                                         />
@@ -124,9 +130,9 @@
                 </div>
             </main>
 
-            <footer class="ilx-emp-v2-footer">
+            <footer class="barcode-scanner-employee-footer">
                 <button
-                    class="ilx-emp-v2-confirm-btn"
+                    class="barcode-scanner-employee-confirm-button"
                     t-on-click="apply"
                     t-att-disabled="state.applying || countedLines.length === 0"
                     t-att-style="(state.applying || countedLines.length === 0) ? 'opacity: 0.5; cursor: not-allowed;' : ''"

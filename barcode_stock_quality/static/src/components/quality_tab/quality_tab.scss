@@ -1,168 +1,168 @@
-// Quality tab of the reception screen. Reuses the shared design tokens (--ilx-*)
+// Quality tab of the reception screen. Reuses the shared design tokens (--barcode-scanner-*)
 // defined by barcode_scanner so the look matches the rest of the suite.
 
-.ilx-quality-tab {
+.barcode-scanner-quality-tab {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.ilx-quality-empty {
+.barcode-scanner-quality-empty {
     padding: 16px;
     border-radius: 12px;
-    background: var(--ilx-surface-container-low);
-    color: var(--ilx-on-surface-variant);
+    background: var(--barcode-scanner-surface-container-low);
+    color: var(--barcode-scanner-on-surface-variant);
     font-size: 0.9rem;
     text-align: center;
 }
 
-.ilx-quality-inspection {
-    background: var(--ilx-surface-container-lowest);
-    border: 1px solid var(--ilx-outline-variant);
+.barcode-scanner-quality-inspection {
+    background: var(--barcode-scanner-surface-container-lowest);
+    border: 1px solid var(--barcode-scanner-outline-variant);
     border-radius: 12px;
     padding: 16px;
 
-    .ilx-quality-inspection-head {
+    .barcode-scanner-quality-inspection-head {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 8px;
     }
 
-    .ilx-quality-inspection-title {
+    .barcode-scanner-quality-inspection-title {
         font-size: 1.02rem;
         font-weight: 600;
-        color: var(--ilx-on-surface);
+        color: var(--barcode-scanner-on-surface);
     }
 
-    .ilx-quality-inspection-sub {
+    .barcode-scanner-quality-inspection-subtitle {
         margin-top: 4px;
         font-size: 0.82rem;
-        color: var(--ilx-on-surface-variant);
+        color: var(--barcode-scanner-on-surface-variant);
     }
 }
 
-.ilx-quality-badge {
+.barcode-scanner-quality-badge {
     padding: 3px 10px;
     border-radius: 9999px;
     font-size: 0.72rem;
     font-weight: 700;
     white-space: nowrap;
-    background: var(--ilx-surface-container-high);
-    color: var(--ilx-on-surface-variant);
+    background: var(--barcode-scanner-surface-container-high);
+    color: var(--barcode-scanner-on-surface-variant);
 
-    &.ilx-quality-badge-ok {
-        background: var(--ilx-success-bg);
-        color: var(--ilx-success);
+    &.barcode-scanner-quality-badge-passed {
+        background: var(--barcode-scanner-success-bg);
+        color: var(--barcode-scanner-success);
     }
 
-    &.ilx-quality-badge-ko {
-        background: var(--ilx-danger-bg);
-        color: var(--ilx-error);
+    &.barcode-scanner-quality-badge-failed {
+        background: var(--barcode-scanner-danger-bg);
+        color: var(--barcode-scanner-error);
     }
 }
 
-.ilx-quality-question {
+.barcode-scanner-quality-question {
     margin-top: 12px;
     padding-top: 12px;
-    border-top: 1px solid var(--ilx-outline-variant);
+    border-top: 1px solid var(--barcode-scanner-outline-variant);
 
-    .ilx-quality-question-name {
+    .barcode-scanner-quality-question-name {
         font-weight: 600;
-        color: var(--ilx-on-surface);
+        color: var(--barcode-scanner-on-surface);
     }
 
-    .ilx-quality-question-notes {
+    .barcode-scanner-quality-question-notes {
         margin-top: 4px;
         font-size: 0.8rem;
-        color: var(--ilx-on-surface-variant);
+        color: var(--barcode-scanner-on-surface-variant);
     }
 }
 
-.ilx-quality-answer {
+.barcode-scanner-quality-answer {
     display: flex;
     align-items: baseline;
     gap: 8px;
     margin-top: 10px;
     padding-top: 10px;
-    border-top: 1px solid var(--ilx-outline-variant);
+    border-top: 1px solid var(--barcode-scanner-outline-variant);
     font-size: 0.9rem;
 
-    .ilx-quality-answer-ok {
-        color: var(--ilx-success);
+    .barcode-scanner-quality-answer-passed {
+        color: var(--barcode-scanner-success);
     }
 
-    .ilx-quality-answer-ko {
-        color: var(--ilx-error);
+    .barcode-scanner-quality-answer-failed {
+        color: var(--barcode-scanner-error);
     }
 
-    .ilx-quality-answer-name {
+    .barcode-scanner-quality-answer-name {
         flex: 1;
-        color: var(--ilx-on-surface);
+        color: var(--barcode-scanner-on-surface);
     }
 
-    .ilx-quality-answer-value {
+    .barcode-scanner-quality-answer-value {
         font-weight: 600;
-        color: var(--ilx-on-surface);
+        color: var(--barcode-scanner-on-surface);
         text-align: right;
     }
 }
 
-.ilx-quality-choices {
+.barcode-scanner-quality-choices {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 10px;
 }
 
-.ilx-quality-choice {
+.barcode-scanner-quality-choice {
     padding: 10px 16px;
     border-radius: 20px;
-    border: 1px solid var(--ilx-outline-variant);
-    background: var(--ilx-surface-container-low);
-    color: var(--ilx-on-surface);
+    border: 1px solid var(--barcode-scanner-outline-variant);
+    background: var(--barcode-scanner-surface-container-low);
+    color: var(--barcode-scanner-on-surface);
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
 
-    &.ilx-quality-choice-active {
-        background: var(--ilx-primary);
-        color: var(--ilx-on-primary);
-        border-color: var(--ilx-primary);
+    &.barcode-scanner-quality-choice-active {
+        background: var(--barcode-scanner-primary);
+        color: var(--barcode-scanner-on-primary);
+        border-color: var(--barcode-scanner-primary);
     }
 }
 
-.ilx-quality-measure {
+.barcode-scanner-quality-measure {
     display: flex;
     align-items: center;
     gap: 8px;
     margin-top: 10px;
 
-    .ilx-quality-measure-input {
+    .barcode-scanner-quality-measure-input {
         flex: 1;
         height: 44px;
         padding: 0 12px;
         border-radius: 8px;
-        border: 1px solid var(--ilx-outline-variant);
-        background: var(--ilx-surface-container-lowest);
-        color: var(--ilx-on-surface);
+        border: 1px solid var(--barcode-scanner-outline-variant);
+        background: var(--barcode-scanner-surface-container-lowest);
+        color: var(--barcode-scanner-on-surface);
         font-size: 1rem;
     }
 
-    .ilx-quality-measure-uom {
+    .barcode-scanner-quality-measure-unit {
         font-size: 0.9rem;
-        color: var(--ilx-on-surface-variant);
+        color: var(--barcode-scanner-on-surface-variant);
     }
 }
 
-.ilx-quality-submit {
+.barcode-scanner-quality-submit {
     width: 100%;
     height: 48px;
     margin-top: 14px;
     border: none;
     border-radius: 12px;
-    background: var(--ilx-primary);
-    color: var(--ilx-on-primary);
+    background: var(--barcode-scanner-primary);
+    color: var(--barcode-scanner-on-primary);
     font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
@@ -173,45 +173,45 @@
     }
 }
 
-.ilx-quality-evidence {
+.barcode-scanner-quality-evidence {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-top: 14px;
     padding-top: 12px;
-    border-top: 1px solid var(--ilx-outline-variant);
+    border-top: 1px solid var(--barcode-scanner-outline-variant);
 }
 
-.ilx-quality-photo-btn {
+.barcode-scanner-quality-photo-button {
     display: inline-flex;
     align-items: center;
     padding: 10px 16px;
     border-radius: 12px;
-    border: 1px solid var(--ilx-outline-variant);
-    background: var(--ilx-surface-container-low);
-    color: var(--ilx-on-surface);
+    border: 1px solid var(--barcode-scanner-outline-variant);
+    background: var(--barcode-scanner-surface-container-low);
+    color: var(--barcode-scanner-on-surface);
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
 
-    .ilx-quality-photo-input {
+    .barcode-scanner-quality-photo-input {
         display: none;
     }
 }
 
-.ilx-quality-photo-count {
+.barcode-scanner-quality-photo-count {
     font-size: 0.82rem;
-    color: var(--ilx-on-surface-variant);
+    color: var(--barcode-scanner-on-surface-variant);
 }
 
-.ilx-quality-reset {
+.barcode-scanner-quality-reset {
     width: 100%;
     height: 44px;
     margin-top: 14px;
-    border: 1px solid var(--ilx-outline-variant);
+    border: 1px solid var(--barcode-scanner-outline-variant);
     border-radius: 12px;
-    background: var(--ilx-surface-container-low);
-    color: var(--ilx-on-surface);
+    background: var(--barcode-scanner-surface-container-low);
+    color: var(--barcode-scanner-on-surface);
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;

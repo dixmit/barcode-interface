@@ -336,13 +336,17 @@ describe("BarcodeInventory", () => {
         expect(screen.diff(line)).toBe(null);
         screen.setCounted(line, "0.3");
         expect(screen.formatDiff(screen.diff(line))).toBe("+0.2");
-        expect(screen.diffClass(line)).toBe("ilx-inv-diff-up");
+        expect(screen.diffClass(line)).toBe("barcode-scanner-inventory-difference-up");
         screen.setCounted(line, "0");
         expect(screen.formatDiff(screen.diff(line))).toBe("-0.1");
-        expect(screen.diffClass(line)).toBe("ilx-inv-diff-down");
+        expect(screen.diffClass(line)).toBe(
+            "barcode-scanner-inventory-difference-down"
+        );
         screen.setCounted(line, "0.1");
         expect(screen.formatDiff(screen.diff(line))).toBe("0");
-        expect(screen.diffClass(line)).toBe("ilx-inv-diff-none");
+        expect(screen.diffClass(line)).toBe(
+            "barcode-scanner-inventory-difference-none"
+        );
         screen.setCounted(line, "");
         expect(screen.isCounted(line)).toBe(false);
         expect(screen.formatQty(10)).toBe("10");

@@ -11,7 +11,7 @@ barcodeMenuTiles.add(
     {
         label: _t("Purchase Orders"),
         icon: "fa-shopping-cart",
-        iconClass: "ilx-icon-purchase",
+        iconClass: "barcode-scanner-icon-purchase",
         action: ({navigate}) => navigate("purchase"),
     },
     {sequence: 50}

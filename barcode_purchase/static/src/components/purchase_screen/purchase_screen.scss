@@ -1,24 +1,24 @@
-.ilx-po-v2-screen {
+.barcode-scanner-purchase-order-screen {
     position: absolute;
     inset: 0;
-    background-color: var(--ilx-surface);
+    background-color: var(--barcode-scanner-surface);
     display: flex;
     flex-direction: column;
     overflow: hidden;
 
-    .ilx-po-v2-header {
+    .barcode-scanner-purchase-order-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 1.2rem 1.5rem;
-        background: var(--ilx-surface-container-lowest);
+        background: var(--barcode-scanner-surface-container-lowest);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
         margin-bottom: 1.5rem;
     }
-    .ilx-po-v2-back-btn {
+    .barcode-scanner-purchase-order-back-button {
         background: none;
         border: none;
-        color: var(--ilx-primary);
+        color: var(--barcode-scanner-primary);
         font-size: 1.25rem;
         min-height: 48px;
         min-width: 48px;
@@ -26,16 +26,16 @@
         align-items: center;
         justify-content: center;
     }
-    .ilx-po-v2-header-title {
+    .barcode-scanner-purchase-order-header-title {
         margin: 0;
         font-size: 1.125rem;
         font-weight: 700;
-        color: var(--ilx-primary);
+        color: var(--barcode-scanner-primary);
         flex: 1;
         text-align: center;
     }
 
-    .ilx-po-v2-main {
+    .barcode-scanner-purchase-order-main {
         flex: 1;
         padding: 0 1.5rem;
         max-width: 600px;
@@ -47,157 +47,157 @@
         overflow-y: auto;
     }
 
-    .ilx-po-v2-card {
-        background: var(--ilx-surface-container-lowest);
+    .barcode-scanner-purchase-order-card {
+        background: var(--barcode-scanner-surface-container-lowest);
         border-radius: 12px;
         padding: 1.25rem;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
 
-    .ilx-po-v2-field-group {
+    .barcode-scanner-purchase-order-field-group {
         margin-bottom: 1.25rem;
     }
-    .ilx-po-v2-label {
+    .barcode-scanner-purchase-order-label {
         display: block;
         font-size: 0.7rem;
         font-weight: 600;
-        color: var(--ilx-on-surface-variant);
+        color: var(--barcode-scanner-on-surface-variant);
         letter-spacing: 0.05em;
         margin-bottom: 0.5rem;
     }
-    .ilx-po-v2-input-box {
+    .barcode-scanner-purchase-order-input-box {
         display: flex;
         align-items: center;
-        background: var(--ilx-surface-container-low);
+        background: var(--barcode-scanner-surface-container-low);
         border-radius: 8px;
         padding: 0.85rem 1rem;
-        border: 1px solid var(--ilx-surface-container-high);
+        border: 1px solid var(--barcode-scanner-surface-container-high);
     }
-    .ilx-po-v2-input-icon {
+    .barcode-scanner-purchase-order-input-icon {
         font-size: 1.1rem;
-        color: var(--ilx-primary);
+        color: var(--barcode-scanner-primary);
         margin-right: 12px;
     }
-    .ilx-po-v2-input-text {
+    .barcode-scanner-purchase-order-input-text {
         flex: 1;
         font-size: 0.95rem;
-        color: var(--ilx-on-surface);
+        color: var(--barcode-scanner-on-surface);
     }
-    .ilx-po-v2-input-chevron {
-        color: var(--ilx-on-surface-variant);
+    .barcode-scanner-purchase-order-input-chevron {
+        color: var(--barcode-scanner-on-surface-variant);
     }
-    .ilx-po-v2-raw-input {
+    .barcode-scanner-purchase-order-raw-input {
         background: transparent;
         border: none;
         flex: 1;
         font-size: 0.95rem;
-        color: var(--ilx-on-surface);
+        color: var(--barcode-scanner-on-surface);
         outline: none;
     }
-    .ilx-po-v2-raw-input::placeholder {
-        color: var(--ilx-on-surface-variant);
+    .barcode-scanner-purchase-order-raw-input::placeholder {
+        color: var(--barcode-scanner-on-surface-variant);
     }
 
-    .ilx-po-v2-grid-2 {
+    .barcode-scanner-purchase-order-grid-2 {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 12px;
     }
 
-    .ilx-po-v2-lines-header {
+    .barcode-scanner-purchase-order-lines-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .ilx-po-v2-badge {
-        background: var(--ilx-primary-container);
-        color: var(--ilx-on-primary-container);
+    .barcode-scanner-purchase-order-badge {
+        background: var(--barcode-scanner-primary-container);
+        color: var(--barcode-scanner-on-primary-container);
         font-size: 0.7rem;
         font-weight: 700;
         padding: 4px 8px;
         border-radius: 4px;
     }
 
-    .ilx-po-v2-lines-container {
+    .barcode-scanner-purchase-order-lines-container {
         display: flex;
         flex-direction: column;
         gap: 12px;
     }
-    .ilx-po-v2-line-card {
-        background: var(--ilx-surface-container-lowest);
+    .barcode-scanner-purchase-order-line-card {
+        background: var(--barcode-scanner-surface-container-lowest);
         border-radius: 12px;
         padding: 1.25rem;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
-    .ilx-po-v2-line-top {
+    .barcode-scanner-purchase-order-line-top {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         margin-bottom: 1rem;
     }
-    .ilx-po-v2-line-title h4 {
+    .barcode-scanner-purchase-order-line-title h4 {
         margin: 0 0 4px 0;
         font-size: 1rem;
         font-weight: 700;
-        color: var(--ilx-on-surface);
+        color: var(--barcode-scanner-on-surface);
     }
-    .ilx-po-v2-sku {
+    .barcode-scanner-purchase-order-sku {
         font-family: monospace;
         font-size: 0.75rem;
-        color: var(--ilx-on-surface-variant);
+        color: var(--barcode-scanner-on-surface-variant);
     }
-    .ilx-po-v2-delete {
+    .barcode-scanner-purchase-order-delete {
         background: none;
         border: none;
-        color: var(--ilx-error);
+        color: var(--barcode-scanner-error);
         font-size: 1.2rem;
         padding: 0;
     }
 
-    .ilx-po-v2-line-table {
+    .barcode-scanner-purchase-order-line-table {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
     }
-    .ilx-po-v2-col {
+    .barcode-scanner-purchase-order-col {
         display: flex;
         flex-direction: column;
         gap: 6px;
     }
-    .ilx-po-v2-col-header {
+    .barcode-scanner-purchase-order-col-header {
         font-size: 0.65rem;
         font-weight: 700;
-        color: var(--ilx-on-surface-variant);
+        color: var(--barcode-scanner-on-surface-variant);
     }
-    .ilx-po-v2-col-val {
+    .barcode-scanner-purchase-order-col-val {
         font-size: 0.95rem;
         font-weight: 600;
-        color: var(--ilx-on-surface);
+        color: var(--barcode-scanner-on-surface);
     }
-    .ilx-po-v2-subtotal {
-        color: var(--ilx-primary);
+    .barcode-scanner-purchase-order-subtotal {
+        color: var(--barcode-scanner-primary);
         font-weight: 800;
         font-size: 1.05rem;
     }
-    .ilx-po-v2-input-inline {
+    .barcode-scanner-purchase-order-input-inline {
         background: transparent;
         border: none;
         outline: none;
         width: 50px;
         padding: 0;
-        border-bottom: 1px dashed var(--ilx-outline-variant);
-        color: var(--ilx-on-surface);
+        border-bottom: 1px dashed var(--barcode-scanner-outline-variant);
+        color: var(--barcode-scanner-on-surface);
     }
-    .ilx-po-v2-input-inline:focus {
-        border-bottom: 1px solid var(--ilx-primary);
+    .barcode-scanner-purchase-order-input-inline:focus {
+        border-bottom: 1px solid var(--barcode-scanner-primary);
     }
 
-    .ilx-po-v2-add-btn {
+    .barcode-scanner-purchase-order-add-button {
         width: 100%;
         background: transparent;
-        border: 2px dashed var(--ilx-outline-variant);
-        color: var(--ilx-primary);
-        border-radius: var(--ilx-radius-xl, 0.75rem);
+        border: 2px dashed var(--barcode-scanner-outline-variant);
+        color: var(--barcode-scanner-primary);
+        border-radius: var(--barcode-scanner-radius-xl, 0.75rem);
         padding: 1rem;
         font-weight: 600;
         font-size: 1rem;
@@ -208,21 +208,21 @@
         cursor: pointer;
     }
 
-    .ilx-po-v2-checkbox-wrapper {
+    .barcode-scanner-purchase-order-checkbox-wrapper {
         display: flex;
         align-items: center;
         gap: 10px;
         margin-top: 1rem;
         padding: 0.5rem 0;
     }
-    .ilx-po-v2-checkbox {
+    .barcode-scanner-purchase-order-checkbox {
         appearance: none;
         -webkit-appearance: none;
         width: 22px;
         height: 22px;
-        border: 2px solid var(--ilx-outline-variant);
+        border: 2px solid var(--barcode-scanner-outline-variant);
         border-radius: 4px;
-        background-color: var(--ilx-surface-container-lowest);
+        background-color: var(--barcode-scanner-surface-container-lowest);
         margin: 0;
         cursor: pointer;
         display: flex;
@@ -230,26 +230,26 @@
         justify-content: center;
         transition: all 0.2s;
     }
-    .ilx-po-v2-checkbox:checked {
-        background-color: var(--ilx-primary);
-        border-color: var(--ilx-primary);
+    .barcode-scanner-purchase-order-checkbox:checked {
+        background-color: var(--barcode-scanner-primary);
+        border-color: var(--barcode-scanner-primary);
     }
-    .ilx-po-v2-checkbox:checked::after {
+    .barcode-scanner-purchase-order-checkbox:checked::after {
         content: "\f00c"; // FontAwesome check
         font-family: "FontAwesome";
-        color: var(--ilx-on-primary);
+        color: var(--barcode-scanner-on-primary);
         font-size: 13px;
     }
-    .ilx-po-v2-checkbox-label {
+    .barcode-scanner-purchase-order-checkbox-label {
         font-size: 0.95rem;
-        color: var(--ilx-on-surface-variant);
+        color: var(--barcode-scanner-on-surface-variant);
         cursor: pointer;
         user-select: none;
     }
 
-    .ilx-po-v2-footer {
+    .barcode-scanner-purchase-order-footer {
         flex-shrink: 0;
-        background: var(--ilx-surface-container-lowest);
+        background: var(--barcode-scanner-surface-container-lowest);
         padding: 1rem 1.5rem calc(env(safe-area-inset-bottom) + 1rem);
         max-width: 600px;
         margin: 0 auto;
@@ -260,19 +260,19 @@
         gap: 12px;
         box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.03);
     }
-    .ilx-po-v2-draft-btn {
+    .barcode-scanner-purchase-order-draft-button {
         background: transparent;
         border: none;
         font-weight: 600;
-        color: var(--ilx-on-surface);
+        color: var(--barcode-scanner-on-surface);
         display: flex;
         align-items: center;
         gap: 8px;
         font-size: 0.95rem;
     }
-    .ilx-po-v2-confirm-btn {
-        background: var(--ilx-primary);
-        color: var(--ilx-on-primary);
+    .barcode-scanner-purchase-order-confirm-button {
+        background: var(--barcode-scanner-primary);
+        color: var(--barcode-scanner-on-primary);
         border: none;
         border-radius: 8px;
         padding: 0.8rem 1.5rem;
@@ -282,13 +282,13 @@
         align-items: center;
         gap: 8px;
     }
-    .ilx-po-v2-confirm-btn:disabled {
+    .barcode-scanner-purchase-order-confirm-button:disabled {
         opacity: 0.6;
     }
 
     // The purchase unit a line is ordered in, under its quantity.
-    .ilx-po-v2-uom {
+    .barcode-scanner-purchase-order-uom {
         font-size: 0.75rem;
-        color: var(--ilx-on-surface-variant);
+        color: var(--barcode-scanner-on-surface-variant);
     }
 }

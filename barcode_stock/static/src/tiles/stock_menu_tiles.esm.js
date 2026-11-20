@@ -11,7 +11,7 @@ barcodeMenuTiles.add(
     {
         label: _t("Warehouse Operations"),
         icon: "fa-home",
-        iconClass: "ilx-icon-warehouse",
+        iconClass: "barcode-scanner-icon-warehouse",
         action: ({navigate}) => navigate("warehouse_ops"),
     },
     {sequence: 10}
@@ -22,7 +22,7 @@ barcodeMenuTiles.add(
     {
         label: _t("Internal Transfer"),
         icon: "fa-exchange",
-        iconClass: "ilx-icon-transfer",
+        iconClass: "barcode-scanner-icon-transfer",
         action: ({navigate}) => navigate("internal_transfer"),
     },
     {sequence: 20}
@@ -33,7 +33,7 @@ barcodeMenuTiles.add(
     {
         label: _t("Quick Info"),
         icon: "fa-info-circle",
-        iconClass: "ilx-icon-info",
+        iconClass: "barcode-scanner-icon-info",
         action: ({navigate}) => navigate("quick_info"),
     },
     {sequence: 30}
