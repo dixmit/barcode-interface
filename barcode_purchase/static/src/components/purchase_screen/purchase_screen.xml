@@ -3,7 +3,7 @@
     <t t-name="barcode_purchase.PurchaseScreen">
         <div class="ilx-po-v2-screen">
             <header class="ilx-po-v2-header">
-                <button class="ilx-po-v2-back-btn" t-on-click="goBack">
+                <button class="ilx-po-v2-back-button" t-on-click="goBack">
                     <i class="fa fa-arrow-left" />
                 </button>
                 <h1 class="ilx-po-v2-header-title">Create Purchase Order</h1>
@@ -159,7 +159,7 @@
                     </div>
                 </div>
 
-                <button class="ilx-po-v2-add-btn" t-on-click="addProduct">
+                <button class="ilx-po-v2-add-button" t-on-click="addProduct">
                     <i class="fa fa-plus-circle" /> ADD PRODUCT
                 </button>
 
@@ -178,11 +178,14 @@
             </main>
 
             <footer class="ilx-po-v2-footer">
-                <button class="ilx-po-v2-draft-btn" t-on-click="() => this.saveDraft()">
+                <button
+                    class="ilx-po-v2-draft-button"
+                    t-on-click="() => this.saveDraft()"
+                >
                     <i class="fa fa-save" /> Save Draft
                 </button>
                 <button
-                    class="ilx-po-v2-confirm-btn"
+                    class="ilx-po-v2-confirm-button"
                     t-att-disabled="state.saving"
                     t-on-click="() => this.createPurchase()"
                 >

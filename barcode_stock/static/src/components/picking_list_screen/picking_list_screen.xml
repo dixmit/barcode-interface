@@ -57,7 +57,7 @@
                                             style="display: flex; align-items: center; gap: 4px;"
                                         >
                                             <span
-                                                t-att-class="p.state === 'assigned' ? 'ilx-kw-status-tag ilx-kw-status-tag--ready' : 'ilx-kw-status-tag'"
+                                                t-att-class="p.state === 'assigned' ? 'ilx-kw-status-tag ilx-kw-status-tag-ready' : 'ilx-kw-status-tag'"
                                             >
                                                 <t
                                                     t-esc="component.getStateLabel(p).toUpperCase()"
@@ -117,8 +117,8 @@
     </t>
     <t t-name="barcode_scanner.PickingListScreen">
         <div class="ilx-kw-screen ilx-kw-picking-list">
-            <header class="ilx-kw-header ilx-kw-header--elevated">
-                <button type="button" class="ilx-kw-icon-btn" t-on-click="goBack">
+            <header class="ilx-kw-header ilx-kw-header-elevated">
+                <button type="button" class="ilx-kw-icon-button" t-on-click="goBack">
                     <i class="fa fa-arrow-left" />
                 </button>
                 <h1 class="ilx-kw-header-title">Picking Operations</h1>
@@ -142,7 +142,7 @@
                         <div class="ilx-kw-filter-toolbar">
                             <button
                                 type="button"
-                                class="ilx-kw-tool-btn"
+                                class="ilx-kw-tool-button"
                                 t-att-class="{active: state.openMenu === 'filters', 'has-value': state.activeFilters.length}"
                                 t-on-click="() => this.toggleMenu('filters')"
                             >
@@ -157,7 +157,7 @@
                             </button>
                             <button
                                 type="button"
-                                class="ilx-kw-tool-btn"
+                                class="ilx-kw-tool-button"
                                 t-att-class="{active: state.openMenu === 'group', 'has-value': state.groupByLevels.length}"
                                 t-on-click="() => this.toggleMenu('group')"
                             >
@@ -168,7 +168,7 @@
                             <div class="ilx-kw-tool-spacer" />
                             <button
                                 type="button"
-                                class="ilx-kw-tool-btn ilx-kw-star-btn"
+                                class="ilx-kw-tool-button ilx-kw-star-button"
                                 t-att-class="{active: isCurrentFilterDefault}"
                                 t-att-title="starTitle"
                                 t-on-click="() => this.toggleDefaultFilter()"
@@ -318,7 +318,7 @@
                                 t-as="group"
                                 t-key="group"
                             >
-                                <span class="ilx-kw-facet ilx-kw-facet--group">
+                                <span class="ilx-kw-facet ilx-kw-facet-group">
                                     <span class="ilx-kw-facet-text">
                                         <i class="fa fa-layer-group" />
                                         <t t-esc="groupLabels[group] || group" />

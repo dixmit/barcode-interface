@@ -12,7 +12,7 @@
             position="after"
         >
             <div class="ilx-kw-info-row mt-3">
-                <div class="ilx-kw-icon-box-small ilx-kw-bg-purple-light">
+                <div class="ilx-kw-icon-box-small ilx-kw-background-purple-light">
                     <i class="fa fa-map-signs" />
                 </div>
                 <div class="ilx-kw-info-text w-100">

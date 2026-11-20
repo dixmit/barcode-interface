@@ -3,7 +3,7 @@
     <t t-name="barcode_inventory.InventoryCountScreen">
         <div class="ilx-emp-v2-screen">
             <header class="ilx-emp-v2-header">
-                <button class="ilx-emp-v2-back-btn" t-on-click="goBack">
+                <button class="ilx-emp-v2-back-button" t-on-click="goBack">
                     <i class="fa fa-arrow-left" />
                 </button>
                 <h1 class="ilx-emp-v2-header-title">
@@ -126,7 +126,7 @@
 
             <footer class="ilx-emp-v2-footer">
                 <button
-                    class="ilx-emp-v2-confirm-btn"
+                    class="ilx-emp-v2-confirm-button"
                     t-on-click="apply"
                     t-att-disabled="state.applying || countedLines.length === 0"
                     t-att-style="(state.applying || countedLines.length === 0) ? 'opacity: 0.5; cursor: not-allowed;' : ''"

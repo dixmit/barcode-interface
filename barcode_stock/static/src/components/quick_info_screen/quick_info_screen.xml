@@ -3,7 +3,7 @@
     <t t-name="barcode_scanner.QuickInfoScreen">
         <div class="ilx-v2-screen">
             <header class="ilx-v2-header">
-                <button class="ilx-v2-back-btn" t-on-click="goBack">
+                <button class="ilx-v2-back-button" t-on-click="goBack">
                     <i class="fa fa-arrow-left" />
                 </button>
                 <h1 class="ilx-v2-header-title">Quick Info</h1>
@@ -23,7 +23,7 @@
                             <div class="ilx-kw-info-row">
                                 <div
                                     class="ilx-kw-icon-box"
-                                    t-att-class="state.resultType === 'product' ? 'ilx-kw-bg-orange' : 'ilx-kw-bg-brown'"
+                                    t-att-class="state.resultType === 'product' ? 'ilx-kw-background-orange' : 'ilx-kw-background-brown'"
                                     style="width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;"
                                 >
                                     <i
@@ -46,7 +46,7 @@
                             <t t-if="state.resultType === 'product'">
                                 <div class="ilx-kw-info-row mt-3">
                                     <div
-                                        class="ilx-kw-icon-box-small ilx-kw-bg-purple-light"
+                                        class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
                                     >
                                         <i class="fa fa-barcode" />
                                     </div>
@@ -61,7 +61,7 @@
                                 </div>
                                 <div class="ilx-kw-info-row mt-3">
                                     <div
-                                        class="ilx-kw-icon-box-small ilx-kw-bg-purple-light"
+                                        class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
                                     >
                                         <i class="fa fa-tag" />
                                     </div>
@@ -76,7 +76,7 @@
                                 </div>
                                 <div class="ilx-kw-info-row mt-3">
                                     <div
-                                        class="ilx-kw-icon-box-small ilx-kw-bg-purple-light"
+                                        class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
                                     >
                                         <i class="fa fa-dollar" />
                                     </div>
@@ -93,7 +93,7 @@
                                 </div>
                                 <div class="ilx-kw-info-row mt-3">
                                     <div
-                                        class="ilx-kw-icon-box-small ilx-kw-bg-purple-light"
+                                        class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
                                     >
                                         <i class="fa fa-cube" />
                                     </div>
@@ -118,7 +118,7 @@
                                 </div>
                                 <div class="ilx-kw-info-row mt-3">
                                     <div
-                                        class="ilx-kw-icon-box-small ilx-kw-bg-purple-light"
+                                        class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
                                     >
                                         <i class="fa fa-cubes" />
                                     </div>
@@ -140,7 +140,7 @@
                                         style="align-items: flex-start;"
                                     >
                                         <div
-                                            class="ilx-kw-icon-box-small ilx-kw-bg-purple-light"
+                                            class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
                                         >
                                             <i class="fa fa-map-marker" />
                                         </div>
@@ -158,14 +158,14 @@
                                                 >
                                                     <div class="ilx-kw-stock-row">
                                                         <span
-                                                            class="ilx-kw-stock-row__name"
+                                                            class="ilx-kw-stock-row-name"
                                                         >
                                                             <t
                                                                 t-esc="item.locationName"
                                                             />
                                                         </span>
                                                         <span
-                                                            class="ilx-kw-stock-row__qty"
+                                                            class="ilx-kw-stock-row-quantity"
                                                         >
                                                             <t t-esc="item.quantity" />
                                                         </span>
@@ -181,7 +181,7 @@
                                         style="align-items: flex-start;"
                                     >
                                         <div
-                                            class="ilx-kw-icon-box-small ilx-kw-bg-purple-light"
+                                            class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
                                         >
                                             <i class="fa fa-tags" />
                                         </div>
@@ -201,14 +201,14 @@
                                                     >
                                                         <div class="ilx-kw-stock-row">
                                                             <span
-                                                                class="ilx-kw-stock-row__name"
+                                                                class="ilx-kw-stock-row-name"
                                                             >
                                                                 <t
                                                                     t-esc="item.locationName"
                                                                 />
                                                             </span>
                                                             <span
-                                                                class="ilx-kw-stock-row__qty"
+                                                                class="ilx-kw-stock-row-quantity"
                                                             >
                                                                 <t
                                                                     t-esc="item.quantity"
@@ -231,7 +231,7 @@
                             <t t-if="state.resultType === 'location'">
                                 <div class="ilx-kw-info-row mt-3">
                                     <div
-                                        class="ilx-kw-icon-box-small ilx-kw-bg-purple-light"
+                                        class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
                                     >
                                         <i class="fa fa-barcode" />
                                     </div>
@@ -246,7 +246,7 @@
                                 </div>
                                 <div class="ilx-kw-info-row mt-3">
                                     <div
-                                        class="ilx-kw-icon-box-small ilx-kw-bg-purple-light"
+                                        class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
                                     >
                                         <i class="fa fa-flag" />
                                     </div>
@@ -269,7 +269,7 @@
                                         style="align-items: flex-start;"
                                     >
                                         <div
-                                            class="ilx-kw-icon-box-small ilx-kw-bg-purple-light"
+                                            class="ilx-kw-icon-box-small ilx-kw-background-purple-light"
                                         >
                                             <i class="fa fa-cubes" />
                                         </div>
@@ -287,14 +287,14 @@
                                                 >
                                                     <div class="ilx-kw-stock-row">
                                                         <span
-                                                            class="ilx-kw-stock-row__name"
+                                                            class="ilx-kw-stock-row-name"
                                                         >
                                                             <t
                                                                 t-esc="item.productName"
                                                             />
                                                         </span>
                                                         <span
-                                                            class="ilx-kw-stock-row__qty"
+                                                            class="ilx-kw-stock-row-quantity"
                                                         >
                                                             <t t-esc="item.quantity" />
                                                         </span>
@@ -410,7 +410,7 @@
                                 style="position: relative; z-index: 2;"
                             />
                             <button
-                                class="ilx-qi-v2-barcode-btn"
+                                class="ilx-qi-v2-barcode-button"
                                 t-on-click="searchBarcode"
                                 style="position: relative; z-index: 2;"
                             >

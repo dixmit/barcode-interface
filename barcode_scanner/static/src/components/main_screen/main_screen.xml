@@ -4,7 +4,7 @@
         <div class="ilx-home-screen">
             <header class="ilx-home-header">
                 <div class="ilx-home-top-bar">
-                    <button class="ilx-home-menu-btn" t-on-click="goHome">
+                    <button class="ilx-home-menu-button" t-on-click="goHome">
                         <i class="fa fa-th" />
                     </button>
                     <div class="ilx-home-avatar">
@@ -12,7 +12,7 @@
                             t-if="showAvatarImage"
                             t-att-src="avatarUrl"
                             t-on-error="onAvatarError"
-                            class="ilx-home-avatar-img"
+                            class="ilx-home-avatar-image"
                             alt="Avatar"
                         />
                         <span t-else="" class="ilx-home-avatar-text">

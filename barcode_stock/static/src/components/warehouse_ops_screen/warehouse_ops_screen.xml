@@ -3,7 +3,7 @@
     <t t-name="barcode_scanner.WarehouseOps">
         <div class="ilx-stitch-screen">
             <header class="ilx-stitch-header">
-                <button class="ilx-stitch-menu-btn" t-on-click="goBack">
+                <button class="ilx-stitch-menu-button" t-on-click="goBack">
                     <i class="fa fa-arrow-left" />
                 </button>
                 <h2
@@ -15,7 +15,7 @@
             <main class="ilx-stitch-main">
                 <div class="ilx-stitch-location">
                     <div class="ilx-stitch-select-wrapper">
-                        <i class="fa fa-home ilx-stitch-loc-icon" />
+                        <i class="fa fa-home ilx-stitch-location-icon" />
                         <select
                             name="warehouse_id"
                             class="ilx-stitch-select"

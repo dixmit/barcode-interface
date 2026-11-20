@@ -8,10 +8,10 @@
                 </div>
             </t>
             <t t-else="">
-                <header class="ilx-kw-header ilx-kw-header--elevated">
+                <header class="ilx-kw-header ilx-kw-header-elevated">
                     <div class="ilx-kw-header-left">
                         <button
-                            class="ilx-kw-icon-btn color-primary-container"
+                            class="ilx-kw-icon-button color-primary-container"
                             t-on-click="goBack"
                         >
                             <i class="fa fa-arrow-left" />

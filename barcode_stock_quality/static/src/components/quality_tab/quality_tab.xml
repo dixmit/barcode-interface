@@ -128,7 +128,7 @@
                     class="ilx-quality-evidence"
                     t-if="inspection.state === 'waiting' or inspection.state === 'failed'"
                 >
-                    <label class="ilx-quality-photo-btn">
+                    <label class="ilx-quality-photo-button">
                         <i class="fa fa-camera me-1" /> Attach photo evidence
                         <input
                         type="file"

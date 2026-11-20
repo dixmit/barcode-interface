@@ -3,7 +3,7 @@
     <t t-name="barcode_purchase.PurchaseLocationSelectorScreen">
         <div class="ilx-emp-v2-screen">
             <header class="ilx-emp-v2-header">
-                <button class="ilx-emp-v2-back-btn" t-on-click="goBack">
+                <button class="ilx-emp-v2-back-button" t-on-click="goBack">
                     <i class="fa fa-arrow-left" />
                 </button>
                 <h1 class="ilx-emp-v2-header-title">Select Destination</h1>
@@ -71,7 +71,7 @@
 
             <footer class="ilx-emp-v2-footer">
                 <button
-                    t-att-class="!state.selectedLocation ? 'ilx-emp-v2-confirm-btn disabled' : 'ilx-emp-v2-confirm-btn'"
+                    t-att-class="!state.selectedLocation ? 'ilx-emp-v2-confirm-button disabled' : 'ilx-emp-v2-confirm-button'"
                     t-on-click="confirmSelection"
                 >
                     Confirm Location

@@ -14,7 +14,7 @@
         gap: 8px;
     }
 
-    .ilx-kw-tool-btn {
+    .ilx-kw-tool-button {
         height: 36px;
         border-radius: 18px;
         border: none;
@@ -62,7 +62,7 @@
         flex: 1;
     }
 
-    .ilx-kw-star-btn {
+    .ilx-kw-star-button {
         width: 36px;
         padding: 0;
         justify-content: center;
@@ -97,7 +97,7 @@
         background: var(--barcode-scanner-primary-container);
         color: var(--barcode-scanner-on-surface);
 
-        &.ilx-kw-facet--group {
+        &.ilx-kw-facet-group {
             background: var(--barcode-scanner-tertiary-container);
         }
     }
